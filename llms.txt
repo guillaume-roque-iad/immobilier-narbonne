@@ -1,0 +1,23 @@
+# Guillaume Roque — Immobilier Narbonne
+
+> Site personnel de Guillaume Roque, conseiller immobilier iad France basé à Narbonne (11100, Aude, Occitanie) depuis 2013. Le site s'adresse aux propriétaires qui souhaitent vendre leur maison ou appartement à Narbonne : estimation gratuite, accompagnement de la mise en vente jusqu'à la signature chez le notaire.
+
+## Informations clés
+- Conseiller : Guillaume Roque
+- Réseau : iad France
+- Zone d'intervention : Narbonne (11100) et son agglomération
+- Depuis : 2013
+- Avis Google : 4,9/5 (97 avis)
+- Avis Immodvisor (AFNOR) : 4,8/5 (35 avis)
+- Téléphone : +33 6 62 10 83 96
+- Email : guillaume.roque@iadfrance.fr
+- Estimation gratuite : https://www.iadfrance.fr/conseiller-immobilier/guillaume.roque/estimation
+- Profil officiel iad France : https://www.iadfrance.fr/conseiller-immobilier/guillaume.roque
+
+## Pages
+- / : page d'accueil — accompagnement vendeur, avis clients, contact, estimation gratuite
+- /mentions-legales.html : mentions légales
+
+## Sites associés (même conseiller)
+- https://tribu-immo.com — recrutement de mandataires iad France
+- Guides vendeurs Narbonne détaillés : https://tribu-immo.com/vendre-maison-narbonne.html, https://tribu-immo.com/article-vendre-appartement-narbonne.html

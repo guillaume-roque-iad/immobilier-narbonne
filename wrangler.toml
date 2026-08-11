@@ -1,0 +1,5 @@
+name = "immobilier-narbonne-guillaume-roque"
+compatibility_date = "2024-09-23"
+
+[assets]
+directory = "."
