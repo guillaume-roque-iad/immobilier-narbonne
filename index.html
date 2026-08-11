@@ -331,7 +331,7 @@ footer{background:var(--bleu-fonce);padding:56px 8vw 36px}
       </div>
       <div class="fg"><label for="g-email">Email *</label><input id="g-email" type="email" name="email" required placeholder="Votre adresse e-mail"/></div>
       <button type="submit" class="fsub">Recevoir le guide →</button>
-      <p class="fnote">Le bouton ouvre votre messagerie avec un message pré-rempli à destination de Guillaume Roque.</p>
+      <p class="fnote">Vos coordonnées sont transmises directement à Guillaume Roque, qui vous répond personnellement sous 24h.</p>
     </form>
   </div>
 </section>
@@ -518,10 +518,10 @@ footer{background:var(--bleu-fonce);padding:56px 8vw 36px}
   </div>
   <div class="bgrid">
     <a href="https://tribu-immo.com/vendre-maison-narbonne.html" target="_blank" rel="noopener" class="bcard"><div class="btop"></div><div class="bbody"><div class="bcat">Vendeurs · Narbonne</div><h3>Vendre sa maison ou son appartement à Narbonne</h3><p>Estimation gratuite, juste prix et accompagnement complet.</p><div class="blire">Lire l'article</div></div></a>
-    <a href="https://tribu-immo.com/article-vendre-appartement-narbonne.html" target="_blank" rel="noopener" class="bcard"><div class="btop"></div><div class="bbody"><div class="bcat">Vendeurs · Narbonne</div><h3>Vendre son appartement à Narbonne : le guide complet 2026</h3><p>Prix indicatifs par quartier, étapes, diagnostics et délais.</p><div class="blire">Lire l'article</div></div></a>
+    <a href="https://tribu-immo.com/guide-2-vendre.html" target="_blank" rel="noopener" class="bcard"><div class="btop"></div><div class="bbody"><div class="bcat">Vendeurs · Guide</div><h3>Guide du vendeur : vendre son bien au meilleur prix</h3><p>Estimation, préparation, photos, diagnostics, visites et négociation — les 6 étapes clés.</p><div class="blire">Lire l'article</div></div></a>
     <a href="https://tribu-immo.com/article-juste-prix.html" target="_blank" rel="noopener" class="bcard"><div class="btop"></div><div class="bbody"><div class="bcat">Conseils vendeurs</div><h3>Vendre vite sans brader : la méthode du juste prix</h3><p>Positionner le bon prix pour vendre vite, et au meilleur prix.</p><div class="blire">Lire l'article</div></div></a>
     <a href="https://tribu-immo.com/article-narbonne.html" target="_blank" rel="noopener" class="bcard"><div class="btop"></div><div class="bbody"><div class="bcat">Marché local</div><h3>Immobilier à Narbonne en 2026</h3><p>Prix, quartiers et tendances du marché narbonnais.</p><div class="blire">Lire l'article</div></div></a>
-    <a href="https://tribu-immo.com/article-estimation-narbonne.html" target="_blank" rel="noopener" class="bcard"><div class="btop"></div><div class="bbody"><div class="bcat">Estimation</div><h3>Estimer son bien à Narbonne : la méthode</h3><p>Comment est calculée une estimation fiable, sans surprise.</p><div class="blire">Lire l'article</div></div></a>
+    <a href="https://www.iadfrance.fr/conseiller-immobilier/guillaume.roque/estimation" target="_blank" rel="noopener" class="bcard"><div class="btop"></div><div class="bbody"><div class="bcat">Estimation</div><h3>Demander mon estimation gratuite</h3><p>Une estimation fiable, sans surprise, réalisée personnellement par Guillaume.</p><div class="blire">Lire l'article</div></div></a>
     <a href="https://tribu-immo.com/article-aude.html" target="_blank" rel="noopener" class="bcard"><div class="btop"></div><div class="bbody"><div class="bcat">Guide départemental</div><h3>Immobilier dans l'Aude en 2026</h3><p>De Narbonne à Carcassonne — panorama du marché audois.</p><div class="blire">Lire l'article</div></div></a>
   </div>
 </section>
@@ -554,9 +554,15 @@ footer{background:var(--bleu-fonce);padding:56px 8vw 36px}
   </div>
   <div class="fr">
     <script>
-    function envoyerMail(e, contexte) {
+    // Clé d'accès Web3Forms (web3forms.com) : gratuite, à générer avec l'adresse
+    // guillaume.roque@iadfrance.fr, puis à coller ici pour activer l'envoi direct.
+    var WEB3FORMS_ACCESS_KEY = 'REMPLACER_PAR_VOTRE_CLE_WEB3FORMS';
+
+    async function envoyerMail(e, contexte) {
       e.preventDefault();
       var form = e.target;
+      var btn = form.querySelector('button[type=submit]');
+      var note = form.querySelector('.fnote');
       var nom = form.querySelector('[name=nom]') ? form.querySelector('[name=nom]').value : '';
       var email = form.querySelector('[name=email]') ? form.querySelector('[name=email]').value : '';
       var tel = form.querySelector('[name=telephone]') ? form.querySelector('[name=telephone]').value : '';
@@ -568,7 +574,42 @@ footer{background:var(--bleu-fonce);padding:56px 8vw 36px}
         + (secteur ? '\nSecteur : ' + secteur : '')
         + (typebien ? '\nType de bien : ' + typebien : '')
         + (message ? '\nMessage : ' + message : '');
-      window.location.href = 'mailto:guillaume.roque@iadfrance.fr?subject=' + encodeURIComponent(sujet) + '&body=' + encodeURIComponent(corps);
+
+      function envoyerParMailto() {
+        window.location.href = 'mailto:guillaume.roque@iadfrance.fr?subject=' + encodeURIComponent(sujet) + '&body=' + encodeURIComponent(corps);
+      }
+
+      // Tant qu'aucune clé Web3Forms n'est configurée, on garde l'ancien
+      // comportement (ouverture de la messagerie) pour ne rien casser.
+      if (!WEB3FORMS_ACCESS_KEY || WEB3FORMS_ACCESS_KEY.indexOf('REMPLACER') === 0) {
+        envoyerParMailto();
+        return false;
+      }
+
+      var texteOriginal = btn ? btn.textContent : '';
+      if (btn) { btn.disabled = true; btn.textContent = 'Envoi en cours...'; }
+
+      try {
+        var res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({
+            access_key: WEB3FORMS_ACCESS_KEY,
+            subject: sujet,
+            from_name: nom || 'Site immobiliernarbonne.com',
+            replyto: email,
+            nom: nom, email: email, telephone: tel, secteur: secteur, typebien: typebien, message: message
+          })
+        });
+        var data = await res.json();
+        if (!data.success) { throw new Error(data.message || 'Erreur envoi'); }
+        form.reset();
+        if (btn) { btn.textContent = 'Message envoyé ✓'; }
+        if (note) { note.textContent = 'Merci ' + (nom || '') + ', votre demande a bien été envoyée à Guillaume. Il vous répond personnellement sous 24h.'; }
+      } catch (err) {
+        if (btn) { btn.disabled = false; btn.textContent = texteOriginal; }
+        envoyerParMailto();
+      }
       return false;
     }
     </script>
@@ -584,7 +625,7 @@ footer{background:var(--bleu-fonce);padding:56px 8vw 36px}
       </div>
       <div class="fg"><label for="f-message">Votre message</label><textarea id="f-message" name="message" placeholder="Décrivez votre projet de vente..."></textarea></div>
       <button type="submit" class="fsub">Envoyer ma demande →</button>
-      <p class="fnote">Le bouton ouvre votre messagerie avec un message pré-rempli à destination de Guillaume Roque.</p>
+      <p class="fnote">Vos coordonnées sont transmises directement à Guillaume Roque, qui vous répond personnellement sous 24h.</p>
     </form>
   </div>
 </section>
