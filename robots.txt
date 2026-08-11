@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://immobilier-narbonne.fr/sitemap.xml
+Sitemap: https://immobiliernarbonne.com/sitemap.xml
