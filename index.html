@@ -554,9 +554,10 @@ footer{background:var(--bleu-fonce);padding:56px 8vw 36px}
   </div>
   <div class="fr">
     <script>
-    // Clé d'accès Web3Forms (web3forms.com) : gratuite, à générer avec l'adresse
-    // guillaume.roque@iadfrance.fr, puis à coller ici pour activer l'envoi direct.
-    var WEB3FORMS_ACCESS_KEY = 'REMPLACER_PAR_VOTRE_CLE_WEB3FORMS';
+    // Web App Google Apps Script (script.google.com) déployée sous le compte
+    // guillaume.roque@iadfrance.fr : reçoit le formulaire et envoie l'e-mail
+    // directement, sans passer par la messagerie du visiteur.
+    var APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzU-4t-ANgQ-DhKVK5834dXPIhYZXdOrwiUwZshaL4_Hb4RSIRUFrz9dMJ4eyU2kzofLQ/exec';
 
     async function envoyerMail(e, contexte) {
       e.preventDefault();
@@ -579,9 +580,9 @@ footer{background:var(--bleu-fonce);padding:56px 8vw 36px}
         window.location.href = 'mailto:guillaume.roque@iadfrance.fr?subject=' + encodeURIComponent(sujet) + '&body=' + encodeURIComponent(corps);
       }
 
-      // Tant qu'aucune clé Web3Forms n'est configurée, on garde l'ancien
+      // Si l'URL du script n'est pas configurée, on garde l'ancien
       // comportement (ouverture de la messagerie) pour ne rien casser.
-      if (!WEB3FORMS_ACCESS_KEY || WEB3FORMS_ACCESS_KEY.indexOf('REMPLACER') === 0) {
+      if (!APPS_SCRIPT_URL || APPS_SCRIPT_URL.indexOf('REMPLACER') === 0) {
         envoyerParMailto();
         return false;
       }
@@ -590,19 +591,18 @@ footer{background:var(--bleu-fonce);padding:56px 8vw 36px}
       if (btn) { btn.disabled = true; btn.textContent = 'Envoi en cours...'; }
 
       try {
-        var res = await fetch('https://api.web3forms.com/submit', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-          body: JSON.stringify({
-            access_key: WEB3FORMS_ACCESS_KEY,
-            subject: sujet,
-            from_name: nom || 'Site immobiliernarbonne.com',
-            replyto: email,
-            nom: nom, email: email, telephone: tel, secteur: secteur, typebien: typebien, message: message
-          })
-        });
-        var data = await res.json();
-        if (!data.success) { throw new Error(data.message || 'Erreur envoi'); }
+        var fd = new FormData();
+        fd.append('contexte', contexte);
+        fd.append('nom', nom);
+        fd.append('email', email);
+        fd.append('telephone', tel);
+        fd.append('secteur', secteur);
+        fd.append('typebien', typebien);
+        fd.append('message', message);
+        // mode 'no-cors' : la réponse Apps Script n'est pas lisible en JS
+        // (limitation connue des Web Apps Apps Script côté navigateur), mais
+        // l'e-mail est bien envoyé côté serveur dès que la requête part.
+        await fetch(APPS_SCRIPT_URL, { method: 'POST', mode: 'no-cors', body: fd });
         form.reset();
         if (btn) { btn.textContent = 'Message envoyé ✓'; }
         if (note) { note.textContent = 'Merci ' + (nom || '') + ', votre demande a bien été envoyée à Guillaume. Il vous répond personnellement sous 24h.'; }
