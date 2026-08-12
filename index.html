@@ -58,7 +58,7 @@ body{font-family:'Inter',-apple-system,sans-serif;color:var(--noir);background:v
 .nb-logo{height:30px;width:auto}
 .nb-sep{width:1px;height:26px;background:rgba(0,0,0,0.1)}
 .nb-name{font-size:12px;font-weight:700;color:var(--noir);line-height:1.25}
-.nb-name em{color:var(--corail);font-style:normal}
+.nb-name em{color:var(--corail-dark);font-style:normal}
 .nb-cta{background:var(--bleu-prof);color:#fff;font-size:13px;font-weight:700;padding:10px 26px;border-radius:100px;text-decoration:none;transition:background .2s}
 .nb-cta:hover{background:var(--bleu-dark)}
 
@@ -200,8 +200,8 @@ body{font-family:'Inter',-apple-system,sans-serif;color:var(--noir);background:v
 .fg input,.fg select,.fg textarea{width:100%;padding:13px 16px;border:1.5px solid transparent;border-radius:10px;background:#fff;font-size:14px;font-family:inherit;color:var(--noir);outline:none;transition:border-color .2s}
 .fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--bleu)}
 .fg textarea{min-height:90px;resize:vertical}
-.fsub{width:100%;background:var(--bleu);color:#fff;font-size:14px;font-weight:700;padding:16px;border:none;border-radius:10px;cursor:pointer;transition:background .2s;font-family:inherit}
-.fsub:hover{background:var(--bleu-dark)}
+.fsub{width:100%;background:var(--bleu-prof);color:#fff;font-size:14px;font-weight:700;padding:16px;border:none;border-radius:10px;cursor:pointer;transition:background .2s;font-family:inherit}
+.fsub:hover{background:var(--bleu-fonce)}
 .fg2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .fnote{font-size:11.5px;color:var(--gris);margin-top:14px;line-height:1.5}
 
@@ -456,7 +456,7 @@ footer{background:var(--bleu-fonce);padding:56px 8vw 36px}
       var pages = Math.ceil(AVIS.length / pp());
       for (var i = 0; i < pages; i++) {
         var btn = document.createElement('button');
-        btn.style.cssText = 'width:8px;height:8px;border-radius:4px;border:none;background:rgba(0,0,0,.15);cursor:pointer;padding:0;transition:all .2s';
+        btn.style.cssText = 'width:8px;height:8px;border-radius:4px;border:none;background:rgba(0,0,0,.15);cursor:pointer;padding:0;transition:background-color .2s';
         btn.type = 'button';
         btn.setAttribute('aria-label', 'Afficher le groupe d\'avis ' + (i + 1));
         btn.setAttribute('data-p', i);
