@@ -11,12 +11,15 @@
 - Avis Immodvisor (AFNOR) : 4,8/5 (35 avis)
 - Téléphone : +33 6 62 10 83 96
 - Email : guillaume.roque@iadfrance.fr
-- Estimation gratuite : https://www.iadfrance.fr/conseiller-immobilier/guillaume.roque/estimation
+- Estimation gratuite : https://immobiliernarbonne.com/estimation-immobiliere-narbonne
 - Profil officiel iad France : https://www.iadfrance.fr/conseiller-immobilier/guillaume.roque
 
 ## Pages
 - / : page d'accueil — accompagnement vendeur, avis clients, contact, estimation gratuite
-- /mentions-legales.html : mentions légales
+- /estimation-immobiliere-narbonne : estimation immobilière gratuite à Narbonne, formulaire dédié
+- /conseils/ : conseils vendeurs, articles publiés deux fois par mois
+- /conseils/combien-vaut-maison-narbonne : méthode d'estimation (comparables DVF, état du bien, DPE, secteur)
+- /mentions-legales : mentions légales
 
 ## Sites associés (même conseiller)
 - https://tribu-immo.com — recrutement de mandataires iad France
