@@ -342,7 +342,7 @@ footer{background:var(--bleu-fonce);padding:56px 8vw 36px}
       </div>
       <div class="fg"><label for="g-email">Email *</label><input id="g-email" type="email" name="email" required placeholder="Votre adresse e-mail"/></div>
       <button type="submit" class="fsub">Recevoir le guide →</button>
-      <p class="fnote">Vos coordonnées sont transmises directement à Guillaume Roque, qui vous répond personnellement sous 24h.</p>
+      <p class="fnote">Vos coordonnées sont transmises directement à Guillaume Roque, qui vous répond personnellement sous 24h — ou appelez directement le <a href="tel:+33662108396" style="color:inherit;text-decoration:underline">06 62 10 83 96</a>.</p>
     </form>
   </div>
 </section>
@@ -617,7 +617,16 @@ footer{background:var(--bleu-fonce);padding:56px 8vw 36px}
         await fetch(APPS_SCRIPT_URL, { method: 'POST', mode: 'no-cors', body: fd });
         form.reset();
         if (btn) { btn.textContent = 'Message envoyé ✓'; }
-        if (note) { note.textContent = 'Merci ' + (nom || '') + ', votre demande a bien été envoyée à Guillaume. Il vous répond personnellement sous 24h.'; }
+        if (note) {
+          note.textContent = 'Merci ' + (nom || '') + ', votre demande a bien été transmise à Guillaume. Il vous répond personnellement sous 24h — ou appelez directement le ';
+          var telLink = document.createElement('a');
+          telLink.href = 'tel:+33662108396';
+          telLink.style.color = 'inherit';
+          telLink.style.textDecoration = 'underline';
+          telLink.textContent = '06 62 10 83 96';
+          note.appendChild(telLink);
+          note.appendChild(document.createTextNode('.'));
+        }
       } catch (err) {
         if (btn) { btn.disabled = false; btn.textContent = texteOriginal; }
         envoyerParMailto();
@@ -637,7 +646,7 @@ footer{background:var(--bleu-fonce);padding:56px 8vw 36px}
       </div>
       <div class="fg"><label for="f-message">Votre message</label><textarea id="f-message" name="message" placeholder="Décrivez votre projet de vente..."></textarea></div>
       <button type="submit" class="fsub">Envoyer ma demande →</button>
-      <p class="fnote">Vos coordonnées sont transmises directement à Guillaume Roque, qui vous répond personnellement sous 24h.</p>
+      <p class="fnote">Vos coordonnées sont transmises directement à Guillaume Roque, qui vous répond personnellement sous 24h — ou appelez directement le <a href="tel:+33662108396" style="color:inherit;text-decoration:underline">06 62 10 83 96</a>.</p>
     </form>
   </div>
 </section>
