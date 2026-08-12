@@ -611,10 +611,13 @@ footer{background:var(--bleu-fonce);padding:56px 8vw 36px}
         fd.append('secteur', secteur);
         fd.append('typebien', typebien);
         fd.append('message', message);
-        // mode 'no-cors' : la réponse Apps Script n'est pas lisible en JS
-        // (limitation connue des Web Apps Apps Script côté navigateur), mais
-        // l'e-mail est bien envoyé côté serveur dès que la requête part.
-        await fetch(APPS_SCRIPT_URL, { method: 'POST', mode: 'no-cors', body: fd });
+        // FormData evite le preflight CORS (multipart/form-data est "safelisted").
+        // On lit la vraie reponse JSON renvoyee par Apps Script ({success:true/false})
+        // pour n'afficher le message de succes qu'apres confirmation reelle.
+        var resp = await fetch(APPS_SCRIPT_URL, { method: 'POST', body: fd });
+        var data = null;
+        try { data = await resp.json(); } catch (e2) { data = null; }
+        if (!resp.ok || !data || data.success !== true) { throw new Error('reponse serveur invalide'); }
         form.reset();
         if (btn) { btn.textContent = 'Message envoyé ✓'; }
         if (note) {
