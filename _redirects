@@ -1,0 +1,13 @@
+# Normalisation des URL finales — redirections permanentes (301) explicites.
+# Cloudflare ne gère pas automatiquement le slash final : chaque cas est déclaré ici
+# pour éviter toute redirection temporaire implicite et garantir une seule URL canonique par page.
+/estimation-immobiliere-narbonne/ /estimation-immobiliere-narbonne 301
+/mentions-legales/ /mentions-legales 301
+/politique-confidentialite/ /politique-confidentialite 301
+/merci-estimation/ /merci-estimation 301
+/conseils/combien-vaut-maison-narbonne/ /conseils/combien-vaut-maison-narbonne 301
+/vendre-bien-narbonne/ /vendre-bien-narbonne 301
+/guillaume-roque/ /guillaume-roque 301
+/prix-immobilier-narbonne/ /prix-immobilier-narbonne 301
+/ventes-realisees/ /ventes-realisees 301
+/avis-clients/ /avis-clients 301

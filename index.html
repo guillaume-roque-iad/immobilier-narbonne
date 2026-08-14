@@ -19,15 +19,17 @@
 <meta property="og:locale" content="fr_FR"/>
 <meta property="og:site_name" content="Guillaume Roque — Immobilier Narbonne"/>
 <meta name="twitter:card" content="summary_large_image"/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'"/>
-<noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/></noscript>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://immobiliernarbonne.com/#guillaume-roque","name":"Guillaume Roque","jobTitle":"Conseiller immobilier indépendant","image":"https://immobiliernarbonne.com/img-guillaume.jpg","email":"guillaume.roque@iadfrance.fr","telephone":"+33662108396","url":"https://immobiliernarbonne.com","worksFor":{"@type":"Organization","name":"I@D France"},"sameAs":["https://www.iadfrance.fr/conseiller-immobilier/guillaume.roque/estimation","https://www.google.com/maps?cid=10249811500579735043","https://www.instagram.com/guillaumeroqueiad/","https://www.facebook.com/guillaumeroque.immobilier/","https://www.linkedin.com/in/guillaume-roque-07a3bb8a/"]},{"@type":"RealEstateAgent","@id":"https://immobiliernarbonne.com/#agent","name":"Guillaume Roque — Immobilier Narbonne","image":"https://immobiliernarbonne.com/img-guillaume.jpg","telephone":"+33662108396","email":"guillaume.roque@iadfrance.fr","url":"https://immobiliernarbonne.com","areaServed":[{"@type":"City","name":"Narbonne"},{"@type":"AdministrativeArea","name":"Grand Narbonne"}],"employee":{"@id":"https://immobiliernarbonne.com/#guillaume-roque"},"sameAs":["https://www.google.com/maps?cid=10249811500579735043","https://www.instagram.com/guillaumeroqueiad/","https://www.facebook.com/guillaumeroque.immobilier/","https://www.linkedin.com/in/guillaume-roque-07a3bb8a/"]},{"@type":"WebSite","@id":"https://immobiliernarbonne.com/#website","name":"Guillaume Roque — Immobilier Narbonne","url":"https://immobiliernarbonne.com","publisher":{"@id":"https://immobiliernarbonne.com/#agent"},"inLanguage":"fr-FR"}]}
 </script>
+<link rel="preload" href="/fonts/inter-600.woff2" as="font" type="font/woff2" crossorigin/>
 <style>
+@font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/inter-400.woff2') format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:swap;src:url('/fonts/inter-500.woff2') format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:swap;src:url('/fonts/inter-600.woff2') format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:700;font-display:swap;src:url('/fonts/inter-700.woff2') format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:800;font-display:swap;src:url('/fonts/inter-800.woff2') format('woff2')}
+
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
   --bleu:#00B4EC;
@@ -334,7 +336,7 @@ footer{background:var(--bleu-fonce);padding:56px 8vw 36px}
   <div class="guide-card">
     <h3>Recevoir le guide et être recontacté</h3>
     <p class="gc-sub">Laissez vos coordonnées, je vous réponds personnellement sous 24h.</p>
-    <form id="fm-guide" onsubmit="return envoyerMail(event,'guide');" onfocusin="suivreDebutFormulaire('guide')">
+    <form id="fm-guide" onsubmit="return envoyerMail(event,'guide');">
       <div style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden" aria-hidden="true"><label>Laisser ce champ vide<input type="text" name="site_web" tabindex="-1" autocomplete="off"/></label></div>
       <div class="fg"><label for="g-nom">Nom et prénom *</label><input id="g-nom" type="text" name="nom" required placeholder="Jean Dupont"/></div>
       <div class="fg2">
@@ -363,6 +365,9 @@ footer{background:var(--bleu-fonce);padding:56px 8vw 36px}
     <div class="svcard"><div class="svicon">🔍</div><h3>Recherche d'acquéreurs</h3><p>Sélection d'acquéreurs qualifiés et solvables avant chaque visite, pour ne pas vous faire perdre de temps.</p></div>
     <div class="svcard"><div class="svicon">🤝</div><h3>Négociation des offres</h3><p>Analyse et négociation de chaque offre dans votre intérêt, avec transparence sur le déroulé.</p></div>
     <div class="svcard"><div class="svicon">📋</div><h3>Suivi jusqu'à l'acte</h3><p>Diagnostics, compromis, lien avec le notaire : un suivi administratif complet jusqu'à la signature définitive.</p></div>
+  </div>
+  <div style="text-align:center;margin-top:36px">
+    <a href="/vendre-bien-narbonne" style="font-size:13px;font-weight:700;color:#0079A3;text-decoration:none">Découvrir le détail des étapes pour vendre une maison à Narbonne →</a>
   </div>
 </section>
 
@@ -660,7 +665,7 @@ footer{background:var(--bleu-fonce);padding:56px 8vw 36px}
       return false;
     }
     </script>
-    <form id="fm" onsubmit="return envoyerMail(event,'contact');" onfocusin="suivreDebutFormulaire('contact')">
+    <form id="fm" onsubmit="return envoyerMail(event,'contact');">
       <div style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden" aria-hidden="true"><label>Laisser ce champ vide<input type="text" name="site_web" tabindex="-1" autocomplete="off"/></label></div>
       <div class="fg"><label for="f-nom">Nom et prénom *</label><input id="f-nom" type="text" name="nom" required placeholder="Jean Dupont"/></div>
       <div class="fg2">
@@ -697,10 +702,11 @@ footer{background:var(--bleu-fonce);padding:56px 8vw 36px}
     </div>
     <div class="fc">
       <h3>Ressources</h3>
+      <a href="/vendre-bien-narbonne">Vendre une maison ou un appartement à Narbonne</a>
+      <a href="/prix-immobilier-narbonne">Consulter les prix immobiliers à Narbonne</a>
+      <a href="/guillaume-roque">Découvrir la méthode de Guillaume Roque</a>
       <a href="#articles">Guides Narbonne</a>
       <a href="#avis">Avis clients</a>
-      <a href="/estimation-immobiliere-narbonne">Estimation gratuite</a>
-      <a href="https://www.iadfrance.fr/conseiller-immobilier/guillaume.roque" target="_blank" rel="noopener" onclick="if(typeof trackEvent==='function')trackEvent('click_iad_profile',{emplacement:'footer'})">Profil iad officiel</a>
     </div>
     <div class="fc">
       <h3>Suivez-moi</h3>
@@ -712,7 +718,7 @@ footer{background:var(--bleu-fonce);padding:56px 8vw 36px}
   </div>
   <div class="fbot">
     <p class="fleg">Guillaume Roque, mandataire indépendant en immobilier (sans détention de fonds), agent commercial de la SAS I@D France immatriculé au RSAC, titulaire de la carte de démarchage immobilier pour le compte de la société I@D France SAS. Site indépendant, non officiel iad France. © 2026</p>
-    <span class="fcopy"><a href="/mentions-legales" style="color:inherit;text-decoration:underline">Mentions légales</a> · <a href="/politique-confidentialite" style="color:inherit;text-decoration:underline">Confidentialité</a> · immobiliernarbonne.com</span>
+    <span class="fcopy"><a href="/mentions-legales" style="color:inherit;text-decoration:underline">Mentions légales</a> · <a href="/politique-confidentialite" style="color:inherit;text-decoration:underline">Confidentialité</a> · <a href="/politique-confidentialite#cookies" onclick="if(typeof ouvrirGestionCookies==='function')return ouvrirGestionCookies();" style="color:inherit;text-decoration:underline">Gérer mes cookies</a> · immobiliernarbonne.com</span>
   </div>
 </footer>
 
@@ -725,47 +731,140 @@ footer{background:var(--bleu-fonce);padding:56px 8vw 36px}
   le cablage des evenements avant meme d'avoir un compte GA4.
   Emplacement a completer par Guillaume : GA4_MEASUREMENT_ID = 'G-XXXXXXXXXX';
 -->
-<div id="cookieBanner" style="display:none;position:fixed;left:0;right:0;bottom:0;z-index:2000;background:#0B2436;color:#fff;padding:16px 5vw">
+<div id="cookieBanner" style="display:none;position:fixed;left:0;right:0;bottom:0;z-index:2000;background:#0B2436;color:#fff;padding:18px 5vw">
   <div style="max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between">
-    <p style="font-size:12.5px;line-height:1.6;color:rgba(255,255,255,.9);margin:0;max-width:640px">Ce site n'utilise aujourd'hui aucun cookie de mesure d'audience. Si vous acceptez, un outil de mesure pourra être activé pour améliorer le site — vos coordonnées ne sont jamais transmises à cet outil. <a href="/politique-confidentialite" style="color:#fff;text-decoration:underline">En savoir plus</a></p>
-    <div style="display:flex;gap:10px;flex-shrink:0">
+    <div style="max-width:640px">
+      <p style="font-size:12.5px;line-height:1.6;color:rgba(255,255,255,.9);margin:0 0 6px">Ce site n'utilise aujourd'hui aucun cookie de mesure d'audience. Si vous acceptez, un outil de mesure pourra être activé pour améliorer le site — vos coordonnées ne sont jamais transmises à cet outil. <a href="/politique-confidentialite" style="color:#fff;text-decoration:underline">En savoir plus</a></p>
+      <p id="consentStatutTexte" style="font-size:11px;color:rgba(255,255,255,.6);margin:0"></p>
+    </div>
+    <div style="display:flex;gap:10px;flex-shrink:0;flex-wrap:wrap;align-items:center">
+      <button id="consentBtnRetirer" onclick="retirerConsentement()" style="display:none;background:transparent;border:1px solid rgba(255,255,255,.4);color:#fff;font-size:12px;font-weight:600;padding:8px 16px;border-radius:100px;cursor:pointer">Retirer mon consentement</button>
       <button onclick="setConsent(false)" style="background:transparent;border:1px solid rgba(255,255,255,.4);color:#fff;font-size:12px;font-weight:600;padding:8px 16px;border-radius:100px;cursor:pointer">Refuser</button>
       <button onclick="setConsent(true)" style="background:var(--bleu);border:none;color:#fff;font-size:12px;font-weight:700;padding:8px 18px;border-radius:100px;cursor:pointer">Accepter</button>
+      <button onclick="document.getElementById('cookieBanner').style.display='none'" aria-label="Fermer ce panneau" style="background:transparent;border:none;color:rgba(255,255,255,.55);font-size:16px;padding:4px 10px;cursor:pointer;line-height:1">✕</button>
     </div>
   </div>
 </div>
 <script>
 var GA4_MEASUREMENT_ID = ''; // ex: 'G-XXXXXXXXXX' — laisser vide tant que Guillaume n'a pas fourni son propre identifiant GA4
+var CONSENT_KEY = 'consent_mesure_audience';
+var CONSENT_DUREE_MS = 183 * 24 * 60 * 60 * 1000; // ~6 mois — passé ce délai, le choix expire et est redemandé
 
 window.dataLayer = window.dataLayer || [];
+function gtag() { window.dataLayer.push(arguments); }
+gtag('consent', 'default', { analytics_storage: 'denied' }); // mode Consent par défaut : refusé tant que non accepté explicitement
+
 function trackEvent(nom, params) {
   window.dataLayer.push(Object.assign({event: nom}, params || {}));
 }
+
+function lireConsentement() {
+  try {
+    var brut = localStorage.getItem(CONSENT_KEY);
+    if (!brut) return null;
+    var data = JSON.parse(brut);
+    if (!data || !data.expiresAt || Date.now() > Date.parse(data.expiresAt)) return null; // choix expiré : on redemande
+    return data;
+  } catch (e) { return null; }
+}
+
+function ecrireConsentement(choice) {
+  var maintenant = new Date();
+  var expiration = new Date(maintenant.getTime() + CONSENT_DUREE_MS);
+  var data = { choice: choice, date: maintenant.toISOString(), expiresAt: expiration.toISOString() };
+  try { localStorage.setItem(CONSENT_KEY, JSON.stringify(data)); } catch (e) {}
+  return data;
+}
+
+function supprimerCookiesAnalytics() {
+  // Retire les cookies Google Analytics accessibles en JS (_ga, _ga_<container-id>, _gid)
+  document.cookie.split(';').map(function (c) { return c.split('=')[0].trim(); })
+    .filter(function (n) { return n === '_gid' || n.indexOf('_ga') === 0; })
+    .forEach(function (n) {
+      document.cookie = n + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+      document.cookie = n + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=.' + location.hostname + ';';
+    });
+}
+
 function loadGA4() {
   if (!GA4_MEASUREMENT_ID) return;
+  gtag('consent', 'update', { analytics_storage: 'granted' });
   var s = document.createElement('script');
   s.async = true;
   s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA4_MEASUREMENT_ID;
   document.head.appendChild(s);
-  window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
-  window.gtag('js', new Date());
-  window.gtag('config', GA4_MEASUREMENT_ID, {anonymize_ip: true});
+  gtag('js', new Date());
+  gtag('config', GA4_MEASUREMENT_ID, { anonymize_ip: true });
 }
-function setConsent(accorde) {
-  try { localStorage.setItem('consent_mesure_audience', accorde ? 'granted' : 'denied'); } catch (e) {}
+
+function majInterfaceConsentement() {
+  var data = lireConsentement();
+  var elStatut = document.getElementById('consentStatutTexte');
+  var btnRetirer = document.getElementById('consentBtnRetirer');
+  if (!elStatut) return;
+  if (!GA4_MEASUREMENT_ID) {
+    elStatut.textContent = "Aucun outil de mesure d'audience n'est actif sur ce site actuellement.";
+    if (btnRetirer) btnRetirer.style.display = 'none';
+  } else if (data && data.choice === 'accepted') {
+    elStatut.textContent = 'Mesure d\'audience acceptée le ' + new Date(data.date).toLocaleDateString('fr-FR') + '.';
+    if (btnRetirer) btnRetirer.style.display = 'inline-block';
+  } else if (data && data.choice === 'denied') {
+    elStatut.textContent = 'Mesure d\'audience refusée le ' + new Date(data.date).toLocaleDateString('fr-FR') + '.';
+    if (btnRetirer) btnRetirer.style.display = 'none';
+  } else {
+    elStatut.textContent = 'Aucun choix enregistré pour le moment.';
+    if (btnRetirer) btnRetirer.style.display = 'none';
+  }
+}
+
+function setConsent(accepte) {
+  ecrireConsentement(accepte ? 'accepted' : 'denied');
   var banniere = document.getElementById('cookieBanner');
   if (banniere) banniere.style.display = 'none';
-  if (accorde) loadGA4();
+  if (accepte) {
+    loadGA4();
+  } else {
+    gtag('consent', 'update', { analytics_storage: 'denied' });
+    supprimerCookiesAnalytics();
+  }
+  majInterfaceConsentement();
 }
+
+function retirerConsentement() {
+  ecrireConsentement('denied');
+  gtag('consent', 'update', { analytics_storage: 'denied' });
+  supprimerCookiesAnalytics();
+  majInterfaceConsentement();
+  var banniere = document.getElementById('cookieBanner');
+  if (banniere) banniere.style.display = 'none';
+}
+
+function ouvrirGestionCookies() {
+  majInterfaceConsentement();
+  var banniere = document.getElementById('cookieBanner');
+  if (banniere) banniere.style.display = 'block';
+  return false;
+}
+
 (function initConsentement() {
-  var choix = null;
-  try { choix = localStorage.getItem('consent_mesure_audience'); } catch (e) {}
-  if (choix === 'granted') { loadGA4(); }
-  else if (choix !== 'denied' && GA4_MEASUREMENT_ID) {
+  var data = lireConsentement();
+  if (data && data.choice === 'accepted') {
+    loadGA4();
+  } else if (!data && GA4_MEASUREMENT_ID) {
     var banniere = document.getElementById('cookieBanner');
     if (banniere) banniere.style.display = 'block';
   }
+  majInterfaceConsentement();
+  if (location.hash === '#cookies') { ouvrirGestionCookies(); }
 })();
+
+// Suivi du 1er focus dans un formulaire (remplace les attributs inline onfocusin)
+document.addEventListener('focusin', function (e) {
+  var f = e.target.closest('form');
+  if (!f) return;
+  if (f.id === 'fm-guide') suivreDebutFormulaire('guide');
+  else if (f.id === 'fm') suivreDebutFormulaire('contact');
+});
 </script>
 
 </body>
