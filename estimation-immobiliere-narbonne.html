@@ -87,7 +87,7 @@ body{font-family:'Inter',-apple-system,sans-serif;color:var(--noir);background:v
 .hs strong{display:block;font-size:34px;font-weight:800;color:#fff;letter-spacing:-.04em;line-height:1}
 .hs span{font-size:11px;color:rgba(255,255,255,0.92);text-transform:uppercase;letter-spacing:.1em;font-weight:600;margin-top:4px;display:block}
 .hero-right{position:relative}
-.hero-photo{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top;border-radius:24px;display:block}
+.hero-photo{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;object-position:top;border-radius:24px;display:block}
 .hero-card{position:absolute;bottom:20px;left:-28px;background:rgba(255,255,255,0.95);backdrop-filter:blur(16px);border-radius:14px;padding:16px 20px;box-shadow:0 8px 32px rgba(0,0,0,0.12)}
 .hero-card strong{display:block;font-size:14px;font-weight:700;color:var(--noir);margin-bottom:2px}
 .hero-card span{font-size:12px;color:var(--gris)}
@@ -145,7 +145,7 @@ body{font-family:'Inter',-apple-system,sans-serif;color:var(--noir);background:v
 /* GUILLAUME */
 .guil{padding:110px 8vw;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
 .guil-img{position:relative}
-.guil-photo{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:top;border-radius:24px;display:block}
+.guil-photo{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:top;border-radius:24px;display:block}
 .guil-tag{position:absolute;bottom:24px;right:-20px;background:#fff;border-radius:14px;padding:16px 22px;box-shadow:0 8px 32px rgba(0,0,0,.1)}
 .guil-tag strong{display:block;font-size:14px;font-weight:700;color:#C84133;margin-bottom:2px}
 .guil-tag span{font-size:12px;color:var(--gris)}
@@ -307,7 +307,7 @@ footer{background:var(--bleu-fonce);padding:56px 8vw 36px}
   </div>
   <div class="hero-right">
     <div class="hero-rating"><strong>4,9</strong><span>/5 · 97 avis</span></div>
-    <picture><source type="image/avif" srcset="/img-guillaume.avif"/><source type="image/webp" srcset="/img-guillaume.webp"/><img src="/img-guillaume.jpg" alt="Guillaume Roque, conseiller iad France à Narbonne" id="heroPhoto" class="hero-photo" fetchpriority="high" decoding="async"/></picture>
+    <picture><source type="image/avif" srcset="/img-guillaume.avif"/><source type="image/webp" srcset="/img-guillaume.webp"/><img src="/img-guillaume.jpg" alt="Guillaume Roque, conseiller iad France à Narbonne" id="heroPhoto" width="900" height="1350" class="hero-photo" fetchpriority="high" decoding="async"/></picture>
     <div class="hero-card">
       <strong>Guillaume Roque</strong>
       <span>Conseiller iad France · Narbonne</span>
@@ -358,7 +358,7 @@ footer{background:var(--bleu-fonce);padding:56px 8vw 36px}
 <!-- GUILLAUME -->
 <section class="guil" id="guillaume">
   <div class="guil-img">
-    <picture><source type="image/avif" srcset="/img-guillaume.avif"/><source type="image/webp" srcset="/img-guillaume.webp"/><img src="/img-guillaume.jpg" alt="Guillaume Roque, conseiller iad France à Narbonne" id="guilPhoto" class="guil-photo" loading="lazy" decoding="async"/></picture>
+    <picture><source type="image/avif" srcset="/img-guillaume.avif"/><source type="image/webp" srcset="/img-guillaume.webp"/><img src="/img-guillaume.jpg" alt="Guillaume Roque, conseiller iad France à Narbonne" id="guilPhoto" width="900" height="1350" class="guil-photo" loading="lazy" decoding="async"/></picture>
     <div class="guil-tag"><strong>Conseiller iad France</strong><span>Narbonne · depuis 2013</span></div>
   </div>
   <div>
@@ -560,12 +560,13 @@ footer{background:var(--bleu-fonce);padding:56px 8vw 36px}
         }
       } catch (err) {
         if (btn) { btn.disabled = false; btn.textContent = texteOriginal; }
+        if (note) { note.textContent = "L'envoi automatique a rencontré un problème : votre messagerie s'ouvre avec votre demande pré-remplie, il ne vous reste qu'à l'envoyer. Vous pouvez aussi appeler directement le 06 62 10 83 96."; }
         envoyerParMailto();
       }
       return false;
     }
     </script>
-    <form id="fm-estim" onsubmit="return envoyerMail(event,'estimation');">
+    <form id="fm-estim" method="post" onsubmit="return envoyerMail(event,'estimation');">
       <div style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden" aria-hidden="true"><label>Laisser ce champ vide<input type="text" name="site_web" tabindex="-1" autocomplete="off"/></label></div>
       <div class="fg"><label for="e-nom">Nom et prénom *</label><input id="e-nom" type="text" name="nom" required placeholder="Jean Dupont"/></div>
       <div class="fg2">
@@ -617,7 +618,7 @@ footer{background:var(--bleu-fonce);padding:56px 8vw 36px}
     </div>
   </div>
   <div class="fbot">
-    <p class="fleg">Guillaume Roque, mandataire indépendant en immobilier (sans détention de fonds), agent commercial de la SAS I@D France immatriculé au RSAC, titulaire de la carte de démarchage immobilier pour le compte de la société I@D France SAS. Site indépendant, non officiel iad France. © 2026</p>
+    <p class="fleg">Guillaume Roque, conseiller immobilier indépendant iad France, mandataire indépendant en immobilier (sans détention de fonds), agent commercial EI inscrit au RSAC de Narbonne sous le numéro 512 124 215, de la SAS I@D France, titulaire de la carte de démarchage immobilier pour le compte de la société I@D France SAS, intervenant à Narbonne et dans le Grand Narbonne. Site indépendant, non officiel iad France. © 2026</p>
     <span class="fcopy"><a href="/mentions-legales" style="color:inherit;text-decoration:underline">Mentions légales</a> · <a href="/politique-confidentialite" style="color:inherit;text-decoration:underline">Confidentialité</a> · <a href="/politique-confidentialite#cookies" onclick="if(typeof ouvrirGestionCookies==='function')return ouvrirGestionCookies();" style="color:inherit;text-decoration:underline">Gérer mes cookies</a> · immobiliernarbonne.com</span>
   </div>
 </footer>
