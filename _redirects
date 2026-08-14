@@ -11,3 +11,9 @@
 /prix-immobilier-narbonne/ /prix-immobilier-narbonne 301
 /ventes-realisees/ /ventes-realisees 301
 /avis-clients/ /avis-clients 301
+/conseils/erreurs-qui-ralentissent-vente-narbonne/ /conseils/erreurs-qui-ralentissent-vente-narbonne 301
+/conseils/diagnostics-vente-narbonne/ /conseils/diagnostics-vente-narbonne 301
+/conseils/juste-prix-maison-narbonne/ /conseils/juste-prix-maison-narbonne 301
+
+# Page 404 — statut HTTP 404 réel pour toute URL non reconnue (catch-all, doit rester en dernier)
+/* /404.html 404
