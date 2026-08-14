@@ -15,5 +15,8 @@
 /conseils/diagnostics-vente-narbonne/ /conseils/diagnostics-vente-narbonne 301
 /conseils/juste-prix-maison-narbonne/ /conseils/juste-prix-maison-narbonne 301
 
-# Page 404 — statut HTTP 404 réel pour toute URL non reconnue (catch-all, doit rester en dernier)
-/* /404.html 404
+# NB : la page 404 personnalisee n'est PAS geree ici. Ce projet est deploye comme un Cloudflare
+# Worker a assets statiques (pas Cloudflare Pages classique) : les regles _redirects n'acceptent
+# que les statuts 200/301/302/303/307/308 (une regle "404" ici fait echouer TOUT le build, cause
+# reelle du blocage du Round 19). La page 404.html est desormais servie via not_found_handling
+# dans wrangler.toml, le mecanisme correct et supporte pour ce type de projet.

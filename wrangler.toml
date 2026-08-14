@@ -3,3 +3,5 @@ compatibility_date = "2024-09-23"
 
 [assets]
 directory = "."
+# Sert 404.html (present a la racine) avec un vrai statut HTTP 404 pour toute URL non reconnue.
+not_found_handling = "404-page"
