@@ -164,7 +164,7 @@ footer{background:var(--bleu-fonce);padding:56px 8vw 36px}
 <div id="cookieBanner" style="display:none;position:fixed;left:0;right:0;bottom:0;z-index:2000;background:#0B2436;color:#fff;padding:18px 5vw">
   <div style="max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between">
     <div style="max-width:640px">
-      <p style="font-size:12.5px;line-height:1.6;color:rgba(255,255,255,.9);margin:0 0 6px">Ce site n'utilise aujourd'hui aucun cookie de mesure d'audience. Si vous acceptez, un outil de mesure pourra être activé pour améliorer le site — vos coordonnées ne sont jamais transmises à cet outil. <a href="/politique-confidentialite" style="color:#fff;text-decoration:underline">En savoir plus</a></p>
+      <p style="font-size:12.5px;line-height:1.6;color:rgba(255,255,255,.9);margin:0 0 6px">Ce site utilise Google Analytics 4, un outil de mesure d'audience, uniquement si vous l'acceptez. Vos coordonnées personnelles ne sont jamais transmises à cet outil. <a href="/politique-confidentialite" style="color:#fff;text-decoration:underline">En savoir plus</a></p>
       <p id="consentStatutTexte" style="font-size:11px;color:rgba(255,255,255,.6);margin:0"></p>
     </div>
     <div style="display:flex;gap:10px;flex-shrink:0;flex-wrap:wrap;align-items:center">
@@ -176,7 +176,7 @@ footer{background:var(--bleu-fonce);padding:56px 8vw 36px}
   </div>
 </div>
 <script>
-var GA4_MEASUREMENT_ID = ''; // ex: 'G-XXXXXXXXXX' — laisser vide tant que Guillaume n'a pas fourni son propre identifiant GA4
+var GA4_MEASUREMENT_ID = 'G-DXS5R3BPDY'; // identifiant fourni par Guillaume le 14/08/2026 — charge uniquement apres consentement (voir loadGA4())
 var CONSENT_KEY = 'consent_mesure_audience';
 var CONSENT_DUREE_MS = 183 * 24 * 60 * 60 * 1000; // ~6 mois — passé ce délai, le choix expire et est redemandé
 
