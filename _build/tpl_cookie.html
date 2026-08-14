@@ -1,0 +1,141 @@
+<!-- MESURE D'AUDIENCE (RGPD) -->
+<!--
+  Aucun identifiant GA4 n'est configure : tant que GA4_MEASUREMENT_ID reste
+  vide, aucun script tiers n'est charge et aucun cookie de mesure n'est depose.
+  Emplacement a completer par Guillaume : GA4_MEASUREMENT_ID = 'G-XXXXXXXXXX';
+-->
+<div id="cookieBanner" style="display:none;position:fixed;left:0;right:0;bottom:0;z-index:2000;background:#0B2436;color:#fff;padding:18px 5vw">
+  <div style="max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between">
+    <div style="max-width:640px">
+      <p style="font-size:12.5px;line-height:1.6;color:rgba(255,255,255,.9);margin:0 0 6px">Ce site utilise Google Analytics 4, un outil de mesure d'audience, uniquement si vous l'acceptez. Vos coordonnées personnelles ne sont jamais transmises à cet outil. <a href="/politique-confidentialite" style="color:#fff;text-decoration:underline">En savoir plus</a></p>
+      <p id="consentStatutTexte" style="font-size:11px;color:rgba(255,255,255,.6);margin:0"></p>
+    </div>
+    <div style="display:flex;gap:10px;flex-shrink:0;flex-wrap:wrap;align-items:center">
+      <button id="consentBtnRetirer" onclick="retirerConsentement()" style="display:none;background:transparent;border:1px solid rgba(255,255,255,.4);color:#fff;font-size:12px;font-weight:600;padding:8px 16px;border-radius:100px;cursor:pointer">Retirer mon consentement</button>
+      <button onclick="setConsent(false)" style="background:transparent;border:1px solid rgba(255,255,255,.4);color:#fff;font-size:12px;font-weight:600;padding:8px 16px;border-radius:100px;cursor:pointer">Refuser</button>
+      <button onclick="setConsent(true)" style="background:var(--bleu);border:none;color:#fff;font-size:12px;font-weight:700;padding:8px 18px;border-radius:100px;cursor:pointer">Accepter</button>
+      <button onclick="document.getElementById('cookieBanner').style.display='none'" aria-label="Fermer ce panneau" style="background:transparent;border:none;color:rgba(255,255,255,.55);font-size:16px;padding:4px 10px;cursor:pointer;line-height:1">✕</button>
+    </div>
+  </div>
+</div>
+<script>
+var GA4_MEASUREMENT_ID = 'G-DXS5R3BPDY'; // identifiant fourni par Guillaume le 14/08/2026 — charge uniquement apres consentement (voir loadGA4())
+var CONSENT_KEY = 'consent_mesure_audience';
+var CONSENT_DUREE_MS = 183 * 24 * 60 * 60 * 1000; // ~6 mois — passé ce délai, le choix expire et est redemandé
+
+window.dataLayer = window.dataLayer || [];
+function gtag() { window.dataLayer.push(arguments); }
+gtag('consent', 'default', { analytics_storage: 'denied' }); // mode Consent par défaut : refusé tant que non accepté explicitement
+
+function trackEvent(nom, params) {
+  window.dataLayer.push(Object.assign({event: nom}, params || {}));
+}
+
+function lireConsentement() {
+  try {
+    var brut = localStorage.getItem(CONSENT_KEY);
+    if (!brut) return null;
+    var data = JSON.parse(brut);
+    if (!data || !data.expiresAt || Date.now() > Date.parse(data.expiresAt)) return null; // choix expiré : on redemande
+    return data;
+  } catch (e) { return null; }
+}
+
+function ecrireConsentement(choice) {
+  var maintenant = new Date();
+  var expiration = new Date(maintenant.getTime() + CONSENT_DUREE_MS);
+  var data = { choice: choice, date: maintenant.toISOString(), expiresAt: expiration.toISOString() };
+  try { localStorage.setItem(CONSENT_KEY, JSON.stringify(data)); } catch (e) {}
+  return data;
+}
+
+function supprimerCookiesAnalytics() {
+  // Retire les cookies Google Analytics accessibles en JS (_ga, _ga_<container-id>, _gid)
+  document.cookie.split(';').map(function (c) { return c.split('=')[0].trim(); })
+    .filter(function (n) { return n === '_gid' || n.indexOf('_ga') === 0; })
+    .forEach(function (n) {
+      document.cookie = n + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+      document.cookie = n + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=.' + location.hostname + ';';
+    });
+}
+
+function loadGA4() {
+  if (!GA4_MEASUREMENT_ID) return;
+  gtag('consent', 'update', { analytics_storage: 'granted' });
+  var s = document.createElement('script');
+  s.async = true;
+  s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA4_MEASUREMENT_ID;
+  document.head.appendChild(s);
+  gtag('js', new Date());
+  gtag('config', GA4_MEASUREMENT_ID, { anonymize_ip: true });
+}
+
+function majInterfaceConsentement() {
+  var data = lireConsentement();
+  var elStatut = document.getElementById('consentStatutTexte');
+  var btnRetirer = document.getElementById('consentBtnRetirer');
+  if (!elStatut) return;
+  if (!GA4_MEASUREMENT_ID) {
+    elStatut.textContent = "Aucun outil de mesure d'audience n'est actif sur ce site actuellement.";
+    if (btnRetirer) btnRetirer.style.display = 'none';
+  } else if (data && data.choice === 'accepted') {
+    elStatut.textContent = 'Mesure d\'audience acceptée le ' + new Date(data.date).toLocaleDateString('fr-FR') + '.';
+    if (btnRetirer) btnRetirer.style.display = 'inline-block';
+  } else if (data && data.choice === 'denied') {
+    elStatut.textContent = 'Mesure d\'audience refusée le ' + new Date(data.date).toLocaleDateString('fr-FR') + '.';
+    if (btnRetirer) btnRetirer.style.display = 'none';
+  } else {
+    elStatut.textContent = 'Aucun choix enregistré pour le moment.';
+    if (btnRetirer) btnRetirer.style.display = 'none';
+  }
+}
+
+function setConsent(accepte) {
+  ecrireConsentement(accepte ? 'accepted' : 'denied');
+  var banniere = document.getElementById('cookieBanner');
+  if (banniere) banniere.style.display = 'none';
+  if (accepte) {
+    loadGA4();
+  } else {
+    gtag('consent', 'update', { analytics_storage: 'denied' });
+    supprimerCookiesAnalytics();
+  }
+  majInterfaceConsentement();
+}
+
+function retirerConsentement() {
+  ecrireConsentement('denied');
+  gtag('consent', 'update', { analytics_storage: 'denied' });
+  supprimerCookiesAnalytics();
+  majInterfaceConsentement();
+  var banniere = document.getElementById('cookieBanner');
+  if (banniere) banniere.style.display = 'none';
+}
+
+function ouvrirGestionCookies() {
+  majInterfaceConsentement();
+  var banniere = document.getElementById('cookieBanner');
+  if (banniere) banniere.style.display = 'block';
+  return false;
+}
+
+(function initConsentement() {
+  var data = lireConsentement();
+  if (data && data.choice === 'accepted') {
+    loadGA4();
+  } else if (!data && GA4_MEASUREMENT_ID) {
+    var banniere = document.getElementById('cookieBanner');
+    if (banniere) banniere.style.display = 'block';
+  }
+  majInterfaceConsentement();
+  if (location.hash === '#cookies') { ouvrirGestionCookies(); }
+})();
+
+// Suivi du 1er focus dans le formulaire (remplace l'attribut inline onfocusin)
+document.addEventListener('focusin', function (e) {
+  var f = e.target.closest('form');
+  if (f && f.id === 'fm-estim') suivreDebutFormulaire('estimation');
+});
+</script>
+
+</body>
