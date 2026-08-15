@@ -265,7 +265,7 @@ Sources : <a href="https://www.service-public.fr/particuliers/vosdroits/F10798" 
   </div>
   <div class="fbot">
     <p class="fleg">Guillaume Roque, conseiller immobilier indépendant iad France, mandataire indépendant en immobilier (sans détention de fonds), agent commercial EI inscrit au RSAC de Narbonne sous le numéro 512 124 215, de la SAS I@D France, titulaire de la carte de démarchage immobilier pour le compte de la société I@D France SAS, intervenant à Narbonne et dans le Grand Narbonne. Site indépendant, non officiel iad France. © 2026</p>
-    <span class="fcopy"><a href="/mentions-legales" style="color:inherit;text-decoration:underline">Mentions légales</a> · <a href="/politique-confidentialite" style="color:inherit;text-decoration:underline">Confidentialité</a> · <a href="/politique-confidentialite#cookies" onclick="if(typeof ouvrirGestionCookies==='function')return ouvrirGestionCookies();" style="color:inherit;text-decoration:underline">Gérer mes cookies</a> · immobiliernarbonne.com</span>
+    <span class="fcopy"><a href="/mentions-legales" style="color:inherit;text-decoration:underline">Mentions légales</a> · <a href="/politique-confidentialite" style="color:inherit;text-decoration:underline">Confidentialité</a> · <a href="/politique-confidentialite#cookies" onclick="if(typeof ouvrirGestionCookies==='function')return ouvrirGestionCookies();" style="color:inherit;text-decoration:underline">Gérer mes cookies</a> · <a href="https://www.iadfrance.fr/bareme_honoraires_iad.pdf" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">Barème d'honoraires</a> · immobiliernarbonne.com</span>
   </div>
 </footer>
 <div id="cookieBanner" style="display:none;position:fixed;left:0;right:0;bottom:0;z-index:2000;background:#0B2436;color:#fff;padding:18px 5vw">
@@ -332,9 +332,12 @@ function supprimerCookiesAnalytics() {
 
 function loadGA4() {
   if (!GA4_MEASUREMENT_ID) return;
+  // Toujours remettre le consentement a jour, meme si le script est deja charge :
+  // sinon le scenario accepter -> retirer -> re-accepter sur la meme page (sans
+  // recharger) restait bloque avant la mise a jour du consentement.
+  gtag('consent', 'update', { analytics_storage: 'granted' });
   if (window.__ga4Loaded) return; // empeche un second chargement du script (ex. double clic, appel repete)
   window.__ga4Loaded = true;
-  gtag('consent', 'update', { analytics_storage: 'granted' });
   var s = document.createElement('script');
   s.async = true;
   s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA4_MEASUREMENT_ID;
