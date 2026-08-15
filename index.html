@@ -340,12 +340,12 @@ footer{background:var(--bleu-fonce);padding:56px 8vw 36px}
       <div style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden" aria-hidden="true"><label>Laisser ce champ vide<input type="text" name="site_web" tabindex="-1" autocomplete="off"/></label></div>
       <div class="fg"><label for="g-nom">Nom et prénom *</label><input id="g-nom" type="text" name="nom" required placeholder="Jean Dupont"/></div>
       <div class="fg2">
-        <div class="fg"><label for="g-tel">Téléphone *</label><input id="g-tel" type="tel" name="telephone" required placeholder="+33 6 00 00 00 00"/></div>
+        <div class="fg"><label for="g-tel">Téléphone *</label><input id="g-tel" type="tel" name="telephone" required placeholder="+33 6 00 00 00 00" pattern="[0-9+\s.\-()]{6,20}" title="Numéro de téléphone valide (chiffres, espaces, +, -, . acceptés)"/></div>
         <div class="fg"><label for="g-cp">Quartier / secteur</label><input id="g-cp" type="text" name="secteur" placeholder="Narbonne"/></div>
       </div>
       <div class="fg"><label for="g-email">Email *</label><input id="g-email" type="email" name="email" required placeholder="Votre adresse e-mail"/></div>
       <button type="submit" class="fsub">Recevoir le guide →</button>
-      <p class="fnote">Vos coordonnées sont transmises directement à Guillaume Roque, qui vous répond personnellement sous 24h — ou appelez directement le <a href="tel:+33662108396" style="color:inherit;text-decoration:underline">06 62 10 83 96</a>.</p>
+      <p class="fnote" role="status" aria-live="polite">Vos coordonnées sont transmises directement à Guillaume Roque, qui vous répond personnellement sous 24h — ou appelez directement le <a href="tel:+33662108396" style="color:inherit;text-decoration:underline">06 62 10 83 96</a>.</p>
       <p class="fnote" style="margin-top:6px">Les informations recueillies via ce formulaire sont destinées uniquement à Guillaume Roque pour traiter votre demande. Vous disposez d'un droit d'accès, de rectification et d'effacement de vos données — voir notre <a href="/politique-confidentialite" style="color:inherit;text-decoration:underline">politique de confidentialité</a>.</p>
     </form>
   </div>
@@ -647,6 +647,10 @@ footer{background:var(--bleu-fonce);padding:56px 8vw 36px}
           // Aucune donnee personnelle (nom, email, telephone) n'est transmise a la mesure d'audience.
           var nomEvtSucces = contexte === 'estimation' ? 'estimate_form_success' : (contexte === 'guide' ? 'download_seller_guide' : 'contact_form_success');
           trackEvent(nomEvtSucces, {form_type: contexte});
+          // Evenement de conversion standard GA4, envoye uniquement ici, apres
+          // confirmation reelle du serveur (data.success === true ci-dessus) —
+          // jamais sur une erreur d'envoi.
+          trackEvent('generate_lead', {lead_source: contexte, form_type: contexte});
         }
         if (btn) { btn.textContent = 'Message envoyé ✓'; }
         if (note) {
@@ -672,7 +676,7 @@ footer{background:var(--bleu-fonce);padding:56px 8vw 36px}
       <div class="fg"><label for="f-nom">Nom et prénom *</label><input id="f-nom" type="text" name="nom" required placeholder="Jean Dupont"/></div>
       <div class="fg2">
         <div class="fg"><label for="f-email">Email *</label><input id="f-email" type="email" name="email" required placeholder="Votre adresse e-mail"/></div>
-        <div class="fg"><label for="f-tel">Téléphone *</label><input id="f-tel" type="tel" name="telephone" required placeholder="+33 6 00 00 00 00"/></div>
+        <div class="fg"><label for="f-tel">Téléphone *</label><input id="f-tel" type="tel" name="telephone" required placeholder="+33 6 00 00 00 00" pattern="[0-9+\s.\-()]{6,20}" title="Numéro de téléphone valide (chiffres, espaces, +, -, . acceptés)"/></div>
       </div>
       <div class="fg2">
         <div class="fg"><label for="f-secteur">Secteur du bien</label><input id="f-secteur" type="text" name="secteur" placeholder="Narbonne"/></div>
@@ -680,7 +684,7 @@ footer{background:var(--bleu-fonce);padding:56px 8vw 36px}
       </div>
       <div class="fg"><label for="f-message">Votre message</label><textarea id="f-message" name="message" placeholder="Décrivez votre projet de vente..."></textarea></div>
       <button type="submit" class="fsub">Envoyer ma demande →</button>
-      <p class="fnote">Vos coordonnées sont transmises directement à Guillaume Roque, qui vous répond personnellement sous 24h — ou appelez directement le <a href="tel:+33662108396" style="color:inherit;text-decoration:underline">06 62 10 83 96</a>.</p>
+      <p class="fnote" role="status" aria-live="polite">Vos coordonnées sont transmises directement à Guillaume Roque, qui vous répond personnellement sous 24h — ou appelez directement le <a href="tel:+33662108396" style="color:inherit;text-decoration:underline">06 62 10 83 96</a>.</p>
       <p class="fnote" style="margin-top:6px">Les informations recueillies via ce formulaire sont destinées uniquement à Guillaume Roque pour traiter votre demande. Vous disposez d'un droit d'accès, de rectification et d'effacement de vos données — voir notre <a href="/politique-confidentialite" style="color:inherit;text-decoration:underline">politique de confidentialité</a>.</p>
     </form>
   </div>
@@ -756,7 +760,14 @@ function gtag() { window.dataLayer.push(arguments); }
 gtag('consent', 'default', { analytics_storage: 'denied' }); // mode Consent par défaut : refusé tant que non accepté explicitement
 
 function trackEvent(nom, params) {
-  window.dataLayer.push(Object.assign({event: nom}, params || {}));
+  // Appel officiel gtag('event', ...) : le site charge gtag.js directement
+  // (sans conteneur Google Tag Manager), donc un simple dataLayer.push()
+  // d'un objet ne produit aucun envoi reel. On repasse par window.gtag(),
+  // et on revalide le consentement a chaque appel (pas seulement au chargement).
+  var consentement = lireConsentement();
+  if (!consentement || consentement.choice !== 'accepted') return;
+  if (typeof window.gtag !== 'function') return;
+  window.gtag('event', nom, params || {});
 }
 
 function lireConsentement() {
@@ -789,6 +800,8 @@ function supprimerCookiesAnalytics() {
 
 function loadGA4() {
   if (!GA4_MEASUREMENT_ID) return;
+  if (window.__ga4Loaded) return; // empeche un second chargement du script (ex. double clic, appel repete)
+  window.__ga4Loaded = true;
   gtag('consent', 'update', { analytics_storage: 'granted' });
   var s = document.createElement('script');
   s.async = true;

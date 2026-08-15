@@ -435,7 +435,14 @@ function gtag() { window.dataLayer.push(arguments); }
 gtag('consent', 'default', { analytics_storage: 'denied' }); // mode Consent par défaut : refusé tant que non accepté explicitement
 
 function trackEvent(nom, params) {
-  window.dataLayer.push(Object.assign({event: nom}, params || {}));
+  // Appel officiel gtag('event', ...) : le site charge gtag.js directement
+  // (sans conteneur Google Tag Manager), donc un simple dataLayer.push()
+  // d'un objet ne produit aucun envoi reel. On repasse par window.gtag(),
+  // et on revalide le consentement a chaque appel (pas seulement au chargement).
+  var consentement = lireConsentement();
+  if (!consentement || consentement.choice !== 'accepted') return;
+  if (typeof window.gtag !== 'function') return;
+  window.gtag('event', nom, params || {});
 }
 
 function lireConsentement() {
@@ -467,6 +474,8 @@ function supprimerCookiesAnalytics() {
 
 function loadGA4() {
   if (!GA4_MEASUREMENT_ID) return;
+  if (window.__ga4Loaded) return; // empeche un second chargement du script (ex. double clic, appel repete)
+  window.__ga4Loaded = true;
   gtag('consent', 'update', { analytics_storage: 'granted' });
   var s = document.createElement('script');
   s.async = true;

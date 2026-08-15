@@ -544,7 +544,27 @@ footer{background:var(--bleu-fonce);padding:56px 8vw 36px}
           trackEvent('estimate_form_success', {form_type: contexte});
         }
         if (contexte === 'estimation') {
-          window.location.href = '/merci-estimation';
+          // La redirection vers /merci-estimation ne doit jamais couper l'envoi
+          // de l'evenement de conversion GA4 en cours de route, mais elle ne doit
+          // pas non plus rester bloquee si la mesure d'audience est refusee,
+          // absente (bloqueur de publicites) ou lente : on utilise event_callback
+          // pour rediriger des que gtag confirme l'envoi, avec un filet de
+          // securite (setTimeout) qui redirige de toute facon au bout d'1s max.
+          var estimRedirected = false;
+          var allerVersMerci = function () {
+            if (estimRedirected) return; // evite une double navigation si les deux chemins se declenchent
+            estimRedirected = true;
+            window.location.href = '/merci-estimation';
+          };
+          if (typeof trackEvent === 'function') {
+            trackEvent('generate_lead', {
+              lead_source: 'estimation',
+              form_type: 'estimation',
+              event_callback: allerVersMerci,
+              event_timeout: 1000
+            });
+          }
+          setTimeout(allerVersMerci, 1000);
           return false;
         }
         if (btn) { btn.textContent = 'Demande envoyée ✓'; }
@@ -571,7 +591,7 @@ footer{background:var(--bleu-fonce);padding:56px 8vw 36px}
       <div class="fg"><label for="e-nom">Nom et prénom *</label><input id="e-nom" type="text" name="nom" required placeholder="Jean Dupont"/></div>
       <div class="fg2">
         <div class="fg"><label for="e-email">Email *</label><input id="e-email" type="email" name="email" required placeholder="Votre adresse e-mail"/></div>
-        <div class="fg"><label for="e-tel">Téléphone *</label><input id="e-tel" type="tel" name="telephone" required placeholder="+33 6 00 00 00 00"/></div>
+        <div class="fg"><label for="e-tel">Téléphone *</label><input id="e-tel" type="tel" name="telephone" required placeholder="+33 6 00 00 00 00" pattern="[0-9+\s.\-()]{6,20}" title="Numéro de téléphone valide (chiffres, espaces, +, -, . acceptés)"/></div>
       </div>
       <div class="fg2">
         <div class="fg"><label for="e-secteur">Secteur du bien</label><input id="e-secteur" type="text" name="secteur" placeholder="Narbonne"/></div>
@@ -579,7 +599,7 @@ footer{background:var(--bleu-fonce);padding:56px 8vw 36px}
       </div>
       <div class="fg"><label for="e-message">Votre message</label><textarea id="e-message" name="message" placeholder="Décrivez votre bien (surface, nombre de pièces, état...)"></textarea></div>
       <button type="submit" class="fsub">Recevoir mon estimation gratuite →</button>
-      <p class="fnote">Vos coordonnées sont transmises directement à Guillaume Roque, qui vous répond personnellement sous 24h — ou appelez directement le <a href="tel:+33662108396" style="color:inherit;text-decoration:underline">06 62 10 83 96</a>.</p>
+      <p class="fnote" role="status" aria-live="polite">Vos coordonnées sont transmises directement à Guillaume Roque, qui vous répond personnellement sous 24h — ou appelez directement le <a href="tel:+33662108396" style="color:inherit;text-decoration:underline">06 62 10 83 96</a>.</p>
       <p class="fnote" style="margin-top:6px">Les informations recueillies via ce formulaire sont destinées uniquement à Guillaume Roque pour traiter votre demande d'estimation. Vous disposez d'un droit d'accès, de rectification et d'effacement de vos données — voir notre <a href="/politique-confidentialite" style="color:inherit;text-decoration:underline">politique de confidentialité</a>.</p>
     </form>
   </div>
@@ -653,7 +673,14 @@ function gtag() { window.dataLayer.push(arguments); }
 gtag('consent', 'default', { analytics_storage: 'denied' }); // mode Consent par défaut : refusé tant que non accepté explicitement
 
 function trackEvent(nom, params) {
-  window.dataLayer.push(Object.assign({event: nom}, params || {}));
+  // Appel officiel gtag('event', ...) : le site charge gtag.js directement
+  // (sans conteneur Google Tag Manager), donc un simple dataLayer.push()
+  // d'un objet ne produit aucun envoi reel. On repasse par window.gtag(),
+  // et on revalide le consentement a chaque appel (pas seulement au chargement).
+  var consentement = lireConsentement();
+  if (!consentement || consentement.choice !== 'accepted') return;
+  if (typeof window.gtag !== 'function') return;
+  window.gtag('event', nom, params || {});
 }
 
 function lireConsentement() {
@@ -686,6 +713,8 @@ function supprimerCookiesAnalytics() {
 
 function loadGA4() {
   if (!GA4_MEASUREMENT_ID) return;
+  if (window.__ga4Loaded) return; // empeche un second chargement du script (ex. double clic, appel repete)
+  window.__ga4Loaded = true;
   gtag('consent', 'update', { analytics_storage: 'granted' });
   var s = document.createElement('script');
   s.async = true;
