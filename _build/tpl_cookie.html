@@ -68,9 +68,12 @@ function supprimerCookiesAnalytics() {
 
 function loadGA4() {
   if (!GA4_MEASUREMENT_ID) return;
+  // Toujours remettre le consentement a jour, meme si le script est deja charge :
+  // sinon le scenario accepter -> retirer -> re-accepter sur la meme page (sans
+  // recharger) restait bloque avant la mise a jour du consentement.
+  gtag('consent', 'update', { analytics_storage: 'granted' });
   if (window.__ga4Loaded) return; // empeche un second chargement du script (ex. double clic, appel repete)
   window.__ga4Loaded = true;
-  gtag('consent', 'update', { analytics_storage: 'granted' });
   var s = document.createElement('script');
   s.async = true;
   s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA4_MEASUREMENT_ID;
