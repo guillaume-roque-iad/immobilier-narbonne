@@ -340,10 +340,16 @@ footer{background:var(--bleu-fonce);padding:56px 8vw 36px}
       <div style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden" aria-hidden="true"><label>Laisser ce champ vide<input type="text" name="site_web" tabindex="-1" autocomplete="off"/></label></div>
       <div class="fg"><label for="g-nom">Nom et prénom *</label><input id="g-nom" type="text" name="nom" required placeholder="Jean Dupont"/></div>
       <div class="fg2">
-        <div class="fg"><label for="g-tel">Téléphone *</label><input id="g-tel" type="tel" name="telephone" required placeholder="+33 6 00 00 00 00" pattern="[0-9+\s.\-()]{6,20}" title="Numéro de téléphone valide (chiffres, espaces, +, -, . acceptés)"/></div>
+        <div class="fg"><label for="g-tel">Téléphone</label><input id="g-tel" type="tel" name="telephone" placeholder="+33 6 00 00 00 00" pattern="[0-9+\s.\-()]{6,20}" title="Numéro de téléphone valide (chiffres, espaces, +, -, . acceptés)"/></div>
         <div class="fg"><label for="g-cp">Quartier / secteur</label><input id="g-cp" type="text" name="secteur" placeholder="Narbonne"/></div>
       </div>
       <div class="fg"><label for="g-email">Email *</label><input id="g-email" type="email" name="email" required placeholder="Votre adresse e-mail"/></div>
+      <div class="fg">
+        <label class="consent-telephone" style="display:flex;align-items:flex-start;gap:10px;font-size:12.5px;font-weight:400;text-transform:none;letter-spacing:normal;color:var(--gris-fonce);line-height:1.5;cursor:pointer">
+          <input type="checkbox" name="consent_telephone" id="g-consent-tel" value="oui" style="margin-top:3px;flex-shrink:0;width:auto"/>
+          <span>J'accepte d'être rappelé par Guillaume Roque afin d'échanger sur mon éventuel projet immobilier.</span>
+        </label>
+      </div>
       <button type="submit" class="fsub">Recevoir le guide →</button>
       <p class="fnote" role="status" aria-live="polite">Vos coordonnées sont transmises directement à Guillaume Roque, qui vous répond personnellement sous 24h — ou appelez directement le <a href="tel:+33662108396" style="color:inherit;text-decoration:underline">06 62 10 83 96</a>.</p>
       <p class="fnote" style="margin-top:6px">Les informations recueillies via ce formulaire sont destinées uniquement à Guillaume Roque pour traiter votre demande. Vous disposez d'un droit d'accès, de rectification et d'effacement de vos données — voir notre <a href="/politique-confidentialite" style="color:inherit;text-decoration:underline">politique de confidentialité</a>.</p>
@@ -588,6 +594,25 @@ footer{background:var(--bleu-fonce);padding:56px 8vw 36px}
       if (nomEvt && typeof trackEvent === 'function') trackEvent(nomEvt, {form_type: contexte});
     }
 
+    // Consentement au rappel telephonique (article L.223-2 du Code de la consommation,
+    // en vigueur depuis le 11/08/2026, source Legifrance) : le canal de contact choisi
+    // conditionne le caractere obligatoire du telephone et de la case de consentement.
+    // Aucune case non cochee n'est jamais interpretee comme un consentement.
+    function majCanalContact(form) {
+      var choix = form.querySelector('[name=canal_contact]:checked');
+      var canal = choix ? choix.value : '';
+      var champTel = form.querySelector('[name=telephone]');
+      var blocConsent = form.querySelector('.bloc-consent-tel');
+      var caseConsent = form.querySelector('[name=consent_telephone]');
+      var estTelephone = canal === 'telephone';
+      if (champTel) champTel.required = estTelephone;
+      if (blocConsent) blocConsent.style.display = estTelephone ? '' : 'none';
+      if (caseConsent) {
+        caseConsent.required = estTelephone;
+        if (!estTelephone) caseConsent.checked = false;
+      }
+    }
+
     async function envoyerMail(e, contexte) {
       e.preventDefault();
       var form = e.target;
@@ -606,8 +631,14 @@ footer{background:var(--bleu-fonce);padding:56px 8vw 36px}
       var secteur = form.querySelector('[name=secteur]') ? form.querySelector('[name=secteur]').value : '';
       var typebien = form.querySelector('[name=typebien]') ? form.querySelector('[name=typebien]').value : '';
       var message = form.querySelector('[name=message]') ? form.querySelector('[name=message]').value : '';
+      var canalChoisi = form.querySelector('[name=canal_contact]:checked');
+      var canal = canalChoisi ? canalChoisi.value : '';
+      var caseConsentTel = form.querySelector('[name=consent_telephone]');
+      var consentTel = (caseConsentTel && caseConsentTel.checked) ? 'oui' : 'non';
       var sujet = contexte === 'guide' ? 'Demande du guide vendeur - Narbonne' : 'Projet de vente a Narbonne';
       var corps = 'Nom : ' + nom + '\nTelephone : ' + tel + '\nEmail : ' + email
+        + (canal ? '\nCanal de contact souhaite : ' + (canal === 'telephone' ? 'Telephone' : 'Email') : '')
+        + '\nConsentement rappel telephonique : ' + (consentTel === 'oui' ? 'Oui' : 'Non')
         + (secteur ? '\nSecteur : ' + secteur : '')
         + (typebien ? '\nType de bien : ' + typebien : '')
         + (message ? '\nMessage : ' + message : '');
@@ -635,6 +666,15 @@ footer{background:var(--bleu-fonce);padding:56px 8vw 36px}
         fd.append('secteur', secteur);
         fd.append('typebien', typebien);
         fd.append('message', message);
+        if (canal) fd.append('canal_contact', canal);
+        fd.append('consent_telephone', consentTel);
+        if (consentTel === 'oui') {
+          // Preuve tracable du consentement : horodatage ISO, page d'origine et
+          // version du texte de consentement affiche au moment de la collecte.
+          fd.append('consent_timestamp', new Date().toISOString());
+          fd.append('consent_source', window.location.href);
+          fd.append('consent_text_version', '2026-08');
+        }
         // FormData evite le preflight CORS (multipart/form-data est "safelisted").
         // On lit la vraie reponse JSON renvoyee par Apps Script ({success:true/false})
         // pour n'afficher le message de succes qu'apres confirmation reelle.
@@ -643,6 +683,7 @@ footer{background:var(--bleu-fonce);padding:56px 8vw 36px}
         try { data = await resp.json(); } catch (e2) { data = null; }
         if (!resp.ok || !data || data.success !== true) { throw new Error('reponse serveur invalide'); }
         form.reset();
+        if (typeof majCanalContact === 'function') majCanalContact(form); // reinitialise l'affichage du bloc de consentement apres reset()
         if (typeof trackEvent === 'function') {
           // Aucune donnee personnelle (nom, email, telephone) n'est transmise a la mesure d'audience.
           var nomEvtSucces = contexte === 'estimation' ? 'estimate_form_success' : (contexte === 'guide' ? 'download_seller_guide' : 'contact_form_success');
@@ -674,9 +715,20 @@ footer{background:var(--bleu-fonce);padding:56px 8vw 36px}
     <form id="fm" method="post" onsubmit="return envoyerMail(event,'contact');">
       <div style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden" aria-hidden="true"><label>Laisser ce champ vide<input type="text" name="site_web" tabindex="-1" autocomplete="off"/></label></div>
       <div class="fg"><label for="f-nom">Nom et prénom *</label><input id="f-nom" type="text" name="nom" required placeholder="Jean Dupont"/></div>
+      <fieldset class="contact-preference" style="border:none;padding:0;margin:0 0 18px">
+        <legend style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--gris);margin-bottom:8px;padding:0">Comment souhaitez-vous être recontacté ? *</legend>
+        <label style="display:flex;align-items:center;gap:8px;font-size:14px;font-weight:400;text-transform:none;letter-spacing:normal;color:var(--noir);margin-bottom:8px;cursor:pointer"><input type="radio" name="canal_contact" value="telephone" required onchange="majCanalContact(this.form)" style="width:auto"/> Par téléphone</label>
+        <label style="display:flex;align-items:center;gap:8px;font-size:14px;font-weight:400;text-transform:none;letter-spacing:normal;color:var(--noir);cursor:pointer"><input type="radio" name="canal_contact" value="email" required onchange="majCanalContact(this.form)" style="width:auto"/> Par e-mail</label>
+      </fieldset>
       <div class="fg2">
         <div class="fg"><label for="f-email">Email *</label><input id="f-email" type="email" name="email" required placeholder="Votre adresse e-mail"/></div>
-        <div class="fg"><label for="f-tel">Téléphone *</label><input id="f-tel" type="tel" name="telephone" required placeholder="+33 6 00 00 00 00" pattern="[0-9+\s.\-()]{6,20}" title="Numéro de téléphone valide (chiffres, espaces, +, -, . acceptés)"/></div>
+        <div class="fg"><label for="f-tel">Téléphone</label><input id="f-tel" type="tel" name="telephone" placeholder="+33 6 00 00 00 00" pattern="[0-9+\s.\-()]{6,20}" title="Numéro de téléphone valide (chiffres, espaces, +, -, . acceptés)"/></div>
+      </div>
+      <div class="fg bloc-consent-tel" style="display:none">
+        <label class="consent-telephone" style="display:flex;align-items:flex-start;gap:10px;font-size:12.5px;font-weight:400;text-transform:none;letter-spacing:normal;color:var(--gris-fonce);line-height:1.5;cursor:pointer">
+          <input type="checkbox" name="consent_telephone" id="f-consent-tel" value="oui" style="margin-top:3px;flex-shrink:0;width:auto"/>
+          <span>J'accepte d'être rappelé par Guillaume Roque au sujet de ma demande. Ce consentement peut être retiré à tout moment en écrivant à <a href="mailto:guillaume.roque@iadfrance.fr" style="color:inherit">guillaume.roque@iadfrance.fr</a>.</span>
+        </label>
       </div>
       <div class="fg2">
         <div class="fg"><label for="f-secteur">Secteur du bien</label><input id="f-secteur" type="text" name="secteur" placeholder="Narbonne"/></div>
@@ -724,7 +776,7 @@ footer{background:var(--bleu-fonce);padding:56px 8vw 36px}
   </div>
   <div class="fbot">
     <p class="fleg">Guillaume Roque, conseiller immobilier indépendant iad France, mandataire indépendant en immobilier (sans détention de fonds), agent commercial EI inscrit au RSAC de Narbonne sous le numéro 512 124 215, de la SAS I@D France, titulaire de la carte de démarchage immobilier pour le compte de la société I@D France SAS, intervenant à Narbonne et dans le Grand Narbonne. Site indépendant, non officiel iad France. © 2026</p>
-    <span class="fcopy"><a href="/mentions-legales" style="color:inherit;text-decoration:underline">Mentions légales</a> · <a href="/politique-confidentialite" style="color:inherit;text-decoration:underline">Confidentialité</a> · <a href="/politique-confidentialite#cookies" onclick="if(typeof ouvrirGestionCookies==='function')return ouvrirGestionCookies();" style="color:inherit;text-decoration:underline">Gérer mes cookies</a> · immobiliernarbonne.com</span>
+    <span class="fcopy"><a href="/mentions-legales" style="color:inherit;text-decoration:underline">Mentions légales</a> · <a href="/politique-confidentialite" style="color:inherit;text-decoration:underline">Confidentialité</a> · <a href="/politique-confidentialite#cookies" onclick="if(typeof ouvrirGestionCookies==='function')return ouvrirGestionCookies();" style="color:inherit;text-decoration:underline">Gérer mes cookies</a> · <a href="https://www.iadfrance.fr/bareme_honoraires_iad.pdf" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">Barème d'honoraires</a> · immobiliernarbonne.com</span>
   </div>
 </footer>
 
@@ -800,9 +852,12 @@ function supprimerCookiesAnalytics() {
 
 function loadGA4() {
   if (!GA4_MEASUREMENT_ID) return;
+  // Toujours remettre le consentement a jour, meme si le script est deja charge :
+  // sinon le scenario accepter -> retirer -> re-accepter sur la meme page (sans
+  // recharger) restait bloque avant la mise a jour du consentement.
+  gtag('consent', 'update', { analytics_storage: 'granted' });
   if (window.__ga4Loaded) return; // empeche un second chargement du script (ex. double clic, appel repete)
   window.__ga4Loaded = true;
-  gtag('consent', 'update', { analytics_storage: 'granted' });
   var s = document.createElement('script');
   s.async = true;
   s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA4_MEASUREMENT_ID;
