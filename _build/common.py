@@ -37,7 +37,7 @@ def head(title, description, canonical_path, robots, og_description, jsonld_grap
 <script type="application/ld+json">
 {jsonld_graph}
 </script>
-<link rel="preload" href="/fonts/inter-600.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/inter-variable-latin.woff2" as="font" type="font/woff2" crossorigin/>
 {STYLE}
 </head>
 <body>
