@@ -21,13 +21,9 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","@id":"https://immobiliernarbonne.com/conseils/erreurs-qui-ralentissent-vente-narbonne#article","headline":"5 erreurs qui ralentissent une vente à Narbonne","description":"Prix mal calé, diagnostics incomplets, annonce négligée : les erreurs les plus fréquentes qui allongent une vente à Narbonne, et comment les éviter.","datePublished":"2026-08-14","dateModified":"2026-08-14","author":{"@id":"https://immobiliernarbonne.com/#guillaume-roque"},"publisher":{"@id":"https://immobiliernarbonne.com/#agent"},"image":"https://immobiliernarbonne.com/og-image.jpg","mainEntityOfPage":"https://immobiliernarbonne.com/conseils/erreurs-qui-ralentissent-vente-narbonne","inLanguage":"fr-FR"},{"@type":"Person","@id":"https://immobiliernarbonne.com/#guillaume-roque","name":"Guillaume Roque","jobTitle":"Conseiller immobilier indépendant iad France","description":"Guillaume Roque, conseiller immobilier indépendant iad France, agent commercial EI inscrit au RSAC de Narbonne sous le numéro 512 124 215, intervenant à Narbonne et dans le Grand Narbonne.","image":"https://immobiliernarbonne.com/img-guillaume.jpg","email":"guillaume.roque@iadfrance.fr","telephone":"+33662108396","url":"https://immobiliernarbonne.com","worksFor":{"@type":"Organization","name":"I@D France"}},{"@type":"RealEstateAgent","@id":"https://immobiliernarbonne.com/#agent","name":"Guillaume Roque — Immobilier Narbonne","logo":{"@type":"ImageObject","url":"https://immobiliernarbonne.com/og-image.jpg"},"telephone":"+33662108396","email":"guillaume.roque@iadfrance.fr","url":"https://immobiliernarbonne.com","areaServed":[{"@type":"City","name":"Narbonne"},{"@type":"AdministrativeArea","name":"Grand Narbonne"}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://immobiliernarbonne.com/"},{"@type":"ListItem","position":2,"name":"Conseils","item":"https://immobiliernarbonne.com/conseils/"},{"@type":"ListItem","position":3,"name":"Erreurs à éviter","item":"https://immobiliernarbonne.com/conseils/erreurs-qui-ralentissent-vente-narbonne"}]}]}
 </script>
-<link rel="preload" href="/fonts/inter-600.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/inter-variable-latin.woff2" as="font" type="font/woff2" crossorigin/>
 <style>
-@font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/inter-400.woff2') format('woff2')}
-@font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:swap;src:url('/fonts/inter-500.woff2') format('woff2')}
-@font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:swap;src:url('/fonts/inter-600.woff2') format('woff2')}
-@font-face{font-family:'Inter';font-style:normal;font-weight:700;font-display:swap;src:url('/fonts/inter-700.woff2') format('woff2')}
-@font-face{font-family:'Inter';font-style:normal;font-weight:800;font-display:swap;src:url('/fonts/inter-800.woff2') format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:400 800;font-display:swap;src:url('/fonts/inter-variable-latin.woff2') format('woff2-variations')}
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -145,6 +141,7 @@ footer{background:var(--bleu-fonce);padding:56px 8vw 36px}
   .art-cta{padding:32px 24px}
   .art-body table{font-size:12.5px}
 }
+#cookieBanner button:focus-visible{outline:3px solid #FFFFFF;outline-offset:3px}
 </style>
 </head>
 <body>
@@ -277,7 +274,7 @@ Sources : <a href="https://www.service-public.fr/particuliers/vosdroits/F10798" 
     <div style="display:flex;gap:10px;flex-shrink:0;flex-wrap:wrap;align-items:center">
       <button id="consentBtnRetirer" onclick="retirerConsentement()" style="display:none;background:transparent;border:1px solid rgba(255,255,255,.4);color:#fff;font-size:12px;font-weight:600;padding:8px 16px;border-radius:100px;cursor:pointer">Retirer mon consentement</button>
       <button onclick="setConsent(false)" style="background:transparent;border:1px solid rgba(255,255,255,.4);color:#fff;font-size:12px;font-weight:600;padding:8px 16px;border-radius:100px;cursor:pointer">Refuser</button>
-      <button onclick="setConsent(true)" style="background:var(--bleu);border:none;color:#fff;font-size:12px;font-weight:700;padding:8px 18px;border-radius:100px;cursor:pointer">Accepter</button>
+      <button onclick="setConsent(true)" style="background:#00709C;border:none;color:#fff;font-size:12px;font-weight:700;padding:8px 18px;border-radius:100px;cursor:pointer">Accepter</button>
       <button onclick="document.getElementById('cookieBanner').style.display='none'" aria-label="Fermer ce panneau" style="background:transparent;border:none;color:rgba(255,255,255,.55);font-size:16px;padding:4px 10px;cursor:pointer;line-height:1">✕</button>
     </div>
   </div>
