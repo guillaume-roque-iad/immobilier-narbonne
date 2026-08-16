@@ -22,13 +22,9 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://immobiliernarbonne.com/#guillaume-roque","name":"Guillaume Roque","jobTitle":"Conseiller immobilier indépendant iad France","description":"Guillaume Roque, conseiller immobilier indépendant iad France, agent commercial EI inscrit au RSAC de Narbonne sous le numéro 512 124 215, intervenant à Narbonne et dans le Grand Narbonne.","image":"https://immobiliernarbonne.com/img-guillaume.jpg","email":"guillaume.roque@iadfrance.fr","telephone":"+33662108396","url":"https://immobiliernarbonne.com","worksFor":{"@type":"Organization","name":"I@D France"},"sameAs":["https://www.iadfrance.fr/conseiller-immobilier/guillaume.roque","https://www.google.com/maps?cid=10249811500579735043","https://www.instagram.com/guillaumeroqueiad/","https://www.facebook.com/guillaumeroque.immobilier/","https://www.linkedin.com/in/guillaume-roque-07a3bb8a/"]},{"@type":"RealEstateAgent","@id":"https://immobiliernarbonne.com/#agent","name":"Guillaume Roque — Immobilier Narbonne","image":"https://immobiliernarbonne.com/img-guillaume.jpg","telephone":"+33662108396","email":"guillaume.roque@iadfrance.fr","url":"https://immobiliernarbonne.com","areaServed":[{"@type":"City","name":"Narbonne"},{"@type":"AdministrativeArea","name":"Grand Narbonne"}],"employee":{"@id":"https://immobiliernarbonne.com/#guillaume-roque"},"sameAs":["https://www.google.com/maps?cid=10249811500579735043","https://www.instagram.com/guillaumeroqueiad/","https://www.facebook.com/guillaumeroque.immobilier/","https://www.linkedin.com/in/guillaume-roque-07a3bb8a/"]},{"@type":"WebSite","@id":"https://immobiliernarbonne.com/#website","name":"Guillaume Roque — Immobilier Narbonne","url":"https://immobiliernarbonne.com","publisher":{"@id":"https://immobiliernarbonne.com/#agent"},"inLanguage":"fr-FR"}]}
 </script>
-<link rel="preload" href="/fonts/inter-600.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/inter-variable-latin.woff2" as="font" type="font/woff2" crossorigin/>
 <style>
-@font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/inter-400.woff2') format('woff2')}
-@font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:swap;src:url('/fonts/inter-500.woff2') format('woff2')}
-@font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:swap;src:url('/fonts/inter-600.woff2') format('woff2')}
-@font-face{font-family:'Inter';font-style:normal;font-weight:700;font-display:swap;src:url('/fonts/inter-700.woff2') format('woff2')}
-@font-face{font-family:'Inter';font-style:normal;font-weight:800;font-display:swap;src:url('/fonts/inter-800.woff2') format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:400 800;font-display:swap;src:url('/fonts/inter-variable-latin.woff2') format('woff2-variations')}
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -255,6 +251,7 @@ footer{background:var(--bleu-fonce);padding:56px 8vw 36px}
 /* Accessibilité — accents texte contrastés sur fond clair (WCAG AA 4.5:1) */
 .eyebrow,.blire,.bcat,.cinfo a,.metric strong{color:#0079A3}
 .bcat,.guil-tag strong{color:#C84133}
+#cookieBanner button:focus-visible{outline:3px solid #FFFFFF;outline-offset:3px}
 </style>
 </head>
 <body>
@@ -300,7 +297,7 @@ footer{background:var(--bleu-fonce);padding:56px 8vw 36px}
     </div>
   </div>
   <div class="hero-right">
-    <picture><source type="image/avif" srcset="/img-guillaume.avif"/><source type="image/webp" srcset="/img-guillaume.webp"/><img src="/img-guillaume.jpg" alt="Guillaume Roque, conseiller iad France à Narbonne" id="heroPhoto" width="900" height="1350" class="hero-photo" fetchpriority="high" decoding="async"/></picture>
+    <picture><source type="image/avif" srcset="/img-guillaume-480.avif 480w, /img-guillaume-640.avif 640w, /img-guillaume-900.avif 900w" sizes="(max-width: 1024px) 88vw, 420px"/><source type="image/webp" srcset="/img-guillaume-480.webp 480w, /img-guillaume-640.webp 640w, /img-guillaume-900.webp 900w" sizes="(max-width: 1024px) 88vw, 420px"/><img src="/img-guillaume.jpg" alt="Guillaume Roque, conseiller iad France à Narbonne" id="heroPhoto" width="900" height="1350" class="hero-photo" fetchpriority="high" decoding="async"/></picture>
     <div class="hero-card">
       <strong>Guillaume Roque</strong>
       <span>Conseiller iad France · intervenant à Narbonne</span>
@@ -394,7 +391,7 @@ footer{background:var(--bleu-fonce);padding:56px 8vw 36px}
 <!-- GUILLAUME -->
 <section class="guil" id="guillaume">
   <div class="guil-img">
-    <picture><source type="image/avif" srcset="/img-guillaume.avif"/><source type="image/webp" srcset="/img-guillaume.webp"/><img src="/img-guillaume.jpg" alt="Guillaume Roque, conseiller iad France à Narbonne" id="guilPhoto" width="900" height="1350" class="guil-photo" loading="lazy" decoding="async"/></picture>
+    <picture><source type="image/avif" srcset="/img-guillaume-480.avif 480w, /img-guillaume-640.avif 640w, /img-guillaume-900.avif 900w" sizes="(max-width: 1024px) 84vw, 560px"/><source type="image/webp" srcset="/img-guillaume-480.webp 480w, /img-guillaume-640.webp 640w, /img-guillaume-900.webp 900w" sizes="(max-width: 1024px) 84vw, 560px"/><img src="/img-guillaume.jpg" alt="Guillaume Roque, conseiller iad France à Narbonne" id="guilPhoto" width="900" height="1350" class="guil-photo" loading="lazy" decoding="async"/></picture>
     <div class="guil-tag"><strong>Conseiller iad France</strong><span>Intervient à Narbonne · depuis 2013</span></div>
   </div>
   <div>
@@ -797,7 +794,7 @@ footer{background:var(--bleu-fonce);padding:56px 8vw 36px}
     <div style="display:flex;gap:10px;flex-shrink:0;flex-wrap:wrap;align-items:center">
       <button id="consentBtnRetirer" onclick="retirerConsentement()" style="display:none;background:transparent;border:1px solid rgba(255,255,255,.4);color:#fff;font-size:12px;font-weight:600;padding:8px 16px;border-radius:100px;cursor:pointer">Retirer mon consentement</button>
       <button onclick="setConsent(false)" style="background:transparent;border:1px solid rgba(255,255,255,.4);color:#fff;font-size:12px;font-weight:600;padding:8px 16px;border-radius:100px;cursor:pointer">Refuser</button>
-      <button onclick="setConsent(true)" style="background:var(--bleu);border:none;color:#fff;font-size:12px;font-weight:700;padding:8px 18px;border-radius:100px;cursor:pointer">Accepter</button>
+      <button onclick="setConsent(true)" style="background:#00709C;border:none;color:#fff;font-size:12px;font-weight:700;padding:8px 18px;border-radius:100px;cursor:pointer">Accepter</button>
       <button onclick="document.getElementById('cookieBanner').style.display='none'" aria-label="Fermer ce panneau" style="background:transparent;border:none;color:rgba(255,255,255,.55);font-size:16px;padding:4px 10px;cursor:pointer;line-height:1">✕</button>
     </div>
   </div>

@@ -1,26 +1,31 @@
-# Guillaume Roque — Immobilier Narbonne
+# Guillaume Roque — Immobilier à Narbonne
 
-> Site personnel de Guillaume Roque, conseiller immobilier iad France basé à Narbonne (11100, Aude, Occitanie) depuis 2013. Le site s'adresse aux propriétaires qui souhaitent vendre leur maison ou appartement à Narbonne : estimation gratuite, accompagnement de la mise en vente jusqu'à la signature chez le notaire.
+> Site professionnel de Guillaume Roque, conseiller immobilier indépendant iad France intervenant à Narbonne et dans le Grand Narbonne depuis 2013. Le site accompagne principalement les propriétaires souhaitant estimer ou vendre une maison, un appartement ou un terrain.
 
-## Informations clés
-- Conseiller : Guillaume Roque
-- Réseau : iad France
-- Zone d'intervention : Narbonne (11100) et son agglomération
-- Depuis : 2013
-- Avis Google : 4,9/5 (97 avis)
-- Avis Immodvisor (AFNOR) : 4,8/5 (35 avis)
+## Services principaux
+
+- [Accueil — Guillaume Roque, immobilier à Narbonne](https://immobiliernarbonne.com/)
+- [Estimation immobilière à Narbonne](https://immobiliernarbonne.com/estimation-immobiliere-narbonne)
+- [Vendre un bien immobilier à Narbonne](https://immobiliernarbonne.com/vendre-bien-narbonne)
+- [Prix de l'immobilier à Narbonne](https://immobiliernarbonne.com/prix-immobilier-narbonne)
+- [Présentation de Guillaume Roque](https://immobiliernarbonne.com/guillaume-roque)
+- [Avis clients vérifiés](https://immobiliernarbonne.com/avis-clients)
+
+## Conseils immobiliers
+
+- [Tous les conseils immobiliers](https://immobiliernarbonne.com/conseils/)
+- [Combien vaut une maison à Narbonne ?](https://immobiliernarbonne.com/conseils/combien-vaut-maison-narbonne)
+- [Les erreurs qui ralentissent une vente](https://immobiliernarbonne.com/conseils/erreurs-qui-ralentissent-vente-narbonne)
+- [Diagnostics obligatoires pour vendre](https://immobiliernarbonne.com/conseils/diagnostics-vente-narbonne)
+- [Comment fixer le juste prix d'une maison ?](https://immobiliernarbonne.com/conseils/juste-prix-maison-narbonne)
+
+## Sources professionnelles
+
+- [Profil officiel iad France de Guillaume Roque](https://www.iadfrance.fr/conseiller-immobilier/guillaume.roque)
+- [Mentions légales](https://immobiliernarbonne.com/mentions-legales)
+- [Politique de confidentialité](https://immobiliernarbonne.com/politique-confidentialite)
+
+## Contact
+
 - Téléphone : +33 6 62 10 83 96
 - Email : guillaume.roque@iadfrance.fr
-- Estimation gratuite : https://immobiliernarbonne.com/estimation-immobiliere-narbonne
-- Profil officiel iad France : https://www.iadfrance.fr/conseiller-immobilier/guillaume.roque
-
-## Pages
-- / : page d'accueil — accompagnement vendeur, avis clients, contact, estimation gratuite
-- /estimation-immobiliere-narbonne : estimation immobilière gratuite à Narbonne, formulaire dédié
-- /conseils/ : conseils vendeurs, articles publiés deux fois par mois
-- /conseils/combien-vaut-maison-narbonne : méthode d'estimation (comparables DVF, état du bien, DPE, secteur)
-- /mentions-legales : mentions légales
-
-## Sites associés (même conseiller)
-- https://tribu-immo.com — recrutement de mandataires iad France
-- Guides vendeurs Narbonne détaillés : https://tribu-immo.com/vendre-maison-narbonne.html, https://tribu-immo.com/article-vendre-appartement-narbonne.html

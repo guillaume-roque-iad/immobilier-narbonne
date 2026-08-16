@@ -21,13 +21,9 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://immobiliernarbonne.com/ventes-realisees#webpage","url":"https://immobiliernarbonne.com/ventes-realisees","name":"Ventes réalisées à Narbonne | Guillaume Roque","isPartOf":{"@id":"https://immobiliernarbonne.com/#website"},"inLanguage":"fr-FR"}]}
 </script>
-<link rel="preload" href="/fonts/inter-600.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/inter-variable-latin.woff2" as="font" type="font/woff2" crossorigin/>
 <style>
-@font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/inter-400.woff2') format('woff2')}
-@font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:swap;src:url('/fonts/inter-500.woff2') format('woff2')}
-@font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:swap;src:url('/fonts/inter-600.woff2') format('woff2')}
-@font-face{font-family:'Inter';font-style:normal;font-weight:700;font-display:swap;src:url('/fonts/inter-700.woff2') format('woff2')}
-@font-face{font-family:'Inter';font-style:normal;font-weight:800;font-display:swap;src:url('/fonts/inter-800.woff2') format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:400 800;font-display:swap;src:url('/fonts/inter-variable-latin.woff2') format('woff2-variations')}
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -257,6 +253,7 @@ footer{background:var(--bleu-fonce);padding:56px 8vw 36px}
 /* Section formulaire d'estimation (meme comportement responsive que #contact) */
 #estimation-form{padding:110px 8vw;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
 @media(max-width:1024px){#estimation-form{grid-template-columns:1fr;padding:70px 6vw}}
+#cookieBanner button:focus-visible{outline:3px solid #FFFFFF;outline-offset:3px}
 </style>
 </head>
 <body>
@@ -348,7 +345,7 @@ footer{background:var(--bleu-fonce);padding:56px 8vw 36px}
     <div style="display:flex;gap:10px;flex-shrink:0;flex-wrap:wrap;align-items:center">
       <button id="consentBtnRetirer" onclick="retirerConsentement()" style="display:none;background:transparent;border:1px solid rgba(255,255,255,.4);color:#fff;font-size:12px;font-weight:600;padding:8px 16px;border-radius:100px;cursor:pointer">Retirer mon consentement</button>
       <button onclick="setConsent(false)" style="background:transparent;border:1px solid rgba(255,255,255,.4);color:#fff;font-size:12px;font-weight:600;padding:8px 16px;border-radius:100px;cursor:pointer">Refuser</button>
-      <button onclick="setConsent(true)" style="background:var(--bleu);border:none;color:#fff;font-size:12px;font-weight:700;padding:8px 18px;border-radius:100px;cursor:pointer">Accepter</button>
+      <button onclick="setConsent(true)" style="background:#00709C;border:none;color:#fff;font-size:12px;font-weight:700;padding:8px 18px;border-radius:100px;cursor:pointer">Accepter</button>
       <button onclick="document.getElementById('cookieBanner').style.display='none'" aria-label="Fermer ce panneau" style="background:transparent;border:none;color:rgba(255,255,255,.55);font-size:16px;padding:4px 10px;cursor:pointer;line-height:1">✕</button>
     </div>
   </div>
