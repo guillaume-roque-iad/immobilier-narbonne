@@ -13,3 +13,74 @@ html{scroll-padding-top:155px}a,button,input,select,textarea{touch-action:manipu
 @media(max-width:1100px){.qnav a{font-size:12px;padding:6px 8px}.hero{gap:34px;grid-template-columns:1.2fr .8fr;padding:50px 5vw}.hero h1{font-size:46px}.hero-card{left:0;right:0}.hero-stats{flex-wrap:wrap;gap:12px}.hs{min-width:90px}.guil{gap:36px}.guide,#contact{gap:36px}.nb-logo{height:27px}}
 @media(max-width:760px){html{scroll-padding-top:140px}.navbar{top:0;height:78px;padding:0 5vw}.nb-brand{gap:10px}.nb-logo{height:22px;max-width:120px}.nb-name{font-size:12px}.nb-cta{padding:11px 14px;font-size:12px}.qnav{position:static;display:flex;overflow-x:auto;flex-wrap:nowrap;justify-content:flex-start;padding:6px 3vw;min-height:42px}.qnav a{font-size:13px}.qnav .sep,.qnav .cta{display:none}.hero{grid-template-columns:1fr;padding:38px 6vw 48px;gap:34px;min-height:0}.hero h1{font-size:clamp(36px,8vw,52px)}.hero-sub{font-size:16px}.hero-tag{font-size:12px}.hero-right{max-width:400px;width:100%;margin:auto}.hero-photo{aspect-ratio:1;border-radius:150px 150px 18px 18px;object-position:50% 22%}.hero-card span{font-size:12px}.hero-btns a{width:100%;text-align:center}.hs strong{font-size:23px}.hs span{font-size:12px}.metrics{grid-template-columns:1fr 1fr}.metric strong{font-size:28px}.services,.secteurs,.guil,.avis,.annonces,.blog,#contact,.guide{padding:55px 6vw}.svgrid,.secgrid,.guil,.guide,#contact,.bgrid{grid-template-columns:1fr}.guil-img{max-width:360px}.svcard{padding:24px 0}.guide-card,.fr{padding:24px 18px}.ann-card{padding:30px 20px}.ascore{padding:20px;flex:1;min-width:130px}.ascores{gap:12px}.ascore strong{font-size:34px}.ft{grid-template-columns:1fr}.fg2{grid-template-columns:1fr}.hero-stats{gap:0}.hs{min-width:0}.hero-card strong{font-size:16px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+
+/* Alignement final avec la charte graphique iad 2025 */
+:root{
+  --bleu:#00b4ec;
+  --bleu-dark:#008ec3;
+  --bleu-prof:#007daf;
+  --bleu-fonce:#006390;
+  --bleu-bg:#e9fcff;
+  --corail:#ea584a;
+  --corail-dark:#ea584a;
+  --noir:#000;
+  --gris-fonce:#3c4a5f;
+  --gris:#3c4a5f;
+  --gris-clair:#e9fcff;
+  --blanc:#fff;
+}
+body{color:#000;background:#fff}
+.navbar{border-bottom-color:rgba(60,74,95,.18)}
+.nb-logo{filter:none}
+.nb-brand{padding-block:10px}
+.hero h1 em,.stitle em,.fl h2 em{color:#007daf;font-style:italic}
+.hero-tag,.chip,.bien-tag{background:#e9fcff;color:#006390;border-radius:999px}
+.hero-right{isolation:isolate}
+.hero-right::before{content:"";display:block;position:absolute;inset:22px -18px 4px 22px;background:#e9fcff;border-radius:999px;transform:rotate(5deg);z-index:-1}
+.hero-right picture{position:relative;z-index:1;display:block}
+.hero-photo,.guil-photo{border-radius:999px}
+.hero-card,.guil-tag{border-color:rgba(60,74,95,.18);border-radius:999px;z-index:2}
+.nb-cta,.btn-w,.btn-estim,.fsub{
+  background:#007daf!important;
+  color:#fff!important;
+  border-color:#007daf!important;
+  border-radius:999px;
+  box-shadow:none!important;
+  font-family:Montserrat,Helvetica,Arial,sans-serif;
+  font-style:italic;
+  font-weight:700;
+}
+.nb-cta:hover,.btn-w:hover,.btn-estim:hover,.fsub:hover{
+  background:#006390!important;
+  border-color:#006390!important;
+}
+.btn-o{
+  background:#fff;
+  color:#000;
+  border-color:#00b4ec;
+  border-radius:999px;
+  font-style:italic;
+  font-weight:700;
+}
+.btn-o::after{content:'\203A';color:#ea584a;font-size:1.35em;font-style:normal;line-height:1}
+.btn-o:hover{background:#e9fcff;color:#000;border-color:#007daf}
+.qnav .cta{background:#00b4ec;color:#000!important;font-style:italic}
+.qnav .cta:hover{background:#95ebff!important;color:#000!important}
+.metrics,.fr,.biens-filtres{background:#e9fcff}
+.metrics{border-color:rgba(60,74,95,.18)}
+.metric,.hero-stats,.hs,.ascore,.bcard,.seccard,.fr,.hero-card{border-color:rgba(60,74,95,.18)}
+.svicon{width:56px;height:56px;border-radius:999px;background:#e9fcff;display:grid;place-items:center}
+.svicon::after{display:none}
+.svicon .iad-icon{display:block;width:28px;height:28px;color:#007daf;stroke-width:1.8}
+.guide,.estim,footer,#cookieBanner{background:#3c4a5f!important}
+.guide-card{border-radius:28px}
+.btop{background:#00b4ec}
+.bcat,.blire,.cinfo a{color:#006390}
+.links a.primary{background:#007daf!important;border-color:#007daf!important;color:#fff!important;font-family:Montserrat,Helvetica,Arial,sans-serif;font-style:italic;font-weight:700}
+.links a.primary:hover{background:#006390!important;border-color:#006390!important}
+.merci-cta .p1{background:#ea584a!important;color:#000!important}
+@media(max-width:760px){
+  .hero-right::before{inset:18px -8px 8px 18px;transform:rotate(5deg)}
+  .hero-photo{aspect-ratio:4/5;border-radius:999px}
+  .hero-card{left:8px;right:8px;padding:16px 22px}
+}

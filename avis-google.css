@@ -34,3 +34,15 @@
 .google-reviews--full{grid-template-columns:repeat(2,minmax(0,1fr));margin-bottom:1.25rem}
 @media(max-width:900px){.avis-google-head{align-items:flex-start;flex-direction:column}.google-reviews{grid-template-columns:repeat(2,minmax(0,1fr))}.google-rating{min-width:0}}
 @media(max-width:600px){.google-reviews,.google-reviews--full{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:.85rem;margin-inline:-6vw;padding:0 6vw 1rem}.google-review{min-width:86vw;scroll-snap-align:start}.google-rating{width:100%}.google-panel{padding:1.4rem}.google-actions{align-items:stretch;flex-direction:column}.google-actions .link-secondary{text-align:center}}
+
+/* Palette et gélules conformes à la charte iad 2025 */
+.google-rating,.google-review{border-color:rgba(60,74,95,.18)}
+.google-rating__score,.google-review__name{color:#000}
+.google-rating__meta,.google-review__date,.google-review__text,.google-review__source,.google-source-note,.google-panel__copy{color:#3c4a5f}
+.google-review__initial,.google-panel{background:#e9fcff}
+.google-review__initial{color:#006390}
+.google-actions .btn-google{background:#007daf;color:#fff;border-radius:999px;font-family:Montserrat,Helvetica,Arial,sans-serif;font-style:italic;font-weight:700}
+.google-actions .btn-google:hover{background:#006390}
+.google-actions .link-secondary,.review-nav{color:#006390}
+.review-nav{border-color:rgba(60,74,95,.32)}
+.review-nav:hover{background:#00b4ec;border-color:#00b4ec;color:#000}
