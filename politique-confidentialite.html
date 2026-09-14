@@ -302,7 +302,7 @@ footer{background:var(--bleu-fonce);padding:56px 8vw 36px}
 
 <div class="pc-wrap">
   <h1>Politique de confidentialité</h1>
-  <p class="pc-maj">Dernière mise à jour : 14 août 2026</p>
+  <p class="pc-maj">Dernière mise à jour : 14 septembre 2026</p>
 
   <p>La présente politique de confidentialité explique comment vos données personnelles sont collectées et utilisées lorsque vous visitez le site immobiliernarbonne.com et lorsque vous utilisez l'un de ses formulaires (demande d'estimation, demande de contact, téléchargement du guide vendeur). Elle complète les <a href="/mentions-legales">mentions légales</a> du site.</p>
 
@@ -330,7 +330,7 @@ footer{background:var(--bleu-fonce);padding:56px 8vw 36px}
   <p>Vos données sont destinées exclusivement à Guillaume Roque, seul destinataire des demandes transmises via les formulaires du site. Elles ne sont ni cédées, ni vendues, ni louées à des tiers à des fins commerciales.</p>
   <p>Certains prestataires techniques interviennent en tant que sous-traitants pour assurer le fonctionnement du site et l'acheminement des formulaires, sans en exploiter le contenu pour leur propre compte :</p>
   <ul>
-    <li><strong>Cloudflare, Inc.</strong> — hébergement du site.</li>
+    <li><strong>Cloudflare, Inc.</strong> — hébergement du site et mesure technique de ses performances avec Cloudflare Web Analytics.</li>
     <li><strong>Google (Google Ireland Limited / Google LLC)</strong> — traitement technique de l'envoi des formulaires (Google Apps Script / messagerie).</li>
     <li><strong>Google (Google Ireland Limited)</strong> — mesure d'audience (Google Analytics 4), uniquement si vous avez donné votre consentement via le bandeau cookies. Voir section 8 ci-dessous.</li>
   </ul>
@@ -348,9 +348,10 @@ footer{background:var(--bleu-fonce);padding:56px 8vw 36px}
   <p>Si vous estimez, après nous avoir contactés, que vos droits ne sont pas respectés, vous pouvez introduire une réclamation auprès de la Commission Nationale de l'Informatique et des Libertés (CNIL) — <a href="https://www.cnil.fr" target="_blank" rel="noopener">www.cnil.fr</a>.</p>
 
   <h2 id="cookies">8. Cookies et mesure d'audience</h2>
+  <p>Cloudflare Web Analytics mesure les consultations et les performances techniques du site afin d'en surveiller la qualité de service. Cloudflare présente cet outil comme une solution respectueuse de la vie privée et indique qu'il ne collecte ni n'utilise les données personnelles des visiteurs. Cette mesure technique est distincte de Google Analytics 4 et ne dépose pas de cookie de mesure.<br/>Source : <a href="https://developers.cloudflare.com/web-analytics/about/" target="_blank" rel="noopener">Cloudflare — Web Analytics</a>.</p>
   <p>Ce site utilise Google Analytics 4 (GA4), un outil de mesure d'audience fourni par Google Ireland Limited, uniquement après votre consentement explicite donné via le bandeau de consentement ci-dessous. Sans ce consentement, ou en cas de refus, aucun script GA4 n'est chargé et aucun cookie de mesure n'est déposé (mode « Consent Mode » : le stockage de mesure est refusé par défaut). Google Analytics 4 n'enregistre ni ne stocke les adresses IP individuelles. Pour les visiteurs situés dans l'Union européenne, l'adresse IP est utilisée uniquement pour déterminer une localisation géographique approximative, puis supprimée avant journalisation. Vos coordonnées personnelles (nom, téléphone, email, adresse du bien) ne sont jamais transmises à cet outil.<br/>Source : <a href="https://support.google.com/analytics/answer/12017362" target="_blank" rel="noopener">Google — Traitement des adresses IP par Google Analytics 4</a>.</p>
   <p>Votre choix (accepté ou refusé) est conservé 6 mois, puis vous est de nouveau demandé. À tout moment, vous pouvez consulter votre choix actuel, l'accepter, le refuser, ou <strong>retirer un consentement déjà donné</strong>, via le lien <a href="#" onclick="if(typeof ouvrirGestionCookies==='function'){return ouvrirGestionCookies();}">Gérer mes cookies</a> présent en bas de chaque page du site. Un retrait de consentement empêche tout nouvel appel à l'outil de mesure d'audience et supprime les cookies de mesure déjà déposés lorsque votre navigateur le permet.</p>
-  <p>Les polices de caractères utilisées par le site sont hébergées directement sur ce site : aucune requête n'est envoyée à un serveur de police tiers (Google Fonts ou autre) et aucun cookie n'est déposé à ce titre. La seule requête vers un service tiers en dehors d'une éventuelle mesure d'audience consentie est celle déclenchée par l'envoi d'un formulaire vers Google Apps Script (voir section 4 « Destinataires des données »).</p>
+  <p>Les polices de caractères utilisées par le site sont hébergées directement sur ce site : aucune requête n'est envoyée à un serveur de police tiers (Google Fonts ou autre) et aucun cookie n'est déposé à ce titre. En dehors de la mesure technique Cloudflare décrite ci-dessus et d'une éventuelle mesure d'audience consentie, la seule requête vers un service tiers est celle déclenchée par l'envoi d'un formulaire vers Google Apps Script (voir section 4 « Destinataires des données »).</p>
 
   <h2 id="rappel-telephonique">9. Consentement au rappel téléphonique</h2>
   <p>Depuis le 11 août 2026, l'article L.223-2 du Code de la consommation impose qu'une sollicitation téléphonique à des fins commerciales repose sur votre consentement préalable, explicite et spécifique.</p>
@@ -487,7 +488,7 @@ function majInterfaceConsentement() {
   var btnRetirer = document.getElementById('consentBtnRetirer');
   if (!elStatut) return;
   if (!GA4_MEASUREMENT_ID) {
-    elStatut.textContent = "Aucun outil de mesure d'audience n'est actif sur ce site actuellement.";
+    elStatut.textContent = "Google Analytics 4 n'est pas actif actuellement. La mesure technique Cloudflare fonctionne sans cookie.";
     if (btnRetirer) btnRetirer.style.display = 'none';
   } else if (data && data.choice === 'accepted') {
     elStatut.textContent = 'Mesure d\'audience acceptée le ' + new Date(data.date).toLocaleDateString('fr-FR') + '.';

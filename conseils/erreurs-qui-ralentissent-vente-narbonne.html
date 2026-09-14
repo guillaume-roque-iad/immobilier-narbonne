@@ -360,7 +360,7 @@ function majInterfaceConsentement() {
   var btnRetirer = document.getElementById('consentBtnRetirer');
   if (!elStatut) return;
   if (!GA4_MEASUREMENT_ID) {
-    elStatut.textContent = "Aucun outil de mesure d'audience n'est actif sur ce site actuellement.";
+    elStatut.textContent = "Google Analytics 4 n'est pas actif actuellement. La mesure technique Cloudflare fonctionne sans cookie.";
     if (btnRetirer) btnRetirer.style.display = 'none';
   } else if (data && data.choice === 'accepted') {
     elStatut.textContent = 'Mesure d\'audience acceptée le ' + new Date(data.date).toLocaleDateString('fr-FR') + '.';
