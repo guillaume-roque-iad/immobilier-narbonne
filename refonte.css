@@ -69,9 +69,9 @@ body{color:#000;background:#fff}
 .metrics,.fr,.biens-filtres{background:#e9fcff}
 .metrics{border-color:rgba(60,74,95,.18)}
 .metric,.hero-stats,.hs,.ascore,.bcard,.seccard,.fr,.hero-card{border-color:rgba(60,74,95,.18)}
-.svicon{width:56px;height:56px;border-radius:999px;background:#e9fcff;display:grid;place-items:center}
+.svicon{width:72px;height:56px;border-radius:0;background:transparent;display:flex;align-items:center;justify-content:flex-start}
 .svicon::after{display:none}
-.svicon .iad-icon{display:block;width:28px;height:28px;color:#007daf;stroke-width:1.8}
+.iad-brand-icon{display:block;width:72px;height:54px;overflow:visible}
 .guide,.estim,footer,#cookieBanner{background:#3c4a5f!important}
 .guide-card{border-radius:28px}
 .btop{background:#00b4ec}

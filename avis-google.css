@@ -3,8 +3,9 @@
 .avis-google-head .stitle{margin-bottom:.75rem}
 .google-rating{display:flex;align-items:center;gap:1rem;background:#fff;border:1px solid #dbe4e9;border-radius:1.25rem;padding:1.25rem 1.5rem;min-width:15rem}
 .google-rating__score{font-size:2.75rem;font-weight:800;letter-spacing:-.05em;line-height:1;color:#111}
-.google-rating__stars,.review-stars{color:#007daf;letter-spacing:.08em}
+.google-rating__stars,.review-stars,.stars,.rvstars{color:#007daf;display:inline-flex;align-items:center;gap:.12rem}
 .google-rating__stars{font-size:1rem;line-height:1.2}
+.rating-star{width:1em;height:1em;display:block;fill:currentColor;stroke:none}
 .google-rating__meta{font-size:.82rem;color:#515b66;margin-top:.3rem}
 .google-reviews{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.25rem;list-style:none;padding:0;margin:0}
 .google-review{display:flex;flex-direction:column;background:#fff;border:1px solid #dbe4e9;border-radius:1.15rem;padding:1.5rem;text-align:left;min-width:0}
@@ -18,7 +19,8 @@
 .avis .google-review__text{display:-webkit-box;-webkit-line-clamp:6;-webkit-box-orient:vertical;overflow:hidden}
 .google-review__label{display:block;font-size:.72rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#007daf;margin-bottom:.35rem}
 .google-review__source{display:flex;align-items:center;gap:.45rem;margin-top:auto;font-size:.78rem;color:#68737d}
-.google-review__source .iad-icon{color:#007daf}
+.google-review__source .material-symbol{color:#007daf}
+.google-review__source .google-mark{color:#007daf}
 .google-source-note{font-size:.8rem;line-height:1.65;color:#515b66;margin:1.35rem 0 0}
 .google-actions{display:flex;gap:1rem;align-items:center;flex-wrap:wrap;margin-top:1.75rem}
 .google-actions .btn-google{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:3rem;padding:.8rem 1.35rem;border-radius:999px;background:#00b4ec;color:#111;font-size:.9rem;font-weight:700;text-decoration:none}
@@ -26,7 +28,7 @@
 .google-actions .link-secondary{color:#006390;font-size:.9rem;font-weight:700;text-decoration:none}
 .google-actions .link-secondary:hover{text-decoration:underline}
 .review-nav{width:3rem;height:3rem;border-radius:999px;border:1px solid #b9cbd5;background:#fff;color:#006390;display:grid;place-items:center;cursor:pointer;flex:0 0 auto;transition:background .18s,border-color .18s,color .18s}
-.review-nav:hover{background:#00b4ec;border-color:#00b4ec;color:#111}.review-nav .iad-icon{width:1.2rem;height:1.2rem}
+.review-nav:hover{background:#00b4ec;border-color:#00b4ec;color:#111}.review-nav .material-symbol{width:1.2rem;height:1.2rem}
 .google-panel{padding:2rem;background:#e9fcff;border-radius:1.4rem;margin-bottom:2rem}
 .google-panel .google-rating{border:0;box-shadow:none;padding:0;background:transparent;min-width:0}
 .google-panel__copy{font-size:.98rem;color:#3c4a5f;line-height:1.7;margin:.9rem 0 0;max-width:44rem}

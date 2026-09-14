@@ -79,10 +79,10 @@ html.append('''
     <p class="ssub">Une méthode simple, expliquée clairement, sans promesse de délai ou de prix qui ne pourrait être tenue.</p>
   </div>
   <div class="svgrid">
-    <div class="svcard"><div class="svicon">📊</div><h3>Estimation fondée sur les ventes réelles</h3><p>Chaque estimation s'appuie sur les données officielles DVF et les ventes comparables du secteur, pas sur un algorithme en ligne.</p></div>
-    <div class="svcard"><div class="svicon">🤝</div><h3>Accompagnement de bout en bout</h3><p>Un seul interlocuteur, de l'estimation à la signature chez le notaire, pour éviter les intermédiaires multiples.</p></div>
-    <div class="svcard"><div class="svicon">📍</div><h3>Une connaissance du secteur</h3><p>Une intervention concentrée à Narbonne et dans le Grand Narbonne, pour une lecture fine du marché local.</p></div>
-    <div class="svcard"><div class="svicon">📞</div><h3>Une disponibilité directe</h3><p>Un contact direct par téléphone ou email, sans standard ni plateforme intermédiaire.</p></div>
+    <div class="svcard"><div class="svicon"><svg class="iad-brand-icon" viewBox="0 0 64 48" aria-hidden="true" focusable="false"><use href="/icons.svg?v=20260914#iad-bars"/></svg></div><h3>Estimation fondée sur les ventes réelles</h3><p>Chaque estimation s'appuie sur les données officielles DVF et les ventes comparables du secteur, pas sur un algorithme en ligne.</p></div>
+    <div class="svcard"><div class="svicon"><svg class="iad-brand-icon" viewBox="0 0 64 48" aria-hidden="true" focusable="false"><use href="/icons.svg?v=20260914#iad-people"/></svg></div><h3>Accompagnement de bout en bout</h3><p>Un seul interlocuteur, de l'estimation à la signature chez le notaire, pour éviter les intermédiaires multiples.</p></div>
+    <div class="svcard"><div class="svicon"><svg class="iad-brand-icon" viewBox="0 0 64 48" aria-hidden="true" focusable="false"><use href="/icons.svg?v=20260914#iad-focus"/></svg></div><h3>Une connaissance du secteur</h3><p>Une intervention concentrée à Narbonne et dans le Grand Narbonne, pour une lecture fine du marché local.</p></div>
+    <div class="svcard"><div class="svicon"><svg class="iad-brand-icon" viewBox="0 0 64 48" aria-hidden="true" focusable="false"><use href="/icons.svg?v=20260914#iad-duo"/></svg></div><h3>Une disponibilité directe</h3><p>Un contact direct par téléphone ou email, sans standard ni plateforme intermédiaire.</p></div>
   </div>
 </section>
 

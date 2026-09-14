@@ -256,9 +256,9 @@ footer{background:var(--bleu-fonce);padding:56px 8vw 36px}
 @media(max-width:1024px){#estimation-form{grid-template-columns:1fr;padding:70px 6vw}}
 #cookieBanner button:focus-visible{outline:3px solid #FFFFFF;outline-offset:3px}
 </style>
-<link rel="stylesheet" href="/refonte.css?v=20260914"/>
+<link rel="stylesheet" href="/refonte.css?v=20260914b"/>
 <script src="/navigation.js?v=20260914" defer></script>
-<link rel="stylesheet" href="/annonces.css?v=20260913b"/>
+<link rel="stylesheet" href="/annonces.css?v=20260914"/>
 </head>
 <body>
 <!-- TOPBAR -->
@@ -284,7 +284,7 @@ footer{background:var(--bleu-fonce);padding:56px 8vw 36px}
     <a href="/#avis">Avis clients</a>
     <a href="/#annonces">Mes annonces</a>
     <a href="/#articles">Guides Narbonne</a>
-    <a href="/estimation-immobiliere-narbonne#estimation-form" class="nb-cta">Estimation gratuite <span aria-hidden="true">↗</span></a>
+    <a href="/estimation-immobiliere-narbonne#estimation-form" class="nb-cta">Estimation gratuite <svg class="material-symbol material-symbol--arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/icons.svg?v=20260914#arrow-outward"/></svg></a>
   </div>
 </nav>
 </header>
@@ -453,7 +453,7 @@ footer{background:var(--bleu-fonce);padding:56px 8vw 36px}
       <button id="consentBtnRetirer" onclick="retirerConsentement()" style="display:none;background:transparent;border:1px solid rgba(255,255,255,.4);color:#fff;font-size:12px;font-weight:600;padding:8px 16px;border-radius:100px;cursor:pointer">Retirer mon consentement</button>
       <button onclick="setConsent(false)" style="background:transparent;border:1px solid rgba(255,255,255,.4);color:#fff;font-size:12px;font-weight:600;padding:8px 16px;border-radius:100px;cursor:pointer">Refuser</button>
       <button onclick="setConsent(true)" style="background:#00709C;border:none;color:#fff;font-size:12px;font-weight:700;padding:8px 18px;border-radius:100px;cursor:pointer">Accepter</button>
-      <button onclick="document.getElementById('cookieBanner').style.display='none'" aria-label="Fermer ce panneau" style="background:transparent;border:none;color:rgba(255,255,255,.55);font-size:16px;padding:4px 10px;cursor:pointer;line-height:1">✕</button>
+      <button onclick="document.getElementById('cookieBanner').style.display='none'" aria-label="Fermer ce panneau" style="background:transparent;border:none;color:rgba(255,255,255,.55);font-size:16px;padding:4px 10px;cursor:pointer;line-height:1"><svg class="material-symbol cookie-close-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/icons.svg?v=20260914#close"/></svg></button>
     </div>
   </div>
 </div>

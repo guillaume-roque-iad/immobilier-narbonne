@@ -255,9 +255,9 @@ footer{background:var(--bleu-fonce);padding:56px 8vw 36px}
 @media(max-width:1024px){#estimation-form{grid-template-columns:1fr;padding:70px 6vw}}
 #cookieBanner button:focus-visible{outline:3px solid #FFFFFF;outline-offset:3px}
 </style>
-<link rel="stylesheet" href="/refonte.css?v=20260914"/>
+<link rel="stylesheet" href="/refonte.css?v=20260914b"/>
 <script src="/navigation.js?v=20260914" defer></script>
-<link rel="stylesheet" href="/annonces.css?v=20260913b"/>
+<link rel="stylesheet" href="/annonces.css?v=20260914"/>
 </head>
 <body>
 <!-- TOPBAR -->
@@ -283,7 +283,7 @@ footer{background:var(--bleu-fonce);padding:56px 8vw 36px}
     <a href="/#avis">Avis clients</a>
     <a href="/#annonces">Mes annonces</a>
     <a href="/#articles">Guides Narbonne</a>
-    <a href="/estimation-immobiliere-narbonne#estimation-form" class="nb-cta">Estimation gratuite <span aria-hidden="true">↗</span></a>
+    <a href="/estimation-immobiliere-narbonne#estimation-form" class="nb-cta">Estimation gratuite <svg class="material-symbol material-symbol--arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/icons.svg?v=20260914#arrow-outward"/></svg></a>
   </div>
 </nav>
 </header>
@@ -294,7 +294,7 @@ footer{background:var(--bleu-fonce);padding:56px 8vw 36px}
   <div class="eyebrow">Ventes réalisées</div>
   <h1 class="stitle" style="margin-bottom:20px">Ventes réalisées à Narbonne</h1>
   <div style="background:#FFF6E9;border:1px solid #F3D9A8;border-radius:14px;padding:20px 24px;margin-bottom:32px">
-    <p style="font-size:13.5px;color:#8A5A00;font-weight:600;margin-bottom:6px"><svg class="iad-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V6a4 4 0 0 1 8 0v4"/></svg> Page en préparation — non indexée</p>
+    <p style="font-size:13.5px;color:#8A5A00;font-weight:600;margin-bottom:6px"><svg class="material-symbol" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V6a4 4 0 0 1 8 0v4"/></svg> Page en préparation — non indexée</p>
     <p style="font-size:13.5px;color:#8A5A00;line-height:1.6">Cette page n'est pas encore publiée dans les résultats de recherche (balise noindex). Elle ne sera indexée qu'une fois son contenu confirmé avec des données réelles et vérifiées.</p>
   </div>
   <p style="font-size:15.5px;color:var(--gris-fonce);line-height:1.75;margin-bottom:28px">Cette page présentera, à terme, un historique de ventes réellement accompagnées par Guillaume Roque à Narbonne et dans le Grand Narbonne. Elle ne sera publiée qu'une fois chaque vente confirmée avec l'autorisation explicite des vendeurs concernés — aucune donnée n'est inventée en attendant.</p>
@@ -360,7 +360,7 @@ footer{background:var(--bleu-fonce);padding:56px 8vw 36px}
       <button id="consentBtnRetirer" onclick="retirerConsentement()" style="display:none;background:transparent;border:1px solid rgba(255,255,255,.4);color:#fff;font-size:12px;font-weight:600;padding:8px 16px;border-radius:100px;cursor:pointer">Retirer mon consentement</button>
       <button onclick="setConsent(false)" style="background:transparent;border:1px solid rgba(255,255,255,.4);color:#fff;font-size:12px;font-weight:600;padding:8px 16px;border-radius:100px;cursor:pointer">Refuser</button>
       <button onclick="setConsent(true)" style="background:#00709C;border:none;color:#fff;font-size:12px;font-weight:700;padding:8px 18px;border-radius:100px;cursor:pointer">Accepter</button>
-      <button onclick="document.getElementById('cookieBanner').style.display='none'" aria-label="Fermer ce panneau" style="background:transparent;border:none;color:rgba(255,255,255,.55);font-size:16px;padding:4px 10px;cursor:pointer;line-height:1">✕</button>
+      <button onclick="document.getElementById('cookieBanner').style.display='none'" aria-label="Fermer ce panneau" style="background:transparent;border:none;color:rgba(255,255,255,.55);font-size:16px;padding:4px 10px;cursor:pointer;line-height:1"><svg class="material-symbol cookie-close-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/icons.svg?v=20260914#close"/></svg></button>
     </div>
   </div>
 </div>

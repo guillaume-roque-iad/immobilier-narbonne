@@ -128,7 +128,7 @@ def cookie_and_scripts(focusin_js=''):
       <button id="consentBtnRetirer" onclick="retirerConsentement()" style="display:none;background:transparent;border:1px solid rgba(255,255,255,.4);color:#fff;font-size:12px;font-weight:600;padding:8px 16px;border-radius:100px;cursor:pointer">Retirer mon consentement</button>
       <button onclick="setConsent(false)" style="background:transparent;border:1px solid rgba(255,255,255,.4);color:#fff;font-size:12px;font-weight:600;padding:8px 16px;border-radius:100px;cursor:pointer">Refuser</button>
       <button onclick="setConsent(true)" style="background:var(--bleu);border:none;color:#fff;font-size:12px;font-weight:700;padding:8px 18px;border-radius:100px;cursor:pointer">Accepter</button>
-      <button onclick="document.getElementById('cookieBanner').style.display='none'" aria-label="Fermer ce panneau" style="background:transparent;border:none;color:rgba(255,255,255,.55);font-size:16px;padding:4px 10px;cursor:pointer;line-height:1">✕</button>
+      <button onclick="document.getElementById('cookieBanner').style.display='none'" aria-label="Fermer ce panneau" style="background:transparent;border:none;color:rgba(255,255,255,.55);font-size:16px;padding:4px 10px;cursor:pointer;line-height:1"><svg class="material-symbol cookie-close-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/icons.svg?v=20260914#close"/></svg></button>
     </div>
   </div>
 </div>
