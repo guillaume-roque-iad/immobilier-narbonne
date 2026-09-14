@@ -120,7 +120,7 @@ def cookie_and_scripts(focusin_js=''):
   vide, aucun script tiers n'est charge et aucun cookie de mesure n'est depose.
   Emplacement a completer par Guillaume : GA4_MEASUREMENT_ID = 'G-XXXXXXXXXX';
 -->
-<div id="cookieBanner" style="display:none;position:fixed;left:0;right:0;bottom:0;z-index:2000;background:#0B2436;color:#fff;padding:18px 5vw">
+<div id="cookieBanner" style="display:block;position:fixed;left:0;right:0;bottom:0;z-index:2000;background:#0B2436;color:#fff;padding:18px 5vw">
   <div style="max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between">
     <div style="max-width:640px">
       <p style="font-size:12.5px;line-height:1.6;color:rgba(255,255,255,.9);margin:0 0 6px">Ce site n'utilise aujourd'hui aucun cookie de mesure d'audience. Si vous acceptez, un outil de mesure pourra être activé pour améliorer le site — vos coordonnées ne sont jamais transmises à cet outil. <a href="/politique-confidentialite" style="color:#fff;text-decoration:underline">En savoir plus</a></p>
@@ -236,11 +236,16 @@ function ouvrirGestionCookies() {{
 
 (function initConsentement() {{
   var data = lireConsentement();
+  var banniere = document.getElementById('cookieBanner');
   if (data && data.choice === 'accepted') {{
+    if (banniere) banniere.style.display = 'none';
     loadGA4();
+  }} else if (data && data.choice === 'denied') {{
+    if (banniere) banniere.style.display = 'none';
   }} else if (!data && GA4_MEASUREMENT_ID) {{
-    var banniere = document.getElementById('cookieBanner');
     if (banniere) banniere.style.display = 'block';
+  }} else if (banniere) {{
+    banniere.style.display = 'none';
   }}
   majInterfaceConsentement();
   if (location.hash === '#cookies') {{ ouvrirGestionCookies(); }}
