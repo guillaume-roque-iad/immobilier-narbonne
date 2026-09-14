@@ -8,7 +8,9 @@
 <meta name="description" content="Votre demande d'estimation immobilière à Narbonne a bien été transmise à Guillaume Roque. Découvrez les prochaines étapes et comment le contacter directement."/>
 <meta name="robots" content="noindex, follow"/>
 <link rel="canonical" href="https://immobiliernarbonne.com/merci-estimation"/>
-<link rel="preload" href="/fonts/montserrat-400.ttf" as="font" type="font/ttf" crossorigin/>
+<link rel="preload" href="/fonts/montserrat-400-latin.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/montserrat-700-latin.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/refonte.css?v=20260914c" as="style"/>
 <style>
 @font-face{font-family:'Inter';font-style:normal;font-weight:400 800;font-display:swap;src:url('/fonts/inter-variable-latin.woff2') format('woff2-variations')}
 
@@ -260,9 +262,10 @@ footer{background:var(--bleu-fonce);padding:56px 8vw 36px}
 .merci-back{font-size:13px;color:var(--gris);text-decoration:none}
 .merci-back:hover{color:var(--bleu)}
 </style>
-<link rel="stylesheet" href="/refonte.css?v=20260914b"/>
+<link rel="stylesheet" href="/refonte.css?v=20260914c"/>
 <script src="/navigation.js?v=20260914" defer></script>
-<link rel="stylesheet" href="/annonces.css?v=20260914"/>
+<link rel="preload" href="/annonces.css?v=20260914a" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+<noscript><link rel="stylesheet" href="/annonces.css?v=20260914a"/></noscript>
 </head>
 <body>
 
@@ -363,7 +366,7 @@ footer{background:var(--bleu-fonce);padding:56px 8vw 36px}
   <div style="max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between">
     <div style="max-width:640px">
       <p style="font-size:12.5px;line-height:1.6;color:rgba(255,255,255,.9);margin:0 0 6px">Ce site utilise Google Analytics 4, un outil de mesure d'audience, uniquement si vous l'acceptez. Vos coordonnées personnelles ne sont jamais transmises à cet outil. <a href="/politique-confidentialite" style="color:#fff;text-decoration:underline" aria-label="En savoir plus sur la politique de confidentialité">En savoir plus</a></p>
-      <p id="consentStatutTexte" style="font-size:11px;color:rgba(255,255,255,.6);margin:0"></p>
+      <p id="consentStatutTexte" style="font-size:12px;color:rgba(255,255,255,.86);margin:0"></p>
     </div>
     <div style="display:flex;gap:10px;flex-shrink:0;flex-wrap:wrap;align-items:center">
       <button id="consentBtnRetirer" onclick="retirerConsentement()" style="display:none;background:transparent;border:1px solid rgba(255,255,255,.4);color:#fff;font-size:12px;font-weight:600;padding:8px 16px;border-radius:100px;cursor:pointer">Retirer mon consentement</button>

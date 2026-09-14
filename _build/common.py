@@ -37,7 +37,9 @@ def head(title, description, canonical_path, robots, og_description, jsonld_grap
 <script type="application/ld+json">
 {jsonld_graph}
 </script>
-<link rel="preload" href="/fonts/inter-variable-latin.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/montserrat-400-latin.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/montserrat-700-latin.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/refonte.css?v=20260914c" as="style"/>
 {STYLE}
 </head>
 <body>
@@ -122,7 +124,7 @@ def cookie_and_scripts(focusin_js=''):
   <div style="max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between">
     <div style="max-width:640px">
       <p style="font-size:12.5px;line-height:1.6;color:rgba(255,255,255,.9);margin:0 0 6px">Ce site n'utilise aujourd'hui aucun cookie de mesure d'audience. Si vous acceptez, un outil de mesure pourra être activé pour améliorer le site — vos coordonnées ne sont jamais transmises à cet outil. <a href="/politique-confidentialite" style="color:#fff;text-decoration:underline">En savoir plus</a></p>
-      <p id="consentStatutTexte" style="font-size:11px;color:rgba(255,255,255,.6);margin:0"></p>
+      <p id="consentStatutTexte" style="font-size:12px;color:rgba(255,255,255,.86);margin:0"></p>
     </div>
     <div style="display:flex;gap:10px;flex-shrink:0;flex-wrap:wrap;align-items:center">
       <button id="consentBtnRetirer" onclick="retirerConsentement()" style="display:none;background:transparent;border:1px solid rgba(255,255,255,.4);color:#fff;font-size:12px;font-weight:600;padding:8px 16px;border-radius:100px;cursor:pointer">Retirer mon consentement</button>

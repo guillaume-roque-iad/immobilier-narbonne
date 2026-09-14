@@ -1,6 +1,6 @@
 /* Charte iad 2025 — site commercial, septembre 2026 */
-@font-face{font-family:Montserrat;src:url('/fonts/montserrat-400.ttf') format('truetype');font-weight:400;font-display:swap}
-@font-face{font-family:Montserrat;src:url('/fonts/montserrat-700.ttf') format('truetype');font-weight:600 900;font-display:swap}
+@font-face{font-family:Montserrat;src:url('/fonts/montserrat-400-latin.woff2') format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:Montserrat;src:url('/fonts/montserrat-700-latin.woff2') format('woff2');font-weight:600 900;font-display:swap}
 :root{--bleu:#00b4ec;--bleu-prof:#007daf;--bleu-fonce:#006390;--gris:#515b66;--gris-clair:#f5f9fb;--bleu-bg:#e9fcff;--noir:#111;--corail:#ea584a}
 body{font-family:Montserrat,Helvetica,Arial,sans-serif;font-size:16px;line-height:1.7}
 html{scroll-padding-top:155px}a,button,input,select,textarea{touch-action:manipulation}a:focus-visible,button:focus-visible{outline:3px solid #007daf;outline-offset:5px}
@@ -30,6 +30,7 @@ html{scroll-padding-top:155px}a,button,input,select,textarea{touch-action:manipu
   --blanc:#fff;
 }
 body{color:#000;background:#fff}
+.estim .eyebrow{color:#fff!important}
 .navbar{border-bottom-color:rgba(60,74,95,.18)}
 .nb-logo{filter:none}
 .nb-brand{padding-block:10px}

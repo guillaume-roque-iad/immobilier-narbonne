@@ -22,7 +22,9 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[{"@type":"Service","@id":"https://immobiliernarbonne.com/estimation-immobiliere-narbonne#service","serviceType":"Estimation immobilière","provider":{"@id":"https://immobiliernarbonne.com/#agent"},"areaServed":[{"@type":"City","name":"Narbonne"},{"@type":"AdministrativeArea","name":"Grand Narbonne"}],"name":"Estimation immobilière gratuite à Narbonne","description":"Estimation gratuite et sans engagement d'une maison ou d'un appartement à Narbonne, fondée sur les ventes réelles du secteur.","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}},{"@type":"RealEstateAgent","@id":"https://immobiliernarbonne.com/#agent","name":"Guillaume Roque — Immobilier Narbonne","telephone":"+33662108396","email":"guillaume.roque@iadfrance.fr","url":"https://immobiliernarbonne.com","areaServed":[{"@type":"City","name":"Narbonne"},{"@type":"AdministrativeArea","name":"Grand Narbonne"}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://immobiliernarbonne.com/"},{"@type":"ListItem","position":2,"name":"Estimation immobilière à Narbonne","item":"https://immobiliernarbonne.com/estimation-immobiliere-narbonne"}]}]}
 </script>
-<link rel="preload" href="/fonts/montserrat-400.ttf" as="font" type="font/ttf" crossorigin/>
+<link rel="preload" href="/fonts/montserrat-400-latin.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/montserrat-700-latin.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/refonte.css?v=20260914c" as="style"/>
 <style>
 @font-face{font-family:'Inter';font-style:normal;font-weight:400 800;font-display:swap;src:url('/fonts/inter-variable-latin.woff2') format('woff2-variations')}
 
@@ -256,9 +258,10 @@ footer{background:var(--bleu-fonce);padding:56px 8vw 36px}
 @media(max-width:1024px){#estimation-form{grid-template-columns:1fr;padding:70px 6vw}}
 #cookieBanner button:focus-visible{outline:3px solid #FFFFFF;outline-offset:3px}
 </style>
-<link rel="stylesheet" href="/refonte.css?v=20260914b"/>
+<link rel="stylesheet" href="/refonte.css?v=20260914c"/>
 <script src="/navigation.js?v=20260914" defer></script>
-<link rel="stylesheet" href="/annonces.css?v=20260914"/>
+<link rel="preload" href="/annonces.css?v=20260914a" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+<noscript><link rel="stylesheet" href="/annonces.css?v=20260914a"/></noscript>
 </head>
 <body>
 
@@ -706,7 +709,7 @@ footer{background:var(--bleu-fonce);padding:56px 8vw 36px}
   <div style="max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between">
     <div style="max-width:640px">
       <p style="font-size:12.5px;line-height:1.6;color:rgba(255,255,255,.9);margin:0 0 6px">Ce site utilise Google Analytics 4, un outil de mesure d'audience, uniquement si vous l'acceptez. Vos coordonnées personnelles ne sont jamais transmises à cet outil. <a href="/politique-confidentialite" style="color:#fff;text-decoration:underline" aria-label="En savoir plus sur la politique de confidentialité">En savoir plus</a></p>
-      <p id="consentStatutTexte" style="font-size:11px;color:rgba(255,255,255,.6);margin:0"></p>
+      <p id="consentStatutTexte" style="font-size:12px;color:rgba(255,255,255,.86);margin:0"></p>
     </div>
     <div style="display:flex;gap:10px;flex-shrink:0;flex-wrap:wrap;align-items:center">
       <button id="consentBtnRetirer" onclick="retirerConsentement()" style="display:none;background:transparent;border:1px solid rgba(255,255,255,.4);color:#fff;font-size:12px;font-weight:600;padding:8px 16px;border-radius:100px;cursor:pointer">Retirer mon consentement</button>
