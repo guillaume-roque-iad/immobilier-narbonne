@@ -2,13 +2,14 @@
   'use strict';
 
   var VIDEO_ID = 'd-kWucxZf6I';
+  var VIDEO_URL = 'https://www.youtube.com/shorts/' + VIDEO_ID;
   var labels = {
-    fr: { video: 'Découvrir l’application en vidéo', play: 'Lire la vidéo de présentation', close: 'Réduire la vidéo' },
-    es: { video: 'Descubrir la aplicación en vídeo', play: 'Ver el vídeo de presentación', close: 'Cerrar el vídeo' },
-    en: { video: 'Discover the app in a video', play: 'Play the presentation video', close: 'Close video' },
-    it: { video: 'Scopri l’app in video', play: 'Guarda il video di presentazione', close: 'Chiudi il video' },
-    de: { video: 'Die App im Video entdecken', play: 'Präsentationsvideo abspielen', close: 'Video schließen' },
-    pt: { video: 'Descobrir a aplicação em vídeo', play: 'Ver o vídeo de apresentação', close: 'Fechar vídeo' }
+    fr: { video: 'Découvrir l’application en vidéo', play: 'Lire la vidéo de présentation', close: 'Réduire la vidéo', fallback: 'Voir la vidéo sur YouTube' },
+    es: { video: 'Descubrir la aplicación en vídeo', play: 'Ver el vídeo de presentación', close: 'Cerrar el vídeo', fallback: 'Ver el vídeo en YouTube' },
+    en: { video: 'Discover the app in a video', play: 'Play the presentation video', close: 'Close video', fallback: 'Watch on YouTube' },
+    it: { video: 'Scopri l’app in video', play: 'Guarda il video di presentazione', close: 'Chiudi il video', fallback: 'Guarda su YouTube' },
+    de: { video: 'Die App im Video entdecken', play: 'Präsentationsvideo abspielen', close: 'Video schließen', fallback: 'Auf YouTube ansehen' },
+    pt: { video: 'Descobrir a aplicação em vídeo', play: 'Ver o vídeo de apresentação', close: 'Fechar vídeo', fallback: 'Ver no YouTube' }
   };
 
   function text() {
@@ -33,9 +34,10 @@
       '.propertips-video-label{font-size:13px;font-weight:800;line-height:1.35;color:#fff}',
       '.propertips-inline-wrap{display:flex;flex-direction:column;align-items:center;gap:12px;width:100%}',
       '.propertips-inline-frame{display:block;width:min(300px,100%);aspect-ratio:9/16;border:0;border-radius:18px;background:#000;box-shadow:0 16px 38px rgba(0,0,0,.28)}',
-      '.propertips-inline-close{border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.1);color:#fff;border-radius:999px;padding:10px 16px;font:inherit;font-size:12px;font-weight:700;cursor:pointer}',
-      '.propertips-inline-close:hover{background:rgba(255,255,255,.18)}',
-      '.propertips-inline-close:focus-visible{outline:3px solid #95ebff;outline-offset:3px}',
+      '.propertips-inline-actions{display:flex;gap:10px;align-items:center;justify-content:center;flex-wrap:wrap}',
+      '.propertips-inline-close,.propertips-youtube-link{border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.1);color:#fff!important;border-radius:999px;padding:10px 16px;font:inherit;font-size:12px;font-weight:700;cursor:pointer;text-decoration:none}',
+      '.propertips-inline-close:hover,.propertips-youtube-link:hover{background:rgba(255,255,255,.18)}',
+      '.propertips-inline-close:focus-visible,.propertips-youtube-link:focus-visible{outline:3px solid #95ebff;outline-offset:3px}',
       '@media(max-width:560px){.propertips-logo-wrap{min-height:76px;padding:11px 16px}.propertips-logo-wrap img{width:min(205px,100%)}.propertips-video-trigger{border-radius:15px}.propertips-inline-frame{width:min(285px,100%);border-radius:15px}}'
     ].join('');
     document.head.appendChild(style);
@@ -57,8 +59,11 @@
     var wrap = document.createElement('div');
     wrap.className = 'propertips-inline-wrap';
     wrap.innerHTML =
-      '<iframe class="propertips-inline-frame" src="https://www.youtube-nocookie.com/embed/' + VIDEO_ID + '?autoplay=1&playsinline=1&rel=0&modestbranding=1" title="' + t.video + '" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>' +
-      '<button type="button" class="propertips-inline-close">' + t.close + '</button>';
+      '<iframe class="propertips-inline-frame" src="https://www.youtube-nocookie.com/embed/' + VIDEO_ID + '?autoplay=1&playsinline=1&rel=0" title="' + t.video + '" allow="autoplay; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>' +
+      '<div class="propertips-inline-actions">' +
+        '<button type="button" class="propertips-inline-close">' + t.close + '</button>' +
+        '<a class="propertips-youtube-link" href="' + VIDEO_URL + '" target="_blank" rel="noopener noreferrer">' + t.fallback + ' ↗</a>' +
+      '</div>';
 
     trigger.hidden = true;
     area.appendChild(wrap);
