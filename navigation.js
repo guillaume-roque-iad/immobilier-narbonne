@@ -46,7 +46,7 @@
   document.head.appendChild(script);
 
   const media = document.createElement('script');
-  media.src = '/propertips-media.js?v=20260916h';
+  media.src = '/propertips-media.js?v=20260916j';
   media.defer = true;
   document.head.appendChild(media);
 })();
