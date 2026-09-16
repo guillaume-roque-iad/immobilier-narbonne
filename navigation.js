@@ -44,4 +44,9 @@
   script.src = '/propertips.js?v=20260916';
   script.defer = true;
   document.head.appendChild(script);
+
+  const media = document.createElement('script');
+  media.src = '/propertips-media.js?v=20260916b';
+  media.defer = true;
+  document.head.appendChild(media);
 })();
