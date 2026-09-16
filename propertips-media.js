@@ -3,7 +3,7 @@
 
   var VIDEO_ID = 'd-kWucxZf6I';
   var labels = {
-    fr: { video: 'Découvrir l’application en vidéo', play: 'Lire la vidéo de présentation', close: 'Fermer la vidéo' },
+    fr: { video: 'Découvrir l’application en vidéo', play: 'Lire la vidéo de présentation', close: 'Réduire la vidéo' },
     es: { video: 'Descubrir la aplicación en vídeo', play: 'Ver el vídeo de presentación', close: 'Cerrar el vídeo' },
     en: { video: 'Discover the app in a video', play: 'Play the presentation video', close: 'Close video' },
     it: { video: 'Scopri l’app in video', play: 'Guarda il video di presentazione', close: 'Chiudi il video' },
@@ -23,20 +23,20 @@
     style.textContent = [
       '.propertips-logo-wrap{background:#fff;border-radius:18px;padding:13px 20px;margin:0 0 18px;display:flex;align-items:center;justify-content:center;min-height:86px}',
       '.propertips-logo-wrap img{display:block;width:min(230px,100%);height:auto}',
-      '.propertips-video-trigger{width:100%;border:0;border-radius:18px;overflow:hidden;padding:0;margin:0 0 24px;cursor:pointer;background:linear-gradient(135deg,#006f98,#004f72);color:#fff;position:relative;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;box-shadow:inset 0 0 0 1px rgba(255,255,255,.16);font:inherit}',
+      '.propertips-video-area{margin:0 0 24px}',
+      '.propertips-video-trigger{width:100%;border:0;border-radius:18px;overflow:hidden;padding:0;cursor:pointer;background:linear-gradient(135deg,#006f98,#004f72);color:#fff;position:relative;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;box-shadow:inset 0 0 0 1px rgba(255,255,255,.16);font:inherit}',
       '.propertips-video-trigger:hover .propertips-play{transform:scale(1.07)}',
       '.propertips-video-trigger:focus-visible{outline:3px solid #95ebff;outline-offset:3px}',
       '.propertips-video-poster{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:20px;text-align:center}',
       '.propertips-play{width:62px;height:62px;border-radius:50%;background:#ea584a;display:grid;place-items:center;transition:transform .2s;box-shadow:0 10px 26px rgba(0,0,0,.22)}',
       '.propertips-play::before{content:"";display:block;margin-left:4px;border-top:10px solid transparent;border-bottom:10px solid transparent;border-left:17px solid #fff}',
       '.propertips-video-label{font-size:13px;font-weight:800;line-height:1.35;color:#fff}',
-      '.propertips-video-modal{position:fixed;inset:0;z-index:100000;display:flex;align-items:center;justify-content:center;padding:20px;background:rgba(10,20,30,.88);backdrop-filter:blur(5px)}',
-      '.propertips-video-dialog{position:relative;width:min(390px,92vw);max-height:92vh;display:flex;align-items:center;justify-content:center}',
-      '.propertips-video-frame{width:min(390px,88vw);height:min(82vh,693px);aspect-ratio:9/16;border:0;border-radius:20px;background:#000;box-shadow:0 24px 80px rgba(0,0,0,.5)}',
-      '.propertips-video-close{position:absolute;right:-10px;top:-14px;width:44px;height:44px;border-radius:50%;border:0;background:#fff;color:#111;font-size:25px;line-height:1;cursor:pointer;display:grid;place-items:center;box-shadow:0 6px 22px rgba(0,0,0,.3)}',
-      '.propertips-video-close:focus-visible{outline:3px solid #00b4ec;outline-offset:3px}',
-      'body.propertips-video-open{overflow:hidden}',
-      '@media(max-width:560px){.propertips-logo-wrap{min-height:76px;padding:11px 16px}.propertips-logo-wrap img{width:min(205px,100%)}.propertips-video-trigger{border-radius:15px}.propertips-video-frame{height:min(80vh,640px)}}'
+      '.propertips-inline-wrap{display:flex;flex-direction:column;align-items:center;gap:12px;width:100%}',
+      '.propertips-inline-frame{display:block;width:min(300px,100%);aspect-ratio:9/16;border:0;border-radius:18px;background:#000;box-shadow:0 16px 38px rgba(0,0,0,.28)}',
+      '.propertips-inline-close{border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.1);color:#fff;border-radius:999px;padding:10px 16px;font:inherit;font-size:12px;font-weight:700;cursor:pointer}',
+      '.propertips-inline-close:hover{background:rgba(255,255,255,.18)}',
+      '.propertips-inline-close:focus-visible{outline:3px solid #95ebff;outline-offset:3px}',
+      '@media(max-width:560px){.propertips-logo-wrap{min-height:76px;padding:11px 16px}.propertips-logo-wrap img{width:min(205px,100%)}.propertips-video-trigger{border-radius:15px}.propertips-inline-frame{width:min(285px,100%);border-radius:15px}}'
     ].join('');
     document.head.appendChild(style);
   }
@@ -49,35 +49,26 @@
     }
   }
 
-  function openVideo() {
-    if (document.querySelector('.propertips-video-modal')) return;
+  function mountInlineVideo(area, trigger) {
+    if (!area || area.querySelector('.propertips-inline-frame')) return;
     var t = text();
     trackVideo();
 
-    var modal = document.createElement('div');
-    modal.className = 'propertips-video-modal';
-    modal.setAttribute('role', 'dialog');
-    modal.setAttribute('aria-modal', 'true');
-    modal.setAttribute('aria-label', t.video);
-    modal.innerHTML =
-      '<div class="propertips-video-dialog">' +
-        '<iframe class="propertips-video-frame" src="https://www.youtube-nocookie.com/embed/' + VIDEO_ID + '?autoplay=1&rel=0&modestbranding=1" title="' + t.video + '" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>' +
-        '<button type="button" class="propertips-video-close" aria-label="' + t.close + '">×</button>' +
-      '</div>';
+    var wrap = document.createElement('div');
+    wrap.className = 'propertips-inline-wrap';
+    wrap.innerHTML =
+      '<iframe class="propertips-inline-frame" src="https://www.youtube-nocookie.com/embed/' + VIDEO_ID + '?autoplay=1&playsinline=1&rel=0&modestbranding=1" title="' + t.video + '" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>' +
+      '<button type="button" class="propertips-inline-close">' + t.close + '</button>';
 
-    function close() {
-      document.body.classList.remove('propertips-video-open');
-      modal.remove();
-      document.removeEventListener('keydown', onKey);
-    }
-    function onKey(e) { if (e.key === 'Escape') close(); }
+    trigger.hidden = true;
+    area.appendChild(wrap);
 
-    modal.addEventListener('click', function (e) { if (e.target === modal) close(); });
-    modal.querySelector('.propertips-video-close').addEventListener('click', close);
-    document.addEventListener('keydown', onKey);
-    document.body.classList.add('propertips-video-open');
-    document.body.appendChild(modal);
-    modal.querySelector('.propertips-video-close').focus();
+    var close = wrap.querySelector('.propertips-inline-close');
+    close.addEventListener('click', function () {
+      wrap.remove();
+      trigger.hidden = false;
+      trigger.focus();
+    });
   }
 
   function enhance() {
@@ -95,6 +86,9 @@
     if (brand) brand.replaceWith(logoWrap); else card.prepend(logoWrap);
 
     var t = text();
+    var area = document.createElement('div');
+    area.className = 'propertips-video-area';
+
     var video = document.createElement('button');
     video.type = 'button';
     video.className = 'propertips-video-trigger';
@@ -104,8 +98,10 @@
         '<span class="propertips-play" aria-hidden="true"></span>' +
         '<span class="propertips-video-label">' + t.video + '</span>' +
       '</span>';
-    logoWrap.insertAdjacentElement('afterend', video);
-    video.addEventListener('click', openVideo);
+
+    area.appendChild(video);
+    logoWrap.insertAdjacentElement('afterend', area);
+    video.addEventListener('click', function () { mountInlineVideo(area, video); });
 
     section.setAttribute('data-media-enhanced', '1');
     return true;
