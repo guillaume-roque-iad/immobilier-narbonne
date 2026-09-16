@@ -38,3 +38,10 @@
     if (window.innerWidth > 1180) closeMenu();
   });
 })();
+
+(() => {
+  const script = document.createElement('script');
+  script.src = '/propertips.js?v=20260916';
+  script.defer = true;
+  document.head.appendChild(script);
+})();
