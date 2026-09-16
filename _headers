@@ -13,6 +13,17 @@
   # sans casser les formulaires, Analytics ou le lecteur vidéo.
   Content-Security-Policy-Report-Only: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https://www.google-analytics.com https://images.iadfrance.fr; connect-src 'self' https://script.google.com https://script.googleusercontent.com https://*.google-analytics.com https://*.analytics.google.com https://cloudflareinsights.com; frame-src 'self' https://www.youtube-nocookie.com; form-action 'self' https://script.google.com; frame-ancestors 'self'; base-uri 'self'; object-src 'none'
 
+# Les scripts qui pilotent Propertips doivent toujours être revalidés afin
+# d'éviter qu'un ancien comportement reste en cache dans Safari.
+/navigation.js
+  Cache-Control: no-cache, must-revalidate
+
+/propertips.js
+  Cache-Control: no-cache, must-revalidate
+
+/propertips-media.js
+  Cache-Control: no-cache, must-revalidate
+
 # Cache long pour les ressources statiques versionnables (polices, images, favicon).
 # Ne s'applique jamais aux pages HTML (celles-ci restent sans cache long, cf. regle /* ci-dessus
 # qui ne definit pas Cache-Control : Cloudflare applique alors son cache par defaut pour le HTML).
