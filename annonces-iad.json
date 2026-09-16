@@ -1,6 +1,6 @@
 {
   "source": "https://www.iadfrance.fr/conseiller-immobilier/guillaume.roque",
-  "updated": "2026-09-13",
+  "updated": "2026-09-16",
   "items": [
     {
       "title": "Maison de campagne à QUARANTE (34310)",
@@ -20,6 +20,36 @@
       ],
       "url": "https://www.iadfrance.fr/annonce/maison-vente-11-pieces-quarante-350m2/r2035791",
       "image": "https://images.iadfrance.fr/property/broadcast/2026/06/20/019ee517881aad6b307e72c1302d95ce.png?format=auto&width=600",
+      "charges": ""
+    },
+    {
+      "title": "Terrain à bâtir à Lézignan-Corbières (11200)",
+      "ville": "Lézignan-Corbières",
+      "type": "Terrain",
+      "offre": "Vente",
+      "price": "58 000 €",
+      "details": [
+        "525 m² de terrain"
+      ],
+      "tags": [
+        "Nouveau"
+      ],
+      "url": "https://www.iadfrance.fr/annonce/terrain-vente-lezignan-corbieres-525m2/r2113044",
+      "image": "https://images.iadfrance.fr/property/broadcast/2026/09/16/01a0a983e93a8ccb55c9cc3d4260924d.png?format=auto&width=600",
+      "charges": ""
+    },
+    {
+      "title": "Divers Commerces à Colombiers (34440)",
+      "ville": "Colombiers",
+      "type": "Divers Commerces",
+      "offre": "Vente",
+      "price": "132 500 €",
+      "details": [],
+      "tags": [
+        "Nouveau"
+      ],
+      "url": "https://www.iadfrance.fr/annonce/local-commercial-vente-colombiers/r2091672",
+      "image": "https://images.iadfrance.fr/property/broadcast/2026/09/14/01a0a056976b1ef806e6c9b933ff2059.png?format=auto&width=600",
       "charges": ""
     },
     {
@@ -111,21 +141,6 @@
       "url": "https://www.iadfrance.fr/annonce/local-commercial-location-narbonne-18m2/r2093358",
       "image": "https://images.iadfrance.fr/photos/realestate/2026-08/product-2159990-1.jpg?ts=202608311203&format=auto&width=600",
       "charges": "charges comprises"
-    },
-    {
-      "title": "Appartement à Narbonne (11100)",
-      "ville": "Narbonne",
-      "type": "Appartement",
-      "offre": "Vente",
-      "price": "118 000 €",
-      "details": [
-        "2 pièces",
-        "53 m²"
-      ],
-      "tags": [],
-      "url": "https://www.iadfrance.fr/annonce/appartement-vente-2-pieces-narbonne-53m2/r1895507",
-      "image": "https://images.iadfrance.fr/property/broadcast/2026/08/19/01a01abc2ac88db208f042c086f581b4.jpg?format=auto&width=600",
-      "charges": ""
     },
     {
       "title": "Maison à Creissan (34370)",
@@ -1418,24 +1433,6 @@
       "charges": ""
     },
     {
-      "title": "Maison de ville à capestang (34310)",
-      "ville": "Capestang",
-      "type": "Maison",
-      "offre": "Vente",
-      "price": "120 000 €",
-      "details": [
-        "3 chambres",
-        "4 pièces",
-        "112 m²"
-      ],
-      "tags": [
-        "Exclusivité"
-      ],
-      "url": "https://www.iadfrance.fr/annonce/maison-vente-4-pieces-capestang-112m2/r1972950",
-      "image": "https://images.iadfrance.fr/property/broadcast/2026/03/23/019d19fc3f10b8a6c3efac5e4b2d7e88.jpg?format=auto&width=600",
-      "charges": ""
-    },
-    {
       "title": "Pizzeria à NARBONNE (11100)",
       "ville": "Narbonne",
       "type": "Pizzeria",
@@ -1515,7 +1512,7 @@
       "ville": "Narbonne",
       "type": "Maison",
       "offre": "Vente",
-      "price": "370 000 €",
+      "price": "350 000 €",
       "details": [
         "3 chambres",
         "4 pièces",
@@ -1547,24 +1544,6 @@
       "charges": ""
     },
     {
-      "title": "Appartement à Narbonne (11100)",
-      "ville": "Narbonne",
-      "type": "Appartement",
-      "offre": "Vente",
-      "price": "130 000 €",
-      "details": [
-        "2 chambres",
-        "3 pièces",
-        "74 m²"
-      ],
-      "tags": [
-        "Exclusivité"
-      ],
-      "url": "https://www.iadfrance.fr/annonce/appartement-vente-3-pieces-narbonne-74m2/r1827941",
-      "image": "https://images.iadfrance.fr/property/broadcast/2025/09/01/019906aab34b520d3352bb4197a62498.jpg?format=auto&width=600",
-      "charges": ""
-    },
-    {
       "title": "Immeuble à Rieux-Minervois (11160)",
       "ville": "Rieux-Minervois",
       "type": "Immeuble",
@@ -1592,28 +1571,11 @@
         "180 m²",
         "300 m² de terrain"
       ],
-      "tags": [],
+      "tags": [
+        "Sous compromis"
+      ],
       "url": "https://www.iadfrance.fr/annonce/maison-vente-6-pieces-saint-chinian-180m2/r1808741",
       "image": "https://images.iadfrance.fr/property/broadcast/2025/07/11/0197fa10be43e71e21a3f8f013576f06.jpg?format=auto&width=600",
-      "charges": ""
-    },
-    {
-      "title": "Maison de campagne à Lézignan-Corbières (11200)",
-      "ville": "Lézignan-Corbières",
-      "type": "Maison",
-      "offre": "Vente",
-      "price": "490 000 €",
-      "details": [
-        "4 chambres",
-        "5 pièces",
-        "226 m²",
-        "8 360 m² de terrain"
-      ],
-      "tags": [
-        "Exclusivité"
-      ],
-      "url": "https://www.iadfrance.fr/annonce/maison-vente-5-pieces-lezignan-corbieres-226m2/r1722275",
-      "image": "https://images.iadfrance.fr/property/broadcast/2025/06/16/0197796c9a2670f468f2521f936fa66c.jpg?format=auto&width=600",
       "charges": ""
     },
     {
