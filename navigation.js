@@ -41,12 +41,12 @@
 
 (() => {
   const script = document.createElement('script');
-  script.src = '/propertips.js?v=20260916';
+  script.src = '/propertips.js?v=20260916i';
   script.defer = true;
   document.head.appendChild(script);
 
   const media = document.createElement('script');
-  media.src = '/propertips-media.js?v=20260916g';
+  media.src = '/propertips-media.js?v=20260916h';
   media.defer = true;
   document.head.appendChild(media);
 })();
