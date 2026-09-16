@@ -98,7 +98,7 @@
     if (items) return true;
     if (loading) return loading;
     root.setAttribute('aria-busy', 'true');
-    loading = fetch('/annonces-iad.json?v=20260914', {credentials:'same-origin'})
+    loading = fetch('/annonces-iad.json?v=20260916', {credentials:'same-origin'})
       .then(response => {
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
         return response.json();
