@@ -9,6 +9,7 @@
   const count = root.querySelector('#biens-resultat');
   const more = root.querySelector('#biens-plus');
   const reset = root.querySelector('#biens-reset');
+  const source = root.querySelector('.biens-source');
   let items = null;
   let loading = null;
   let limit = 9;
@@ -18,6 +19,52 @@
     if (className) node.className = className;
     if (text !== undefined) node.textContent = text;
     return node;
+  }
+
+  function syncSelect(select, values) {
+    if (!select) return;
+    const placeholder = select.options[0]?.textContent || 'Tous';
+    const current = select.value;
+    const first = element('option', '', placeholder);
+    first.value = '';
+    const fragment = document.createDocumentFragment();
+    fragment.append(first);
+    values
+      .filter(Boolean)
+      .sort((a, b) => a.localeCompare(b, 'fr', {sensitivity: 'base'}))
+      .forEach(value => {
+        const option = element('option', '', value);
+        option.value = value;
+        fragment.append(option);
+      });
+    select.replaceChildren(fragment);
+    if (values.includes(current)) select.value = current;
+  }
+
+  function syncFilters() {
+    syncSelect(town, [...new Set(items.map(item => item.ville))]);
+    syncSelect(type, [...new Set(items.map(item => item.type))]);
+  }
+
+  function formatUpdatedDate(value) {
+    if (!value || !/^\d{4}-\d{2}-\d{2}$/.test(value)) return null;
+    const [year, month, day] = value.split('-').map(Number);
+    return new Intl.DateTimeFormat('fr-FR', {
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric',
+      timeZone: 'Europe/Paris'
+    }).format(new Date(Date.UTC(year, month - 1, day)));
+  }
+
+  function syncSource(updated) {
+    if (!source) return;
+    const date = formatUpdatedDate(updated);
+    if (!date) return;
+    const link = source.querySelector('a');
+    source.replaceChildren(document.createTextNode(`Annonces importées le ${date} depuis `));
+    if (link) source.append(link);
+    source.append(document.createTextNode('. Retrouvez la disponibilité, le descriptif complet, les diagnostics et les informations sur les honoraires dans chaque fiche iad.'));
   }
 
   function createCard(item) {
@@ -98,7 +145,7 @@
     if (items) return true;
     if (loading) return loading;
     root.setAttribute('aria-busy', 'true');
-    loading = fetch('/annonces-iad.json?v=20260916', {credentials:'same-origin'})
+    loading = fetch('/annonces-iad.json', {credentials:'same-origin', cache:'no-store'})
       .then(response => {
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
         return response.json();
@@ -106,6 +153,8 @@
       .then(data => {
         if (!Array.isArray(data.items)) throw new Error('Catalogue invalide');
         items = data.items;
+        syncFilters();
+        syncSource(data.updated);
         render();
         return true;
       })
@@ -137,14 +186,7 @@
 
   root.querySelector('.biens-filtres').hidden = false;
 
-  if ('IntersectionObserver' in window) {
-    const observer = new IntersectionObserver(entries => {
-      if (!entries.some(entry => entry.isIntersecting)) return;
-      observer.disconnect();
-      ensureCatalogue();
-    }, {rootMargin:'600px 0px'});
-    observer.observe(root);
-  } else {
-    window.addEventListener('load', ensureCatalogue, {once:true});
-  }
+  // Le catalogue est chargé immédiatement pour que les nouvelles annonces,
+  // villes et typologies apparaissent sans dépendre du HTML de secours.
+  ensureCatalogue();
 })();
