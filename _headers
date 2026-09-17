@@ -24,6 +24,15 @@
 /propertips-media.js
   Cache-Control: no-cache, must-revalidate
 
+# Le catalogue IAD et son moteur d'affichage doivent être revalidés à chaque visite.
+# Cela évite qu'un changement de prix, de statut, de commune ou de typologie reste
+# masqué derrière une ancienne version en cache.
+/annonces.js
+  Cache-Control: no-cache, must-revalidate
+
+/annonces-iad.json
+  Cache-Control: no-cache, must-revalidate
+
 # Cache long pour les ressources statiques versionnables (polices, images, favicon).
 # Ne s'applique jamais aux pages HTML (celles-ci restent sans cache long, cf. regle /* ci-dessus
 # qui ne definit pas Cache-Control : Cloudflare applique alors son cache par defaut pour le HTML).
