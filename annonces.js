@@ -14,11 +14,27 @@
   let loading = null;
   let limit = 9;
 
+  // Corrections vérifiées sur la page publique iad de Guillaume Roque.
+  // Ces références ne figurent plus parmi les biens disponibles au 19/09/2026.
+  const catalogueCorrections = {
+    updated: '2026-09-19',
+    excludedRefs: new Set([
+      'r1702385-4',
+      'r1702114-18',
+      'r1983373-23',
+      'r1983373-32'
+    ])
+  };
+
   function element(tag, className, text) {
     const node = document.createElement(tag);
     if (className) node.className = className;
     if (text !== undefined) node.textContent = text;
     return node;
+  }
+
+  function getReference(item) {
+    return (item.url || '').split('/').filter(Boolean).pop() || '';
   }
 
   function syncSelect(select, values) {
@@ -78,7 +94,7 @@
     link.target = '_blank';
     link.rel = 'noopener noreferrer';
     const displayPrice = item.offre === 'Location' ? `${item.price} / mois` : item.price;
-    const reference = item.url.split('/').filter(Boolean).pop();
+    const reference = getReference(item);
     const description = [displayPrice, ...(item.details || [])].filter(Boolean).join(', ');
     link.setAttribute('aria-label', `${item.title} — ${description} — référence ${reference} — voir la fiche sur iad (nouvel onglet)`);
 
@@ -152,9 +168,9 @@
       })
       .then(data => {
         if (!Array.isArray(data.items)) throw new Error('Catalogue invalide');
-        items = data.items;
+        items = data.items.filter(item => !catalogueCorrections.excludedRefs.has(getReference(item)));
         syncFilters();
-        syncSource(data.updated);
+        syncSource(catalogueCorrections.updated || data.updated);
         render();
         return true;
       })
