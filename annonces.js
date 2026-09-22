@@ -15,14 +15,21 @@
   let limit = 9;
 
   // Corrections vérifiées sur la page publique iad de Guillaume Roque.
-  // Ces références ne figurent plus parmi les biens disponibles au 19/09/2026.
+  // Au 22/09/2026, iad affiche 103 biens disponibles.
   const catalogueCorrections = {
-    updated: '2026-09-19',
+    updated: '2026-09-22',
     excludedRefs: new Set([
       'r1702385-4',
       'r1702114-18',
       'r1983373-23',
       'r1983373-32'
+    ]),
+    removedTagsByRef: new Map([
+      ['r2062986', new Set(['Nouveau'])],
+      ['r2079926', new Set(['Nouveau'])],
+      ['r2101887', new Set(['Nouveau'])],
+      ['r2092836', new Set(['Nouveau'])],
+      ['r2093358', new Set(['Nouveau'])]
     ])
   };
 
@@ -35,6 +42,16 @@
 
   function getReference(item) {
     return (item.url || '').split('/').filter(Boolean).pop() || '';
+  }
+
+  function applyCatalogueCorrections(item) {
+    const reference = getReference(item);
+    const removedTags = catalogueCorrections.removedTagsByRef.get(reference);
+    if (!removedTags) return item;
+    return {
+      ...item,
+      tags: (item.tags || []).filter(tag => !removedTags.has(tag))
+    };
   }
 
   function syncSelect(select, values) {
@@ -168,7 +185,9 @@
       })
       .then(data => {
         if (!Array.isArray(data.items)) throw new Error('Catalogue invalide');
-        items = data.items.filter(item => !catalogueCorrections.excludedRefs.has(getReference(item)));
+        items = data.items
+          .filter(item => !catalogueCorrections.excludedRefs.has(getReference(item)))
+          .map(applyCatalogueCorrections);
         syncFilters();
         syncSource(catalogueCorrections.updated || data.updated);
         render();
