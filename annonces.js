@@ -15,9 +15,23 @@
   let limit = 9;
 
   // Corrections vérifiées sur la page publique iad de Guillaume Roque.
-  // Au 22/09/2026, iad affiche 103 biens disponibles.
+  // Au 23/09/2026, iad affiche 104 biens disponibles.
   const catalogueCorrections = {
-    updated: '2026-09-22',
+    updated: '2026-09-23',
+    additionalItems: [
+      {
+        title: 'Appartement à Narbonne (11100)',
+        ville: 'Narbonne',
+        type: 'Appartement',
+        offre: 'Vente',
+        price: '215 000 €',
+        details: ['2 chambres', '3 pièces', '71 m²'],
+        tags: ['Exclusivité', 'Nouveau'],
+        url: 'https://www.iadfrance.fr/annonce/appartement-vente-3-pieces-narbonne-71m2/r2118039',
+        image: 'https://images.iadfrance.fr/property/broadcast/2026/09/22/01a0c830ed4405f3e1c1d9a1e792fcc5.png?format=auto&width=600',
+        charges: ''
+      }
+    ],
     excludedRefs: new Set([
       'r1702385-4',
       'r1702114-18',
@@ -185,9 +199,20 @@
       })
       .then(data => {
         if (!Array.isArray(data.items)) throw new Error('Catalogue invalide');
-        items = data.items
+        const baseItems = data.items
           .filter(item => !catalogueCorrections.excludedRefs.has(getReference(item)))
           .map(applyCatalogueCorrections);
+        const existingRefs = new Set(baseItems.map(getReference));
+        const additionalItems = catalogueCorrections.additionalItems
+          .filter(item => !existingRefs.has(getReference(item)))
+          .map(applyCatalogueCorrections);
+        const firstNonPrestige = baseItems.findIndex(item => !(item.tags || []).includes('Prestige'));
+        const insertionIndex = firstNonPrestige === -1 ? baseItems.length : firstNonPrestige;
+        items = [
+          ...baseItems.slice(0, insertionIndex),
+          ...additionalItems,
+          ...baseItems.slice(insertionIndex)
+        ];
         syncFilters();
         syncSource(catalogueCorrections.updated || data.updated);
         render();
