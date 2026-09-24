@@ -15,10 +15,22 @@
   let limit = 9;
 
   // Corrections vérifiées sur la page publique iad de Guillaume Roque.
-  // Au 23/09/2026, iad affiche 104 biens disponibles.
+  // Au 24/09/2026, iad affiche 105 biens disponibles.
   const catalogueCorrections = {
-    updated: '2026-09-23',
+    updated: '2026-09-24',
     additionalItems: [
+      {
+        title: 'Appartement à Narbonne (11100)',
+        ville: 'Narbonne',
+        type: 'Appartement',
+        offre: 'Vente',
+        price: '118 000 €',
+        details: ['2 pièces', '53 m²'],
+        tags: ['Nouveau'],
+        url: 'https://www.iadfrance.fr/annonce/appartement-vente-2-pieces-narbonne-53m2/r2114821',
+        image: 'https://images.iadfrance.fr/property/broadcast/2026/09/23/01a0ced7c6473045e72374d1fa4423b6.jpg?format=auto&width=600',
+        charges: ''
+      },
       {
         title: 'Appartement à Narbonne (11100)',
         ville: 'Narbonne',
