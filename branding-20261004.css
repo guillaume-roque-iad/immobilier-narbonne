@@ -2,6 +2,7 @@
 .nb-brand .nb-site-logo{display:block;width:144px;height:auto;max-width:none;flex:none;object-fit:contain}
 .site-header .navbar{height:144px}
 .site-header .nb-brand{gap:18px}
+.site-header .nb-links{gap:16px}
 .site-header .nb-logo{height:24px;width:auto;max-width:none}
 .nb-simple{min-height:144px;height:auto;padding-block:10px}
 html{scroll-padding-top:160px}
@@ -10,7 +11,7 @@ html{scroll-padding-top:160px}
 @media(max-width:1180px){
   .site-header .navbar{height:128px}
   .nb-brand .nb-site-logo{width:128px}
-  .nb-links{top:128px}
+  .site-header .nb-links{top:128px;gap:0;max-height:calc(100dvh - 144px);overflow-y:auto}
   html{scroll-padding-top:144px}
 }
 @media(max-width:760px){
@@ -20,7 +21,7 @@ html{scroll-padding-top:160px}
   .site-header .nb-logo{height:18px}
   .site-header .nb-sep{display:block;height:38px;width:1px;flex:none}
   .nb-simple{min-height:112px}
-  .nb-links{top:112px}
+  .site-header .nb-links{top:112px;max-height:calc(100dvh - 128px)}
   html{scroll-padding-top:128px}
 }
 @media(max-width:420px){
