@@ -404,6 +404,7 @@ html{scroll-padding-top:132px}
 <link rel="preload" href="/avis-google.css?v=20260914a" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
 <noscript><link rel="stylesheet" href="/avis-google.css?v=20260914a"/></noscript>
 <link rel="stylesheet" href="/branding-20261004.css"/>
+<link rel="stylesheet" href="/newsletter-20261004.css"/>
 </head>
 <body>
 <a class="skip-link" href="#contenu">Aller au contenu</a>
@@ -694,6 +695,35 @@ html{scroll-padding-top:132px}
   <p style="text-align:center;margin-top:32px"><a href="/conseils/" style="color:#0079A3;font-weight:700;font-size:14px;text-decoration:none">Voir tous les conseils →</a></p>
 </section>
 
+<!-- NEWSLETTER -->
+<section class="newsletter-section" id="newsletter" aria-labelledby="newsletter-title">
+  <div class="newsletter-layout">
+    <div class="newsletter-copy">
+      <div class="eyebrow">La lettre Immobilier Narbonne</div>
+      <h2 id="newsletter-title">Gardons <em>le contact.</em></h2>
+      <p>Chaque mois, recevez mes conseils pour vendre ou acheter, les actualités du marché local et une sélection de biens à Narbonne et dans ses environs.</p>
+      <p class="newsletter-note">Par Guillaume Roque, conseiller immobilier iad France.<br/>Inscription gratuite. Désinscription à tout moment.</p>
+    </div>
+    <div class="newsletter-form">
+      <form class="newsletter-signup" method="post" action="https://c3c1ab51.sibforms.com/serve/MUIFAFUxWFKzIRR-Dt_x33GLHSmClhsom4klap26-YAvbThaISvobKthDyEMv9l4ptNJZPWMqZHWCnAhhtZaddftXAP7mb2IqOCmCd4CK-ahSP085aE_b5zwJE1XADGImRhi6NlAu_YHYDTb8Zo-nP8W734wtTJDh3-95rgyOBvEacmAnWk_igVoOAT6IkwIcqwausiiLtPoB_Gu" aria-describedby="newsletter-privacy">
+        <label for="newsletter-email">Votre adresse email</label>
+        <div class="newsletter-fields">
+          <input id="newsletter-email" name="EMAIL" type="email" autocomplete="email" inputmode="email" placeholder="vous@exemple.fr" required/>
+          <button type="submit">Je m’inscris <span aria-hidden="true">↗</span></button>
+        </div>
+        <label class="newsletter-consent" for="newsletter-consent">
+          <input id="newsletter-consent" type="checkbox" name="OPT_IN" value="1" required/>
+          <span>J’accepte de recevoir par email la newsletter Immobilier Narbonne de Guillaume Roque.</span>
+        </label>
+        <div class="newsletter-honeypot" aria-hidden="true"><label for="newsletter-check">Ne pas remplir ce champ</label><input id="newsletter-check" type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off"/></div>
+        <input type="hidden" name="locale" value="fr"/>
+        <input type="hidden" name="html_type" value="simple"/>
+      </form>
+      <p class="newsletter-privacy" id="newsletter-privacy">Votre adresse email est utilisée pour cette newsletter, gérée avec Brevo. Confirmez votre inscription en cliquant sur le lien reçu par email. Vous pourrez vous désinscrire depuis chaque newsletter. <a href="/politique-confidentialite#newsletter">Confidentialité et droits</a>.</p>
+    </div>
+  </div>
+</section>
+
 <!-- ESTIMATION -->
 <section class="estim">
   <div class="eyebrow" style="color:#fff">Vous souhaitez vendre ?</div>
@@ -906,6 +936,7 @@ html{scroll-padding-top:132px}
     </div>
     <div class="fc">
       <h3>Ressources</h3>
+      <a href="/#newsletter">La newsletter</a>
       <a href="/vendre-bien-narbonne">Vendre une maison ou un appartement à Narbonne</a>
       <a href="/prix-immobilier-narbonne">Consulter les prix immobiliers à Narbonne</a>
       <a href="/guillaume-roque">Découvrir la méthode de Guillaume Roque</a>
