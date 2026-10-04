@@ -1,6 +1,6 @@
 {
   "source": "https://www.iadfrance.fr/conseiller-immobilier/guillaume.roque",
-  "updated": "2026-09-16",
+  "updated": "2026-10-04",
   "items": [
     {
       "title": "Maison de campagne à QUARANTE (34310)",
@@ -20,6 +20,60 @@
       ],
       "url": "https://www.iadfrance.fr/annonce/maison-vente-11-pieces-quarante-350m2/r2035791",
       "image": "https://images.iadfrance.fr/property/broadcast/2026/06/20/019ee517881aad6b307e72c1302d95ce.png?format=auto&width=600",
+      "charges": ""
+    },
+    {
+      "title": "Appartement à Narbonne (11100)",
+      "ville": "Narbonne",
+      "type": "Appartement",
+      "offre": "Vente",
+      "price": "118 000 €",
+      "details": [
+        "2 pièces",
+        "53 m²"
+      ],
+      "tags": [
+        "Nouveau"
+      ],
+      "url": "https://www.iadfrance.fr/annonce/appartement-vente-2-pieces-narbonne-53m2/r2114821",
+      "image": "https://images.iadfrance.fr/property/broadcast/2026/09/23/01a0ced7c6473045e72374d1fa4423b6.jpg?format=auto&width=600",
+      "charges": ""
+    },
+    {
+      "title": "Appartement à Narbonne (11100)",
+      "ville": "Narbonne",
+      "type": "Appartement",
+      "offre": "Vente",
+      "price": "215 000 €",
+      "details": [
+        "2 chambres",
+        "3 pièces",
+        "71 m²"
+      ],
+      "tags": [
+        "Exclusivité",
+        "Nouveau"
+      ],
+      "url": "https://www.iadfrance.fr/annonce/appartement-vente-3-pieces-narbonne-71m2/r2118039",
+      "image": "https://images.iadfrance.fr/property/broadcast/2026/09/22/01a0c830ed4405f3e1c1d9a1e792fcc5.png?format=auto&width=600",
+      "charges": ""
+    },
+    {
+      "title": "Maison de village à Quarante (34310)",
+      "ville": "Quarante",
+      "type": "Maison",
+      "offre": "Vente",
+      "price": "100 000 €",
+      "details": [
+        "4 pièces",
+        "140 m²"
+      ],
+      "tags": [
+        "Exclusivité",
+        "Nouveau"
+      ],
+      "url": "https://www.iadfrance.fr/annonce/maison-vente-4-pieces-quarante-140m2/r2118038",
+      "image": "https://images.iadfrance.fr/property/broadcast/2026/09/29/01a0ec75ab98a5751ecae96f8b7c2a61.png?format=auto&width=600",
       "charges": ""
     },
     {
@@ -45,9 +99,7 @@
       "offre": "Vente",
       "price": "132 500 €",
       "details": [],
-      "tags": [
-        "Nouveau"
-      ],
+      "tags": [],
       "url": "https://www.iadfrance.fr/annonce/local-commercial-vente-colombiers/r2091672",
       "image": "https://images.iadfrance.fr/property/broadcast/2026/09/14/01a0a056976b1ef806e6c9b933ff2059.png?format=auto&width=600",
       "charges": ""
@@ -62,8 +114,7 @@
         "120 m² de surface brute"
       ],
       "tags": [
-        "Exclusivité",
-        "Nouveau"
+        "Exclusivité"
       ],
       "url": "https://www.iadfrance.fr/annonce/immeuble-vente-beziers-120m2/r2062986",
       "image": "https://images.iadfrance.fr/property/broadcast/2026/06/30/019f189113ced002ac4a923701ff169e.jpg?format=auto&width=600",
@@ -82,8 +133,7 @@
         "18 m² de terrain"
       ],
       "tags": [
-        "Exclusivité",
-        "Nouveau"
+        "Exclusivité"
       ],
       "url": "https://www.iadfrance.fr/annonce/maison-vente-4-pieces-riols-93m2/r2079926",
       "image": "https://images.iadfrance.fr/property/broadcast/2026/08/21/01a023f48ecf29fb3beec789b9252a73.jpg?format=auto&width=600",
@@ -101,9 +151,7 @@
         "120 m²",
         "619 m² de terrain"
       ],
-      "tags": [
-        "Nouveau"
-      ],
+      "tags": [],
       "url": "https://www.iadfrance.fr/annonce/maison-vente-5-pieces-narbonne-120m2/r2101887",
       "image": "https://images.iadfrance.fr/property/broadcast/2026/09/02/01a063997e274f3d2c770f7fb866f198.jpg?format=auto&width=600",
       "charges": ""
@@ -118,8 +166,7 @@
         "22 m²"
       ],
       "tags": [
-        "Exclusivité",
-        "Nouveau"
+        "Exclusivité"
       ],
       "url": "https://www.iadfrance.fr/annonce/local-commercial-location-narbonne-22m2/r2092836",
       "image": "https://images.iadfrance.fr/photos/realestate/2026-08/product-2159403-1.jpg?ts=202608311146&format=auto&width=600",
@@ -135,8 +182,7 @@
         "18 m²"
       ],
       "tags": [
-        "Exclusivité",
-        "Nouveau"
+        "Exclusivité"
       ],
       "url": "https://www.iadfrance.fr/annonce/local-commercial-location-narbonne-18m2/r2093358",
       "image": "https://images.iadfrance.fr/photos/realestate/2026-08/product-2159990-1.jpg?ts=202608311203&format=auto&width=600",
@@ -277,22 +323,6 @@
       "ville": "Narbonne",
       "type": "Terrain",
       "offre": "Vente",
-      "price": "119 900 €",
-      "details": [
-        "338 m² de terrain"
-      ],
-      "tags": [
-        "Neuf"
-      ],
-      "url": "https://www.iadfrance.fr/annonce/terrain-vente-narbonne-338m2/r1702385-4",
-      "image": "https://images.iadfrance.fr/photos/realestate/2025-02/product-1759787-1.jpg?ts=202605151709&format=auto&width=600",
-      "charges": ""
-    },
-    {
-      "title": "Terrain à NARBONNE (11100)",
-      "ville": "Narbonne",
-      "type": "Terrain",
-      "offre": "Vente",
       "price": "139 900 €",
       "details": [
         "402 m² de terrain"
@@ -414,22 +444,6 @@
       ],
       "url": "https://www.iadfrance.fr/annonce/terrain-vente-marcorignan-274m2/r1702114-19",
       "image": "https://images.iadfrance.fr/photos/realestate/2025-02/product-1759509-1.jpg?ts=202605151610&format=auto&width=600",
-      "charges": ""
-    },
-    {
-      "title": "Terrain à MARCORIGNAN (11120)",
-      "ville": "Marcorignan",
-      "type": "Terrain",
-      "offre": "Vente",
-      "price": "116 900 €",
-      "details": [
-        "471 m² de terrain"
-      ],
-      "tags": [
-        "Neuf"
-      ],
-      "url": "https://www.iadfrance.fr/annonce/terrain-vente-marcorignan-471m2/r1702114-18",
-      "image": "https://images.iadfrance.fr/photos/realestate/2025-02/product-1759508-1.jpg?ts=202605151610&format=auto&width=600",
       "charges": ""
     },
     {
@@ -1261,22 +1275,6 @@
       "ville": "Narbonne",
       "type": "Murs commerciaux",
       "offre": "Vente",
-      "price": "179 880 €",
-      "details": [
-        "69 m²"
-      ],
-      "tags": [
-        "Neuf"
-      ],
-      "url": "https://www.iadfrance.fr/annonce/local-commercial-vente-narbonne-69m2/r1983373-23",
-      "image": "https://images.iadfrance.fr/photos/realestate/2026-03/product-2047068-1.jpg?ts=202605142116&format=auto&width=600",
-      "charges": ""
-    },
-    {
-      "title": "Murs commerciaux  à NARBONNE (11100)",
-      "ville": "Narbonne",
-      "type": "Murs commerciaux",
-      "offre": "Vente",
       "price": "107 880 €",
       "details": [
         "42 m²"
@@ -1398,22 +1396,6 @@
       ],
       "url": "https://www.iadfrance.fr/annonce/local-commercial-vente-narbonne-63m2/r1983373-31",
       "image": null,
-      "charges": ""
-    },
-    {
-      "title": "Murs commerciaux  à NARBONNE (11100)",
-      "ville": "Narbonne",
-      "type": "Murs commerciaux",
-      "offre": "Vente",
-      "price": "197 880 €",
-      "details": [
-        "72 m²"
-      ],
-      "tags": [
-        "Neuf"
-      ],
-      "url": "https://www.iadfrance.fr/annonce/local-commercial-vente-narbonne-72m2/r1983373-32",
-      "image": "https://images.iadfrance.fr/photos/realestate/2026-03/product-2047077-1.jpg?ts=202605142053&format=auto&width=600",
       "charges": ""
     },
     {

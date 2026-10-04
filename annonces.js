@@ -15,9 +15,9 @@
   let limit = 9;
 
   // Corrections vérifiées sur la page publique iad de Guillaume Roque.
-  // Au 24/09/2026, iad affiche 105 biens disponibles.
+  // Au 04/10/2026, le catalogue source a été resynchronisé avec les annonces iad publiques.
   const catalogueCorrections = {
-    updated: '2026-09-24',
+    updated: '2026-10-04',
     additionalItems: [
       {
         title: 'Appartement à Narbonne (11100)',
@@ -55,7 +55,8 @@
       ['r2079926', new Set(['Nouveau'])],
       ['r2101887', new Set(['Nouveau'])],
       ['r2092836', new Set(['Nouveau'])],
-      ['r2093358', new Set(['Nouveau'])]
+      ['r2093358', new Set(['Nouveau'])],
+      ['r2091672', new Set(['Nouveau'])]
     ])
   };
 
