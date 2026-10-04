@@ -6,3 +6,4 @@ directory = "."
 # Sert 404.html (present a la racine) avec un vrai statut HTTP 404 pour toute URL non reconnue.
 not_found_handling = "404-page"
 # deploy-refresh: 2026-10-04T09:26
+# catalogue-refresh: 2026-10-04-limperiale
