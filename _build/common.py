@@ -41,6 +41,7 @@ def head(title, description, canonical_path, robots, og_description, jsonld_grap
 <link rel="preload" href="/fonts/montserrat-700-latin.woff2" as="font" type="font/woff2" crossorigin/>
 <link rel="preload" href="/refonte.css?v=20260914c" as="style"/>
 {STYLE}
+<link rel="stylesheet" href="/branding-20261004.css"/>
 </head>
 <body>
 '''
@@ -59,7 +60,7 @@ def qnav_navbar(links, cta_href, cta_label):
   <a href="/" class="nb-brand">
     {IAD_LOGO_BLUE}
     <div class="nb-sep"></div>
-    <div class="nb-name">Guillaume <em>Roque</em><br/>Immobilier · Narbonne</div>
+    <img src="/logo-immobilier-narbonne-guillaume-roque-20261004.webp" class="nb-site-logo" width="660" height="560" alt="Immobilier Narbonne — by Guillaume ROQUE" decoding="async"/>
   </a>
   <a href="{cta_href}" class="nb-cta">{cta_label}</a>
 </nav>
@@ -81,6 +82,7 @@ def footer():
 <footer>
   <div class="ft">
     <div class="fb">
+      <a href="/" class="ft-site-brand" aria-label="Immobilier Narbonne — accueil"><img src="/logo-immobilier-narbonne-guillaume-roque-20261004.webp" class="ft-site-logo" width="660" height="560" alt="Immobilier Narbonne — by Guillaume ROQUE" loading="lazy" decoding="async"/></a>
       {IAD_LOGO_WHITE}
       <p>Guillaume Roque · Conseiller immobilier iad France à Narbonne · Estimation gratuite, accompagnement complet pour la vente de votre maison ou appartement.</p>
     </div>
