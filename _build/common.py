@@ -17,7 +17,8 @@ def head(title, description, canonical_path, robots, og_description, jsonld_grap
     return f'''<!DOCTYPE html>
 <html lang="fr">
 <head>
-<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+<link rel="icon" href="/favicon.ico?v=20261004-logo" sizes="any"/>
+<link rel="icon" type="image/png" href="/favicon-immobilier-narbonne-20261004.png" sizes="96x96"/>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>{title}</title>
