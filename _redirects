@@ -20,3 +20,63 @@
 # que les statuts 200/301/302/303/307/308 (une regle "404" ici fait echouer TOUT le build, cause
 # reelle du blocage du Round 19). La page 404.html est desormais servie via not_found_handling
 # dans wrangler.toml, le mecanisme correct et supporte pour ce type de projet.
+
+# BEGIN GENERATED INDEXING REDIRECTS
+/avis-clients.html /avis-clients 301
+/conseils /conseils/ 301
+/conseils/acheter-appartement-copropriete-narbonne.html /conseils/acheter-appartement-copropriete-narbonne 301
+/conseils/acheter-appartement-copropriete-narbonne/ /conseils/acheter-appartement-copropriete-narbonne 301
+/conseils/article-aude.html /conseils/article-aude 301
+/conseils/article-aude/ /conseils/article-aude 301
+/conseils/article-beziers.html /conseils/article-beziers 301
+/conseils/article-beziers/ /conseils/article-beziers 301
+/conseils/article-carcassonne.html /conseils/article-carcassonne 301
+/conseils/article-carcassonne/ /conseils/article-carcassonne 301
+/conseils/article-delai-vente-narbonne.html /conseils/article-delai-vente-narbonne 301
+/conseils/article-delai-vente-narbonne/ /conseils/article-delai-vente-narbonne 301
+/conseils/article-erreurs-vente-narbonne.html /conseils/article-erreurs-vente-narbonne 301
+/conseils/article-erreurs-vente-narbonne/ /conseils/article-erreurs-vente-narbonne 301
+/conseils/article-herault-hauts-cantons.html /conseils/article-herault-hauts-cantons 301
+/conseils/article-herault-hauts-cantons/ /conseils/article-herault-hauts-cantons 301
+/conseils/article-juste-prix.html /conseils/article-juste-prix 301
+/conseils/article-juste-prix/ /conseils/article-juste-prix 301
+/conseils/article-lezignan.html /conseils/article-lezignan 301
+/conseils/article-lezignan/ /conseils/article-lezignan 301
+/conseils/article-minervois.html /conseils/article-minervois 301
+/conseils/article-minervois/ /conseils/article-minervois 301
+/conseils/article-narbonne.html /conseils/article-narbonne 301
+/conseils/article-narbonne/ /conseils/article-narbonne 301
+/conseils/article-pezenas.html /conseils/article-pezenas 301
+/conseils/article-pezenas/ /conseils/article-pezenas 301
+/conseils/article-quarante.html /conseils/article-quarante 301
+/conseils/article-quarante/ /conseils/article-quarante 301
+/conseils/article-quartiers-narbonne.html /conseils/article-quartiers-narbonne 301
+/conseils/article-quartiers-narbonne/ /conseils/article-quartiers-narbonne 301
+/conseils/article-saint-chinian.html /conseils/article-saint-chinian 301
+/conseils/article-saint-chinian/ /conseils/article-saint-chinian 301
+/conseils/article-saint-pons.html /conseils/article-saint-pons 301
+/conseils/article-saint-pons/ /conseils/article-saint-pons 301
+/conseils/article-sete.html /conseils/article-sete 301
+/conseils/article-sete/ /conseils/article-sete 301
+/conseils/barometre-immobilier-narbonne-minervois.html /conseils/barometre-immobilier-narbonne-minervois 301
+/conseils/barometre-immobilier-narbonne-minervois/ /conseils/barometre-immobilier-narbonne-minervois 301
+/conseils/combien-vaut-maison-narbonne.html /conseils/combien-vaut-maison-narbonne 301
+/conseils/diagnostics-vente-narbonne.html /conseils/diagnostics-vente-narbonne 301
+/conseils/erreurs-qui-ralentissent-vente-narbonne.html /conseils/erreurs-qui-ralentissent-vente-narbonne 301
+/conseils/guide-2-vendre.html /conseils/guide-2-vendre 301
+/conseils/guide-2-vendre/ /conseils/guide-2-vendre 301
+/conseils/guide-3-acheter.html /conseils/guide-3-acheter 301
+/conseils/guide-3-acheter/ /conseils/guide-3-acheter 301
+/conseils/index.html /conseils/ 301
+/conseils/juste-prix-maison-narbonne.html /conseils/juste-prix-maison-narbonne 301
+/conseils/vendre-bien-succession-narbonne.html /conseils/vendre-bien-succession-narbonne 301
+/conseils/vendre-bien-succession-narbonne/ /conseils/vendre-bien-succession-narbonne 301
+/estimation-immobiliere-narbonne.html /estimation-immobiliere-narbonne 301
+/guillaume-roque.html /guillaume-roque 301
+/index.html / 301
+/mentions-legales.html /mentions-legales 301
+/merci-estimation.html /merci-estimation 301
+/politique-confidentialite.html /politique-confidentialite 301
+/prix-immobilier-narbonne.html /prix-immobilier-narbonne 301
+/vendre-bien-narbonne.html /vendre-bien-narbonne 301
+/ventes-realisees.html /ventes-realisees 301

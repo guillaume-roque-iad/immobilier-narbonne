@@ -8,3 +8,6 @@ not_found_handling = "404-page"
 # deploy-refresh: 2026-10-04T09:26
 # catalogue-refresh: 2026-10-04-limperiale
 # catalogue-refresh: 2026-10-04-limperiale-photos
+
+[build]
+command = "node _build/update_indexing.mjs"
