@@ -6,6 +6,7 @@ import crypto from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const origin = 'https://immobiliernarbonne.com';
+const merged = new Map([['/conseils/guide-2-vendre', '/vendre-bien-narbonne']]);
 const today = new Date().toISOString().slice(0, 10);
 const read = name => fs.readFileSync(path.join(root, name), 'utf8');
 const write = (name, value) => { if (!fs.existsSync(path.join(root,name)) || read(name) !== value) fs.writeFileSync(path.join(root,name), value); };
@@ -17,13 +18,15 @@ const pages = names.flatMap(name => {
  if (!/<head\b/i.test(html)) return []; // Domain-verification files are not pages.
  const route = name === 'index.html' ? '/' : name.endsWith('/index.html') ? '/'+name.slice(0,-10) : '/'+name.slice(0,-5);
  const excluded = /<meta\b[^>]*name=["'](?:robots|googlebot)["'][^>]*content=["'][^"']*noindex/i.test(html);
- return [{name, route, html, original:html, excluded}];
+ return [{name, route, html, original:html, excluded: excluded || merged.has(route)}];
 });
 const active = pages.filter(p => !p.excluded);
 const aliases = new Map();
 for (const p of pages.filter(p => p.name !== '404.html')) {
- aliases.set('/'+p.name,p.route);
- if (p.route !== '/') aliases.set(p.route.endsWith('/') ? p.route.slice(0,-1) : p.route+'/',p.route);
+ const target = merged.get(p.route) || p.route;
+ if (merged.has(p.route)) aliases.set(p.route,target);
+ aliases.set('/'+p.name,target);
+ if (p.route !== '/') aliases.set(p.route.endsWith('/') ? p.route.slice(0,-1) : p.route+'/',target);
 }
 const groups = [
  ['guide-3-acheter','acheter-appartement-copropriete-narbonne','vendre-bien-succession-narbonne','guide-2-vendre'],
@@ -36,6 +39,22 @@ const titles = new Map(active.map(p => [p.route,(p.html.match(/<h1\b[^>]*>([\s\S
 const byRoute = new Map(active.map(p => [p.route,p]));
 for (const p of pages) {
  let html = p.html;
+ if (merged.has(p.route)) {
+  html = html.replace(/<link\b[^>]*>/gi, tag => attr(tag,'rel') === 'canonical' ? `<link rel="canonical" href="${origin+merged.get(p.route)}">` : tag);
+ }
+ if (p.route === '/vendre-bien-narbonne' && !html.includes('id="guide-vendeur-pratique"')) {
+  const guide = `<section class="section wrap" id="guide-vendeur-pratique" aria-labelledby="guide-vendeur-title">
+  <h2 id="guide-vendeur-title">Le guide pratique pour préparer votre vente</h2>
+  <h3>Préparer le bien avant les photos et les visites</h3>
+  <ul><li>Désencombrer les pièces pour permettre aux acquéreurs d'en apprécier les volumes.</li><li>Réparer les petits défauts visibles : poignée, joint, ampoule ou robinetterie.</li><li>Soigner la lumière, ouvrir les volets et choisir un créneau adapté aux visites.</li><li>Présenter des photos fidèles au logement afin que la visite corresponde à ce qui a été annoncé.</li></ul>
+  <h3>Distinguer commercialisation et préparation de la signature</h3>
+  <p>La commercialisation va de la diffusion de l'annonce à l'offre acceptée. Le positionnement du prix, la présentation du bien, la qualité du dossier et les retours de visite permettent d'ajuster la démarche.</p>
+  <p>Après l'accord, le calendrier dépend notamment du financement, des documents à réunir et des démarches suivies avec le notaire. Le délai s'apprécie donc selon le dossier, sans durée garantie.</p>
+  <h3>Les repères pour avancer</h3>
+  <ul><li><a href="/conseils/combien-vaut-maison-narbonne">Comprendre les critères d'estimation de votre bien</a></li><li><a href="/conseils/diagnostics-vente-narbonne">Préparer les diagnostics et le dossier de vente</a></li><li><a href="/conseils/erreurs-qui-ralentissent-vente-narbonne">Éviter les erreurs qui ralentissent la commercialisation</a></li></ul>
+  </section>`;
+  html = html.replace('</main>',guide+'</main>');
+ }
  if (!p.excluded) {
   const canonicals = [...html.matchAll(/<link\b[^>]*>/gi)].filter(m => attr(m[0],'rel') === 'canonical');
   if (canonicals.length !== 1 || attr(canonicals[0][0],'href') !== origin+p.route) throw new Error('Unexpected canonical: '+p.name);
