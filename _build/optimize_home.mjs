@@ -2,7 +2,13 @@ import {readFile, writeFile} from 'node:fs/promises';
 
 const root = new URL('../', import.meta.url);
 const indexPath = new URL('index.html', root);
-const css = (await readFile(new URL('refonte.css', root), 'utf8')).trim();
+let css = (await readFile(new URL('refonte.css', root), 'utf8')).trim();
+// Keep homepage typography available at first paint, without a font swap.
+for (const weight of [400, 700]) {
+  const path = `fonts/montserrat-${weight}-fr-20261005.woff2`;
+  const font = await readFile(new URL(path, root));
+  css = css.replace(`url('/${path}')`, `url('data:font/woff2;base64,${font.toString('base64')}')`);
+}
 const catalogue = JSON.parse(await readFile(new URL('annonces-iad.json', root), 'utf8'));
 let html = await readFile(indexPath, 'utf8');
 
