@@ -2,7 +2,7 @@ import {readFile, writeFile} from 'node:fs/promises';
 
 const root = new URL('../', import.meta.url);
 const indexPath = new URL('index.html', root);
-let css = (await readFile(new URL('refonte.css', root), 'utf8')).trim();
+let css = (await readFile(new URL('refonte.css', root), 'utf8')).trim().replaceAll('font-display:swap', 'font-display:block');
 // Keep homepage typography available at first paint, without a font swap.
 for (const weight of [400, 700]) {
   const path = `fonts/montserrat-${weight}-fr-20261005.woff2`;
