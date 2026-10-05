@@ -1,32 +1,32 @@
 /* Logo Immobilier Narbonne — by Guillaume ROQUE, octobre 2026. */
-.nb-brand .nb-site-logo{display:block;width:176px;height:auto;max-width:none;flex:none;object-fit:contain}
-.site-header .navbar{height:168px}
+.nb-brand .nb-site-logo{display:block;width:160px;height:auto;max-width:none;flex:none;object-fit:contain}
+.site-header .navbar{height:152px}
 .site-header .nb-brand{gap:18px}
 .site-header .nb-links{gap:16px}
 .site-header .nb-logo{height:24px;width:auto;max-width:none}
-.nb-simple{min-height:168px;height:auto;padding-block:10px}
-html{scroll-padding-top:184px}
+.nb-simple{min-height:152px;height:auto;padding-block:10px}
+html{scroll-padding-top:168px}
 .ft-site-brand{display:block;width:220px;max-width:100%;padding:8px;background:#fff;border-radius:12px;margin-bottom:24px}
 .ft-site-logo{display:block;width:100%;height:auto}
 @media(max-width:1180px){
-  .site-header .navbar{height:152px}
-  .nb-brand .nb-site-logo{width:154px}
-  .site-header .nb-links{top:152px;gap:0;max-height:calc(100dvh - 168px);overflow-y:auto}
-  html{scroll-padding-top:168px}
+  .site-header .navbar{height:140px}
+  .nb-brand .nb-site-logo{width:140px}
+  .site-header .nb-links{top:140px;gap:0;max-height:calc(100dvh - 152px);overflow-y:auto}
+  html{scroll-padding-top:152px}
 }
 @media(max-width:760px){
-  .site-header .navbar{height:132px}
+  .site-header .navbar{height:120px}
   .site-header .nb-brand{gap:12px}
-  .nb-brand .nb-site-logo{width:132px}
+  .nb-brand .nb-site-logo{width:120px}
   .site-header .nb-logo{height:18px}
   .site-header .nb-sep{display:block;height:38px;width:1px;flex:none}
-  .nb-simple{min-height:132px}
-  .site-header .nb-links{top:132px;max-height:calc(100dvh - 152px)}
-  html{scroll-padding-top:152px}
+  .nb-simple{min-height:120px}
+  .site-header .nb-links{top:120px;max-height:calc(100dvh - 140px)}
+  html{scroll-padding-top:140px}
 }
 @media(max-width:420px){
   .site-header .nb-brand{gap:9px}
-  .nb-brand .nb-site-logo{width:116px}
+  .nb-brand .nb-site-logo{width:108px}
   .site-header .nb-logo{height:16px}
   .site-header .nb-menu-toggle{padding:9px 12px}
 }
