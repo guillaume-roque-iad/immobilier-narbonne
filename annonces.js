@@ -258,7 +258,9 @@
 
   root.querySelector('.biens-filtres').hidden = false;
 
-  // Le catalogue est chargé immédiatement pour que les nouvelles annonces,
-  // villes et typologies apparaissent sans dépendre du HTML de secours.
-  ensureCatalogue();
+  // Refresh the catalogue on every visit, after the first screen is painted.
+  // User interaction still calls ensureCatalogue immediately.
+  const refresh = () => requestAnimationFrame(() => setTimeout(ensureCatalogue, 0));
+  if (document.readyState === 'complete') refresh();
+  else window.addEventListener('load', refresh, { once: true });
 })();

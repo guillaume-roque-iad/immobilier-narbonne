@@ -40,6 +40,7 @@
 })();
 
 (() => {
+  function loadPropertips() {
   const script = document.createElement('script');
   script.src = '/propertips.js?v=20260916i';
   script.defer = true;
@@ -49,4 +50,8 @@
   media.src = '/propertips-media.js?v=20260916j';
   media.defer = true;
   document.head.appendChild(media);
+  }
+  const schedule = () => requestAnimationFrame(() => setTimeout(loadPropertips, 0));
+  if (document.readyState === 'complete') schedule();
+  else window.addEventListener('load', schedule, { once: true });
 })();
