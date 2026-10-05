@@ -138,9 +138,8 @@
     link.target = '_blank';
     link.rel = 'noopener noreferrer';
     const displayPrice = item.offre === 'Location' ? `${item.price} / mois` : item.price;
-    const reference = getReference(item);
-    const description = [displayPrice, ...(item.details || [])].filter(Boolean).join(', ');
-    link.setAttribute('aria-label', `${item.title} — ${description} — référence ${reference} — voir la fiche sur iad (nouvel onglet)`);
+    // Let the visible card text provide the accessible name.
+    link.setAttribute('aria-description', `Référence ${getReference(item)}. S’ouvre dans un nouvel onglet.`);
 
     if (item.image) {
       const image = element('img', 'bien-image');

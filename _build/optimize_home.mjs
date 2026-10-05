@@ -20,12 +20,11 @@ function renderCard(item) {
   const tags = [item.offre, ...(item.tags || [])]
     .map(label => `<span class="bien-tag">${escapeText(label)}</span>`)
     .join('');
-  const accessibleDescription = [displayPrice, ...details].filter(Boolean).join(', ');
   const visual = item.image
     ? `<img class="bien-image" src="${escapeAttribute(item.image)}" alt="${escapeAttribute(item.title)}" width="600" height="450" loading="lazy" decoding="async"/>`
     : '<div class="bien-image bien-sans-photo">Photo disponible sur iad</div>';
 
-  return `<article class="bien-card" data-ville="${escapeAttribute(item.ville)}" data-type="${escapeAttribute(item.type)}" data-offre="${escapeAttribute(item.offre)}"><a href="${escapeAttribute(item.url)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeAttribute(`${item.title} — ${accessibleDescription} — référence ${reference} — voir la fiche sur iad (nouvel onglet)`)}">${visual}<div class="bien-content"><div class="bien-tags">${tags}</div><p class="bien-prix">${escapeText(displayPrice)}</p><p class="bien-charge">${escapeText(item.charges || 'Prix affiché sur iad')}</p><h3>${escapeText(item.title)}</h3><p class="bien-details">${escapeText(details.join(' · '))}</p><span class="bien-lien">Voir le bien sur iad <svg class="material-symbol material-symbol--arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/icons.svg?v=20260914#arrow-outward"/></svg></span></div></a></article>`;
+  return `<article class="bien-card" data-ville="${escapeAttribute(item.ville)}" data-type="${escapeAttribute(item.type)}" data-offre="${escapeAttribute(item.offre)}"><a href="${escapeAttribute(item.url)}" target="_blank" rel="noopener noreferrer" aria-description="${escapeAttribute(`Référence ${reference}. S’ouvre dans un nouvel onglet.`)}">${visual}<div class="bien-content"><div class="bien-tags">${tags}</div><p class="bien-prix">${escapeText(displayPrice)}</p><p class="bien-charge">${escapeText(item.charges || 'Prix affiché sur iad')}</p><h3>${escapeText(item.title)}</h3><p class="bien-details">${escapeText(details.join(' · '))}</p><span class="bien-lien">Voir le bien sur iad <svg class="material-symbol material-symbol--arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/icons.svg?v=20260914#arrow-outward"/></svg></span></div></a></article>`;
 }
 
 if (!Array.isArray(catalogue.items) || catalogue.items.length < 6) {

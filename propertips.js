@@ -34,7 +34,7 @@
       '.pt-reward-text{font-size:12.5px;line-height:1.55;color:rgba(255,255,255,.72);text-align:center;margin:0 0 24px}',
       '.pt-cta{display:flex;align-items:center;justify-content:center;width:100%;min-height:54px;padding:14px 20px;border-radius:999px;background:#00b4ec;color:#111!important;text-decoration:none;font-family:Montserrat,Helvetica,Arial,sans-serif;font-weight:850;font-style:italic;transition:transform .2s,background .2s}',
       '.pt-cta:hover{background:#95ebff;transform:translateY(-1px)}',
-      '.pt-invitation{display:block;text-align:center;font-size:10.5px;color:rgba(255,255,255,.55);margin-top:11px}',
+      '.pt-invitation{display:block;text-align:center;font-size:10.5px;color:#c4cdd6;margin-top:11px}',
       '.pt-note{font-size:10.5px!important;line-height:1.55!important;color:#738090!important;margin:22px 0 0!important;max-width:720px!important}',
       '.pt-note a{color:#006390;font-weight:750}',
       '@media(max-width:900px){.pt-section{padding:70px 8vw}.pt-grid{grid-template-columns:1fr;gap:34px}.pt-card{max-width:620px}.pt-steps{grid-template-columns:1fr}.pt-step{min-height:0;display:flex;align-items:center;gap:14px}.pt-step-num{margin-bottom:0;flex:0 0 32px}}',
