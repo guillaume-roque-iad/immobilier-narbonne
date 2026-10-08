@@ -1,6 +1,6 @@
 {
   "source": "https://www.iadfrance.fr/conseiller-immobilier/guillaume.roque",
-  "updated": "2026-10-04",
+  "updated": "2026-10-08",
   "items": [
     {
       "title": "Maison de campagne à QUARANTE (34310)",
@@ -21,6 +21,40 @@
       "url": "https://www.iadfrance.fr/annonce/maison-vente-11-pieces-quarante-350m2/r2035791",
       "image": "https://images.iadfrance.fr/property/broadcast/2026/06/20/019ee517881aad6b307e72c1302d95ce.png?format=auto&width=600",
       "charges": ""
+    },
+    {
+      "title": "Divers Commerces à Minerve (34210)",
+      "ville": "Minerve",
+      "type": "Divers Commerces",
+      "offre": "Vente",
+      "price": "35 400 €",
+      "details": [
+        "95 m²"
+      ],
+      "tags": [
+        "Nouveau"
+      ],
+      "url": "https://www.iadfrance.fr/annonce/local-commercial-vente-minerve-95m2/r2127332",
+      "image": "https://images.iadfrance.fr/property/broadcast/2026/10/04/01a107c9b229808f7e12ed643d309268.png?format=auto&width=300",
+      "charges": ""
+    },
+    {
+      "title": "Maison de village à Saint-Pons-de-Thomières (34220)",
+      "ville": "Saint-Pons-de-Thomières",
+      "type": "Maison",
+      "offre": "Vente",
+      "price": "10 000 €",
+      "details": [
+        "4 pièces",
+        "110 m²"
+      ],
+      "tags": [
+        "Exclusivité",
+        "Sous compromis"
+      ],
+      "url": "https://www.iadfrance.fr/annonce/maison-vente-4-pieces-saint-pons-de-thomieres-110m2/r2067534",
+      "image": "https://images.iadfrance.fr/property/broadcast/2026/07/20/019f7fc281ef0c966d5cef61ce524052.jpg?format=auto&width=300",
+      "charges": "Sous compromis — disponibilité à confirmer sur iad"
     },
     {
       "title": "Appartement neuf – L’Impériale à NARBONNE (11100)",
@@ -310,22 +344,6 @@
       "charges": ""
     },
     {
-      "title": "Immeuble à Béziers (34500)",
-      "ville": "Béziers",
-      "type": "Immeuble",
-      "offre": "Vente",
-      "price": "60 000 €",
-      "details": [
-        "120 m² de surface brute"
-      ],
-      "tags": [
-        "Exclusivité"
-      ],
-      "url": "https://www.iadfrance.fr/annonce/immeuble-vente-beziers-120m2/r2062986",
-      "image": "https://images.iadfrance.fr/property/broadcast/2026/06/30/019f189113ced002ac4a923701ff169e.jpg?format=auto&width=600",
-      "charges": ""
-    },
-    {
       "title": "Maison de village à Riols (34220)",
       "ville": "Riols",
       "type": "Maison",
@@ -345,8 +363,8 @@
       "charges": ""
     },
     {
-      "title": "Maison à Narbonne (11100)",
-      "ville": "Narbonne",
+      "title": "Maison à Vinassan (11110)",
+      "ville": "Vinassan",
       "type": "Maison",
       "offre": "Vente",
       "price": "295 000 €",
@@ -357,7 +375,7 @@
         "619 m² de terrain"
       ],
       "tags": [],
-      "url": "https://www.iadfrance.fr/annonce/maison-vente-5-pieces-narbonne-120m2/r2101887",
+      "url": "https://www.iadfrance.fr/annonce/maison-vente-5-pieces-vinassan-120m2/r2101887",
       "image": "https://images.iadfrance.fr/property/broadcast/2026/09/02/01a063997e274f3d2c770f7fb866f198.jpg?format=auto&width=600",
       "charges": ""
     },
@@ -848,288 +866,16 @@
       "ville": "Narbonne",
       "type": "Appartement",
       "offre": "Vente",
-      "price": "242 900 €",
-      "details": [
-        "3 pièces",
-        "59 m²"
-      ],
-      "tags": [
-        "Neuf"
-      ],
-      "url": "https://www.iadfrance.fr/annonce/appartement-vente-3-pieces-narbonne-59m2/r1491452-29",
-      "image": "https://images.iadfrance.fr/photos/realestate/2024-03/product-1545505-1.jpg?ts=202605151019&format=auto&width=600",
-      "charges": ""
-    },
-    {
-      "title": "Appartement à NARBONNE (11100)",
-      "ville": "Narbonne",
-      "type": "Appartement",
-      "offre": "Vente",
-      "price": "264 900 €",
-      "details": [
-        "4 pièces",
-        "74 m²"
-      ],
-      "tags": [
-        "Neuf"
-      ],
-      "url": "https://www.iadfrance.fr/annonce/appartement-vente-4-pieces-narbonne-74m2/r1491452-35",
-      "image": "https://images.iadfrance.fr/photos/realestate/2024-03/product-1545511-1.jpg?ts=202605151019&format=auto&width=600",
-      "charges": ""
-    },
-    {
-      "title": "Appartement à NARBONNE (11100)",
-      "ville": "Narbonne",
-      "type": "Appartement",
-      "offre": "Vente",
-      "price": "256 900 €",
-      "details": [
-        "3 pièces",
-        "61 m²"
-      ],
-      "tags": [
-        "Neuf"
-      ],
-      "url": "https://www.iadfrance.fr/annonce/appartement-vente-3-pieces-narbonne-61m2/r1491452-39",
-      "image": "https://images.iadfrance.fr/photos/realestate/2024-03/product-1545515-1.jpg?ts=202605151019&format=auto&width=600",
-      "charges": ""
-    },
-    {
-      "title": "Appartement à NARBONNE (11100)",
-      "ville": "Narbonne",
-      "type": "Appartement",
-      "offre": "Vente",
-      "price": "218 900 €",
-      "details": [
-        "3 pièces",
-        "61 m²"
-      ],
-      "tags": [
-        "Neuf"
-      ],
-      "url": "https://www.iadfrance.fr/annonce/appartement-vente-3-pieces-narbonne-61m2/r1491452-41",
-      "image": "https://images.iadfrance.fr/photos/realestate/2024-03/product-1545517-1.jpg?ts=202605151018&format=auto&width=600",
-      "charges": ""
-    },
-    {
-      "title": "Appartement à NARBONNE (11100)",
-      "ville": "Narbonne",
-      "type": "Appartement",
-      "offre": "Vente",
-      "price": "227 900 €",
-      "details": [
-        "3 pièces",
-        "64 m²"
-      ],
-      "tags": [
-        "Neuf"
-      ],
-      "url": "https://www.iadfrance.fr/annonce/appartement-vente-3-pieces-narbonne-64m2/r1491452-42",
-      "image": "https://images.iadfrance.fr/photos/realestate/2024-03/product-1545518-1.jpg?ts=202605151018&format=auto&width=600",
-      "charges": ""
-    },
-    {
-      "title": "Appartement à NARBONNE (11100)",
-      "ville": "Narbonne",
-      "type": "Appartement",
-      "offre": "Vente",
-      "price": "247 900 €",
-      "details": [
-        "3 pièces",
-        "61 m²"
-      ],
-      "tags": [
-        "Neuf"
-      ],
-      "url": "https://www.iadfrance.fr/annonce/appartement-vente-3-pieces-narbonne-61m2/r1491452-44",
-      "image": "https://images.iadfrance.fr/photos/realestate/2024-03/product-1545520-1.jpg?ts=202605151018&format=auto&width=600",
-      "charges": ""
-    },
-    {
-      "title": "Appartement à NARBONNE (11100)",
-      "ville": "Narbonne",
-      "type": "Appartement",
-      "offre": "Vente",
-      "price": "234 900 €",
-      "details": [
-        "3 pièces",
-        "61 m²"
-      ],
-      "tags": [
-        "Neuf"
-      ],
-      "url": "https://www.iadfrance.fr/annonce/appartement-vente-3-pieces-narbonne-61m2/r1491452-36",
-      "image": "https://images.iadfrance.fr/photos/realestate/2024-03/product-1545512-1.jpg?ts=202605151019&format=auto&width=600",
-      "charges": ""
-    },
-    {
-      "title": "Appartement à NARBONNE (11100)",
-      "ville": "Narbonne",
-      "type": "Appartement",
-      "offre": "Vente",
-      "price": "330 900 €",
-      "details": [
-        "4 pièces",
-        "79 m²"
-      ],
-      "tags": [
-        "Neuf"
-      ],
-      "url": "https://www.iadfrance.fr/annonce/appartement-vente-4-pieces-narbonne-79m2/r1491452-34",
-      "image": "https://images.iadfrance.fr/photos/realestate/2024-03/product-1545510-1.jpg?ts=202605151019&format=auto&width=600",
-      "charges": ""
-    },
-    {
-      "title": "Appartement à NARBONNE (11100)",
-      "ville": "Narbonne",
-      "type": "Appartement",
-      "offre": "Vente",
-      "price": "259 900 €",
-      "details": [
-        "3 pièces",
-        "61 m²"
-      ],
-      "tags": [
-        "Neuf"
-      ],
-      "url": "https://www.iadfrance.fr/annonce/appartement-vente-3-pieces-narbonne-61m2/r1491452-32",
-      "image": "https://images.iadfrance.fr/photos/realestate/2024-03/product-1545508-1.jpg?ts=202605151019&format=auto&width=600",
-      "charges": ""
-    },
-    {
-      "title": "Appartement à NARBONNE (11100)",
-      "ville": "Narbonne",
-      "type": "Appartement",
-      "offre": "Vente",
-      "price": "242 900 €",
-      "details": [
-        "3 pièces",
-        "59 m²"
-      ],
-      "tags": [
-        "Neuf"
-      ],
-      "url": "https://www.iadfrance.fr/annonce/appartement-vente-3-pieces-narbonne-59m2/r1491452-28",
-      "image": "https://images.iadfrance.fr/photos/realestate/2024-03/product-1545504-1.jpg?ts=202605151019&format=auto&width=600",
-      "charges": ""
-    },
-    {
-      "title": "Appartement à NARBONNE (11100)",
-      "ville": "Narbonne",
-      "type": "Appartement",
-      "offre": "Vente",
-      "price": "149 900 €",
-      "details": [
-        "2 pièces",
-        "36 m²"
-      ],
-      "tags": [
-        "Neuf"
-      ],
-      "url": "https://www.iadfrance.fr/annonce/appartement-vente-2-pieces-narbonne-36m2/r1491452-25",
-      "image": "https://images.iadfrance.fr/photos/realestate/2024-03/product-1545501-1.jpg?ts=202605151019&format=auto&width=600",
-      "charges": ""
-    },
-    {
-      "title": "Appartement à NARBONNE (11100)",
-      "ville": "Narbonne",
-      "type": "Appartement",
-      "offre": "Vente",
-      "price": "324 900 €",
-      "details": [
-        "4 pièces",
-        "73 m²"
-      ],
-      "tags": [
-        "Neuf"
-      ],
-      "url": "https://www.iadfrance.fr/annonce/appartement-vente-4-pieces-narbonne-73m2/r1491452-16",
-      "image": "https://images.iadfrance.fr/photos/realestate/2024-03/product-1545492-1.jpg?ts=202605151019&format=auto&width=600",
-      "charges": ""
-    },
-    {
-      "title": "Appartement à NARBONNE (11100)",
-      "ville": "Narbonne",
-      "type": "Appartement",
-      "offre": "Vente",
       "price": "250 900 €",
       "details": [
-        "2 pièces",
+        "3 pièces",
         "61 m²"
       ],
       "tags": [
         "Neuf"
       ],
-      "url": "https://www.iadfrance.fr/annonce/appartement-vente-2-pieces-narbonne-61m2/r1491452-10",
+      "url": "https://www.iadfrance.fr/annonce/appartement-vente-3-pieces-narbonne-61m2/r1491452-10",
       "image": "https://images.iadfrance.fr/photos/realestate/2024-03/product-1545486-1.jpg?ts=202605151020&format=auto&width=600",
-      "charges": ""
-    },
-    {
-      "title": "Appartement à NARBONNE (11100)",
-      "ville": "Narbonne",
-      "type": "Appartement",
-      "offre": "Vente",
-      "price": "414 900 €",
-      "details": [
-        "4 pièces",
-        "101 m²"
-      ],
-      "tags": [
-        "Neuf"
-      ],
-      "url": "https://www.iadfrance.fr/annonce/appartement-vente-4-pieces-narbonne-101m2/r1491452-40",
-      "image": "https://images.iadfrance.fr/photos/realestate/2024-03/product-1545516-1.jpg?ts=202605151018&format=auto&width=600",
-      "charges": ""
-    },
-    {
-      "title": "Appartement à NARBONNE (11100)",
-      "ville": "Narbonne",
-      "type": "Appartement",
-      "offre": "Vente",
-      "price": "128 900 €",
-      "details": [
-        "2 pièces",
-        "41 m²"
-      ],
-      "tags": [
-        "Neuf"
-      ],
-      "url": "https://www.iadfrance.fr/annonce/appartement-vente-2-pieces-narbonne-41m2/r1491452-37",
-      "image": "https://images.iadfrance.fr/photos/realestate/2024-03/product-1545513-1.jpg?ts=202605151019&format=auto&width=600",
-      "charges": ""
-    },
-    {
-      "title": "Appartement à NARBONNE (11100)",
-      "ville": "Narbonne",
-      "type": "Appartement",
-      "offre": "Vente",
-      "price": "308 900 €",
-      "details": [
-        "4 pièces",
-        "74 m²"
-      ],
-      "tags": [
-        "Neuf"
-      ],
-      "url": "https://www.iadfrance.fr/annonce/appartement-vente-4-pieces-narbonne-74m2/r1491452-30",
-      "image": "https://images.iadfrance.fr/photos/realestate/2024-03/product-1545506-1.jpg?ts=202605151019&format=auto&width=600",
-      "charges": ""
-    },
-    {
-      "title": "Appartement à NARBONNE (11100)",
-      "ville": "Narbonne",
-      "type": "Appartement",
-      "offre": "Vente",
-      "price": "434 900 €",
-      "details": [
-        "5 pièces",
-        "100 m²"
-      ],
-      "tags": [
-        "Neuf"
-      ],
-      "url": "https://www.iadfrance.fr/annonce/appartement-vente-5-pieces-narbonne-100m2/r1491452-15",
-      "image": "https://images.iadfrance.fr/photos/realestate/2024-03/product-1545491-1.jpg?ts=202605151020&format=auto&width=600",
       "charges": ""
     },
     {
@@ -1157,98 +903,13 @@
       "price": "299 900 €",
       "details": [
         "4 pièces",
-        "73 m²"
+        "74 m²"
       ],
       "tags": [
         "Neuf"
       ],
-      "url": "https://www.iadfrance.fr/annonce/appartement-vente-4-pieces-narbonne-73m2/r1491452-4",
+      "url": "https://www.iadfrance.fr/annonce/appartement-vente-4-pieces-narbonne-74m2/r1491452-4",
       "image": "https://images.iadfrance.fr/photos/realestate/2024-03/product-1545480-1.jpg?ts=202605151020&format=auto&width=600",
-      "charges": ""
-    },
-    {
-      "title": "Appartement à NARBONNE (11100)",
-      "ville": "Narbonne",
-      "type": "Appartement",
-      "offre": "Vente",
-      "price": "147 900 €",
-      "details": [
-        "2 pièces",
-        "36 m²"
-      ],
-      "tags": [
-        "Neuf"
-      ],
-      "url": "https://www.iadfrance.fr/annonce/appartement-vente-2-pieces-narbonne-36m2/r1491452-17",
-      "image": "https://images.iadfrance.fr/photos/realestate/2024-03/product-1545493-1.jpg?ts=202605150838&format=auto&width=600",
-      "charges": ""
-    },
-    {
-      "title": "Appartement à NARBONNE (11100)",
-      "ville": "Narbonne",
-      "type": "Appartement",
-      "offre": "Vente",
-      "price": "251 900 €",
-      "details": [
-        "3 pièces",
-        "61 m²"
-      ],
-      "tags": [
-        "Neuf"
-      ],
-      "url": "https://www.iadfrance.fr/annonce/appartement-vente-3-pieces-narbonne-61m2/r1491452-31",
-      "image": "https://images.iadfrance.fr/photos/realestate/2024-03/product-1545507-1.jpg?ts=202605150838&format=auto&width=600",
-      "charges": ""
-    },
-    {
-      "title": "Appartement à NARBONNE (11100)",
-      "ville": "Narbonne",
-      "type": "Appartement",
-      "offre": "Vente",
-      "price": "144 900 €",
-      "details": [
-        "2 pièces",
-        "37 m²"
-      ],
-      "tags": [
-        "Neuf"
-      ],
-      "url": "https://www.iadfrance.fr/annonce/appartement-vente-2-pieces-narbonne-37m2/r1491452-46",
-      "image": "https://images.iadfrance.fr/photos/realestate/2024-03/product-1545522-1.jpg?ts=202605150837&format=auto&width=600",
-      "charges": ""
-    },
-    {
-      "title": "Appartement à NARBONNE (11100)",
-      "ville": "Narbonne",
-      "type": "Appartement",
-      "offre": "Vente",
-      "price": "226 900 €",
-      "details": [
-        "3 pièces",
-        "61 m²"
-      ],
-      "tags": [
-        "Neuf"
-      ],
-      "url": "https://www.iadfrance.fr/annonce/appartement-vente-3-pieces-narbonne-61m2/r1491452-47",
-      "image": "https://images.iadfrance.fr/photos/realestate/2024-03/product-1545523-1.jpg?ts=202605150946&format=auto&width=600",
-      "charges": ""
-    },
-    {
-      "title": "Appartement à NARBONNE (11100)",
-      "ville": "Narbonne",
-      "type": "Appartement",
-      "offre": "Vente",
-      "price": "334 900 €",
-      "details": [
-        "4 pièces",
-        "79 m²"
-      ],
-      "tags": [
-        "Neuf"
-      ],
-      "url": "https://www.iadfrance.fr/annonce/appartement-vente-4-pieces-narbonne-79m2/r1491452-48",
-      "image": "https://images.iadfrance.fr/photos/realestate/2024-03/product-1545524-1.jpg?ts=202605150837&format=auto&width=600",
       "charges": ""
     },
     {
@@ -1256,7 +917,7 @@
       "ville": "Narbonne",
       "type": "Murs commerciaux",
       "offre": "Vente",
-      "price": "227 880 €",
+      "price": "227 900 €",
       "details": [
         "85 m²"
       ],
@@ -1272,7 +933,7 @@
       "ville": "Narbonne",
       "type": "Murs commerciaux",
       "offre": "Vente",
-      "price": "232 680 €",
+      "price": "232 900 €",
       "details": [
         "76 m²"
       ],
@@ -1288,7 +949,7 @@
       "ville": "Narbonne",
       "type": "Murs commerciaux",
       "offre": "Vente",
-      "price": "200 280 €",
+      "price": "200 900 €",
       "details": [
         "74 m²"
       ],
@@ -1304,7 +965,7 @@
       "ville": "Narbonne",
       "type": "Murs commerciaux",
       "offre": "Vente",
-      "price": "142 680 €",
+      "price": "142 900 €",
       "details": [
         "52 m²"
       ],
@@ -1320,7 +981,7 @@
       "ville": "Narbonne",
       "type": "Murs commerciaux",
       "offre": "Vente",
-      "price": "143 880 €",
+      "price": "143 900 €",
       "details": [
         "53 m²"
       ],
@@ -1336,7 +997,7 @@
       "ville": "Narbonne",
       "type": "Murs commerciaux",
       "offre": "Vente",
-      "price": "146 280 €",
+      "price": "146 900 €",
       "details": [
         "55 m²"
       ],
@@ -1352,7 +1013,7 @@
       "ville": "Narbonne",
       "type": "Murs commerciaux",
       "offre": "Vente",
-      "price": "237 480 €",
+      "price": "237 900 €",
       "details": [
         "87 m²"
       ],
@@ -1368,7 +1029,7 @@
       "ville": "Narbonne",
       "type": "Murs commerciaux",
       "offre": "Vente",
-      "price": "221 880 €",
+      "price": "221 900 €",
       "details": [
         "85 m²"
       ],
@@ -1384,7 +1045,7 @@
       "ville": "Narbonne",
       "type": "Murs commerciaux",
       "offre": "Vente",
-      "price": "202 680 €",
+      "price": "202 900 €",
       "details": [
         "76 m²"
       ],
@@ -1400,7 +1061,7 @@
       "ville": "Narbonne",
       "type": "Murs commerciaux",
       "offre": "Vente",
-      "price": "159 480 €",
+      "price": "159 900 €",
       "details": [
         "59 m²"
       ],
@@ -1416,7 +1077,7 @@
       "ville": "Narbonne",
       "type": "Murs commerciaux",
       "offre": "Vente",
-      "price": "141 480 €",
+      "price": "141 900 €",
       "details": [
         "52 m²"
       ],
@@ -1432,7 +1093,7 @@
       "ville": "Narbonne",
       "type": "Murs commerciaux",
       "offre": "Vente",
-      "price": "143 880 €",
+      "price": "143 900 €",
       "details": [
         "53 m²"
       ],
@@ -1448,7 +1109,7 @@
       "ville": "Narbonne",
       "type": "Murs commerciaux",
       "offre": "Vente",
-      "price": "142 680 €",
+      "price": "142 900 €",
       "details": [
         "55 m²"
       ],
@@ -1464,7 +1125,7 @@
       "ville": "Narbonne",
       "type": "Murs commerciaux",
       "offre": "Vente",
-      "price": "239 880 €",
+      "price": "239 900 €",
       "details": [
         "87 m²"
       ],
@@ -1480,7 +1141,7 @@
       "ville": "Narbonne",
       "type": "Murs commerciaux",
       "offre": "Vente",
-      "price": "107 880 €",
+      "price": "107 900 €",
       "details": [
         "42 m²"
       ],
@@ -1496,7 +1157,7 @@
       "ville": "Narbonne",
       "type": "Murs commerciaux",
       "offre": "Vente",
-      "price": "116 280 €",
+      "price": "116 900 €",
       "details": [
         "42 m²"
       ],
@@ -1512,7 +1173,7 @@
       "ville": "Narbonne",
       "type": "Murs commerciaux",
       "offre": "Vente",
-      "price": "119 880 €",
+      "price": "119 900 €",
       "details": [
         "40 m²"
       ],
@@ -1528,7 +1189,7 @@
       "ville": "Narbonne",
       "type": "Murs commerciaux",
       "offre": "Vente",
-      "price": "115 080 €",
+      "price": "115 900 €",
       "details": [
         "40 m²"
       ],
@@ -1544,7 +1205,7 @@
       "ville": "Narbonne",
       "type": "Murs commerciaux",
       "offre": "Vente",
-      "price": "117 480 €",
+      "price": "117 900 €",
       "details": [
         "42 m²"
       ],
@@ -1560,7 +1221,7 @@
       "ville": "Narbonne",
       "type": "Murs commerciaux",
       "offre": "Vente",
-      "price": "100 680 €",
+      "price": "100 900 €",
       "details": [
         "37 m²"
       ],
@@ -1576,7 +1237,7 @@
       "ville": "Narbonne",
       "type": "Murs commerciaux",
       "offre": "Vente",
-      "price": "167 880 €",
+      "price": "167 900 €",
       "details": [
         "60 m²"
       ],
@@ -1592,7 +1253,7 @@
       "ville": "Narbonne",
       "type": "Murs commerciaux",
       "offre": "Vente",
-      "price": "170 280 €",
+      "price": "170 900 €",
       "details": [
         "63 m²"
       ],
@@ -1770,40 +1431,6 @@
       "ville": "Narbonne",
       "type": "Appartement",
       "offre": "Vente",
-      "price": "163 900 €",
-      "details": [
-        "2 pièces",
-        "40 m²"
-      ],
-      "tags": [
-        "Neuf"
-      ],
-      "url": "https://www.iadfrance.fr/annonce/appartement-vente-2-pieces-narbonne-40m2/r1491452-24",
-      "image": "https://images.iadfrance.fr/photos/realestate/2024-03/product-1545500-1.jpg?ts=202605150838&format=auto&width=600",
-      "charges": ""
-    },
-    {
-      "title": "Appartement à NARBONNE (11100)",
-      "ville": "Narbonne",
-      "type": "Appartement",
-      "offre": "Vente",
-      "price": "251 900 €",
-      "details": [
-        "3 pièces",
-        "62 m²"
-      ],
-      "tags": [
-        "Neuf"
-      ],
-      "url": "https://www.iadfrance.fr/annonce/appartement-vente-3-pieces-narbonne-62m2/r1491452-22",
-      "image": "https://images.iadfrance.fr/photos/realestate/2024-03/product-1545498-1.jpg?ts=202605150838&format=auto&width=600",
-      "charges": ""
-    },
-    {
-      "title": "Appartement à NARBONNE (11100)",
-      "ville": "Narbonne",
-      "type": "Appartement",
-      "offre": "Vente",
       "price": "239 900 €",
       "details": [
         "3 pièces",
@@ -1814,23 +1441,6 @@
       ],
       "url": "https://www.iadfrance.fr/annonce/appartement-vente-3-pieces-narbonne-59m2/r1491452-20",
       "image": "https://images.iadfrance.fr/photos/realestate/2024-03/product-1545496-1.jpg?ts=202605150838&format=auto&width=600",
-      "charges": ""
-    },
-    {
-      "title": "Appartement à NARBONNE (11100)",
-      "ville": "Narbonne",
-      "type": "Appartement",
-      "offre": "Vente",
-      "price": "148 900 €",
-      "details": [
-        "2 pièces",
-        "36 m²"
-      ],
-      "tags": [
-        "Neuf"
-      ],
-      "url": "https://www.iadfrance.fr/annonce/appartement-vente-2-pieces-narbonne-36m2/r1491452-14",
-      "image": "https://images.iadfrance.fr/photos/realestate/2024-03/product-1545490-1.jpg?ts=202605150839&format=auto&width=600",
       "charges": ""
     },
     {
@@ -1855,66 +1465,15 @@
       "ville": "Narbonne",
       "type": "Appartement",
       "offre": "Vente",
-      "price": "354 900 €",
-      "details": [
-        "4 pièces",
-        "85 m²"
-      ],
-      "tags": [
-        "Neuf"
-      ],
-      "url": "https://www.iadfrance.fr/annonce/appartement-vente-4-pieces-narbonne-85m2/r1491452-12",
-      "image": "https://images.iadfrance.fr/photos/realestate/2024-03/product-1545488-1.jpg?ts=202605150839&format=auto&width=600",
-      "charges": ""
-    },
-    {
-      "title": "Appartement à NARBONNE (11100)",
-      "ville": "Narbonne",
-      "type": "Appartement",
-      "offre": "Vente",
-      "price": "306 900 €",
-      "details": [
-        "4 pièces",
-        "73 m²"
-      ],
-      "tags": [
-        "Neuf"
-      ],
-      "url": "https://www.iadfrance.fr/annonce/appartement-vente-4-pieces-narbonne-73m2/r1491452-11",
-      "image": "https://images.iadfrance.fr/photos/realestate/2024-03/product-1545487-1.jpg?ts=202605150839&format=auto&width=600",
-      "charges": ""
-    },
-    {
-      "title": "Appartement à NARBONNE (11100)",
-      "ville": "Narbonne",
-      "type": "Appartement",
-      "offre": "Vente",
-      "price": "146 900 €",
-      "details": [
-        "2 pièces",
-        "36 m²"
-      ],
-      "tags": [
-        "Neuf"
-      ],
-      "url": "https://www.iadfrance.fr/annonce/appartement-vente-2-pieces-narbonne-36m2/r1491452-9",
-      "image": "https://images.iadfrance.fr/photos/realestate/2024-03/product-1545485-1.jpg?ts=202605150839&format=auto&width=600",
-      "charges": ""
-    },
-    {
-      "title": "Appartement à NARBONNE (11100)",
-      "ville": "Narbonne",
-      "type": "Appartement",
-      "offre": "Vente",
       "price": "350 900 €",
       "details": [
         "4 pièces",
-        "85 m²"
+        "86 m²"
       ],
       "tags": [
         "Neuf"
       ],
-      "url": "https://www.iadfrance.fr/annonce/appartement-vente-4-pieces-narbonne-85m2/r1491452-6",
+      "url": "https://www.iadfrance.fr/annonce/appartement-vente-4-pieces-narbonne-86m2/r1491452-6",
       "image": "https://images.iadfrance.fr/photos/realestate/2024-03/product-1545482-1.jpg?ts=202605150839&format=auto&width=600",
       "charges": ""
     },
@@ -1926,12 +1485,12 @@
       "price": "347 900 €",
       "details": [
         "4 pièces",
-        "85 m²"
+        "86 m²"
       ],
       "tags": [
         "Neuf"
       ],
-      "url": "https://www.iadfrance.fr/annonce/appartement-vente-4-pieces-narbonne-85m2/r1491452-3",
+      "url": "https://www.iadfrance.fr/annonce/appartement-vente-4-pieces-narbonne-86m2/r1491452-3",
       "image": "https://images.iadfrance.fr/photos/realestate/2024-03/product-1545479-1.jpg?ts=202605150839&format=auto&width=600",
       "charges": ""
     },
@@ -1943,12 +1502,12 @@
       "price": "299 900 €",
       "details": [
         "4 pièces",
-        "73 m²"
+        "74 m²"
       ],
       "tags": [
         "Neuf"
       ],
-      "url": "https://www.iadfrance.fr/annonce/appartement-vente-4-pieces-narbonne-73m2/r1491452-2",
+      "url": "https://www.iadfrance.fr/annonce/appartement-vente-4-pieces-narbonne-74m2/r1491452-2",
       "image": "https://images.iadfrance.fr/photos/realestate/2024-03/product-1545478-1.jpg?ts=202605150839&format=auto&width=600",
       "charges": ""
     }
