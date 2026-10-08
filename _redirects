@@ -15,6 +15,23 @@
 /conseils/diagnostics-vente-narbonne/ /conseils/diagnostics-vente-narbonne 301
 /conseils/juste-prix-maison-narbonne/ /conseils/juste-prix-maison-narbonne 301
 
+# Site de Mickael Patini déplacé sur son propre domaine (08/10/2026) — redirections permanentes.
+/mickael https://immobilier-grand-narbonne.fr/ 301
+/mickael/ https://immobilier-grand-narbonne.fr/ 301
+/mickael/index.html https://immobilier-grand-narbonne.fr/ 301
+/mickael/annonces.html https://immobilier-grand-narbonne.fr/annonces 301
+/mickael/avis.html https://immobilier-grand-narbonne.fr/avis 301
+/mickael/communes.html https://immobilier-grand-narbonne.fr/communes 301
+/mickael/confidentialite.html https://immobilier-grand-narbonne.fr/confidentialite 301
+/mickael/conseils.html https://immobilier-grand-narbonne.fr/conseils 301
+/mickael/contact.html https://immobilier-grand-narbonne.fr/contact 301
+/mickael/estimation.html https://immobilier-grand-narbonne.fr/estimation 301
+/mickael/mentions-legales.html https://immobilier-grand-narbonne.fr/mentions-legales 301
+/mickael/propertips.html https://immobilier-grand-narbonne.fr/propertips 301
+/mickael/vendre.html https://immobilier-grand-narbonne.fr/vendre 301
+/mickael/article-exemple.html https://immobilier-grand-narbonne.fr/article-exemple 301
+/mickael/* https://immobilier-grand-narbonne.fr/:splat 301
+
 # NB : la page 404 personnalisee n'est PAS geree ici. Ce projet est deploye comme un Cloudflare
 # Worker a assets statiques (pas Cloudflare Pages classique) : les regles _redirects n'acceptent
 # que les statuts 200/301/302/303/307/308 (une regle "404" ici fait echouer TOUT le build, cause
