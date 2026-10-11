@@ -1,0 +1,755 @@
+<!DOCTYPE html><html lang="fr"><head>
+<link rel="icon" href="/favicon.ico?v=20261004-logo" sizes="any">
+<link rel="icon" type="image/png" href="/favicon-immobilier-narbonne-20261004.png" sizes="96x96">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Détail du bien | Immobilier Narbonne</title>
+<meta name="description" content="Découvrez les biens à vendre et à louer : communes, budget, chambres et programmes neufs. Confiez votre recherche à Guillaume Roque.">
+<meta name="keywords" content="vendre maison Narbonne, estimation immobilière Narbonne, agent immobilier Narbonne, iad Narbonne, Guillaume Roque, vendre appartement Narbonne 11100">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://immobiliernarbonne.com/bien">
+<meta property="og:title" content="Conseiller immobilier à Narbonne | Guillaume Roque">
+<meta property="og:description" content="Estimation gratuite et accompagnement complet pour vendre à Narbonne. Conseiller iad France depuis 2013 · 4,9/5 · 97 avis Google.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://immobiliernarbonne.com/">
+<meta property="og:image" content="https://immobiliernarbonne.com/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Guillaume Roque — Immobilier Narbonne">
+<meta name="twitter:card" content="summary_large_image">
+
+<style>
+@font-face{font-family:'Inter';font-style:normal;font-weight:400 800;font-display:swap;src:url('/fonts/inter-variable-latin.woff2') format('woff2-variations')}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bleu:#00B4EC;
+  --bleu-dark:#0090C0;
+  --bleu-prof:#00709C;
+  --bleu-bg:#E8F7FD;
+  --corail:#EA584A;
+  --corail-dark:#C84133;
+  --noir:#111111;
+  --gris-fonce:#333333;
+  --gris:#6B7280;
+  --gris-clair:#F4F9FC;
+  --blanc:#FFFFFF;
+  --bleu-fonce:#005F80;
+  --r:16px;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',-apple-system,sans-serif;color:var(--noir);background:var(--blanc);-webkit-font-smoothing:antialiased;font-size:16px;line-height:1.6}
+
+/* QUICKNAV */
+.qnav{background:var(--bleu-fonce);padding:9px 5vw;display:flex;flex-wrap:wrap;gap:6px;align-items:center;justify-content:center;position:sticky;top:0;z-index:1000}
+.qnav a{color:rgba(255,255,255,0.75);font-size:11.5px;font-weight:500;text-decoration:none;padding:4px 14px;border-radius:100px;transition:all .2s;white-space:nowrap}
+.qnav a:hover{color:#fff;background:rgba(255,255,255,0.12)}
+.qnav .sep{width:1px;height:12px;background:rgba(255,255,255,0.2);margin:0 2px}
+.qnav .cta{background:var(--corail);color:#fff!important;font-weight:600;padding:5px 16px}
+.qnav .cta:hover{background:var(--corail-dark)!important}
+
+/* NAVBAR */
+.navbar{height:60px;padding:0 5vw;display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,0.95);backdrop-filter:blur(20px);border-bottom:1px solid rgba(0,180,236,0.12);position:sticky;top:36px;z-index:999}
+.nb-brand{display:flex;align-items:center;gap:14px;text-decoration:none}
+.nb-logo{height:30px;width:auto}
+.nb-sep{width:1px;height:26px;background:rgba(0,0,0,0.1)}
+.nb-name{font-size:12px;font-weight:700;color:var(--noir);line-height:1.25}
+.nb-name em{color:var(--corail-dark);font-style:normal}
+.nb-cta{background:var(--bleu-prof);color:#fff;font-size:13px;font-weight:700;padding:10px 26px;border-radius:100px;text-decoration:none;transition:background .2s}
+.nb-cta:hover{background:var(--bleu-dark)}
+
+/* HERO */
+.hero{background:var(--bleu-prof);min-height:88vh;display:grid;grid-template-columns:1fr 420px;align-items:center;padding:80px 8vw;gap:60px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-100px;right:-100px;width:500px;height:500px;background:radial-gradient(circle,rgba(255,255,255,0.08) 0%,transparent 70%);pointer-events:none}
+.hero::after{content:'';position:absolute;bottom:-80px;left:10%;width:400px;height:400px;background:radial-gradient(circle,rgba(234,88,74,0.15) 0%,transparent 70%);pointer-events:none}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);color:#fff;font-size:12px;font-weight:600;padding:6px 16px;border-radius:100px;margin-bottom:28px;letter-spacing:.04em}
+.hero-tag::before{content:'';width:6px;height:6px;background:#fff;border-radius:50%;opacity:.8}
+.hero h1{font-size:clamp(38px,5.2vw,66px);font-weight:800;color:#fff;line-height:1.08;letter-spacing:-.035em;margin-bottom:24px}
+.hero h1 em{color:var(--corail);font-style:normal;display:block}
+.hero-sub{font-size:18px;color:rgba(255,255,255,0.92);line-height:1.65;margin-bottom:40px;max-width:480px}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:56px}
+.btn-w{background:#fff;color:var(--bleu);font-size:14px;font-weight:700;padding:15px 34px;border-radius:100px;text-decoration:none;transition:all .2s;display:inline-block}
+.btn-w:hover{background:var(--gris-clair);transform:translateY(-1px)}
+.btn-o{background:transparent;color:rgba(255,255,255,0.95);font-size:14px;font-weight:500;padding:15px 34px;border-radius:100px;text-decoration:none;border:1.5px solid rgba(255,255,255,0.3);transition:all .2s;display:inline-block}
+.btn-o:hover{color:#fff;border-color:rgba(255,255,255,0.6)}
+.hero-stats{display:flex;gap:0;border-top:1px solid rgba(255,255,255,0.15);padding-top:40px}
+.hs{flex:1;padding-right:24px;margin-right:24px;border-right:1px solid rgba(255,255,255,0.15)}
+.hs:last-child{border:none;padding:0;margin:0}
+.hs strong{display:block;font-size:34px;font-weight:800;color:#fff;letter-spacing:-.04em;line-height:1}
+.hs span{font-size:11px;color:rgba(255,255,255,0.92);text-transform:uppercase;letter-spacing:.1em;font-weight:600;margin-top:4px;display:block}
+.hero-right{position:relative}
+.hero-photo{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;object-position:top;border-radius:24px;display:block}
+.hero-card{position:absolute;bottom:20px;left:-28px;background:rgba(255,255,255,0.95);backdrop-filter:blur(16px);border-radius:14px;padding:16px 20px;box-shadow:0 8px 32px rgba(0,0,0,0.12)}
+.hero-card strong{display:block;font-size:14px;font-weight:700;color:var(--noir);margin-bottom:2px}
+.hero-card span{font-size:12px;color:var(--gris)}
+.hero-rating{position:absolute;top:-16px;right:-16px;background:var(--corail);border-radius:14px;padding:14px 18px;text-align:center;box-shadow:0 6px 20px rgba(234,88,74,.35)}
+.hero-rating strong{display:block;font-size:26px;font-weight:800;color:#fff;line-height:1;letter-spacing:-.03em}
+.hero-rating span{font-size:10px;color:rgba(255,255,255,.8);font-weight:600}
+
+/* METRICS BAND */
+.metrics{background:var(--blanc);display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid #E5F4FB}
+.metric{padding:44px 28px;text-align:center;border-right:1px solid #E5F4FB}
+.metric:last-child{border:none}
+.metric strong{display:block;font-size:46px;font-weight:800;color:var(--bleu);letter-spacing:-.04em;line-height:1;margin-bottom:6px}
+.metric strong em{color:var(--corail);font-style:normal}
+.metric span{font-size:12px;color:var(--gris);text-transform:uppercase;letter-spacing:.1em;font-weight:600}
+
+/* SECTION HELPERS */
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#0079A3;margin-bottom:14px}
+.stitle{font-size:clamp(28px,4vw,48px);font-weight:800;letter-spacing:-.03em;line-height:1.08;margin-bottom:16px}
+.stitle em{color:var(--corail);font-style:normal}
+.ssub{font-size:17px;color:var(--gris);line-height:1.65;max-width:560px}
+
+/* GUIDE / LEAD MAGNET */
+.guide{padding:90px 8vw;background:linear-gradient(135deg,var(--bleu-prof) 0%,var(--bleu-fonce) 100%);display:grid;grid-template-columns:1.1fr 0.9fr;gap:60px;align-items:center}
+.guide .eyebrow{color:rgba(255,255,255,.85)}
+.guide h2{font-size:clamp(26px,3.2vw,40px);font-weight:800;color:#fff;letter-spacing:-.03em;line-height:1.15;margin-bottom:16px}
+.guide h2 em{color:var(--corail);font-style:normal}
+.guide p{font-size:15px;color:rgba(255,255,255,.85);line-height:1.7;margin-bottom:22px;max-width:480px}
+.guide-list{display:flex;flex-direction:column;gap:10px}
+.gli{display:flex;align-items:flex-start;gap:12px;font-size:14px;color:rgba(255,255,255,.9);font-weight:500}
+.gli::before{content:'✓';width:22px;height:22px;background:rgba(255,255,255,.15);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;flex-shrink:0;margin-top:1px}
+.guide-card{background:#fff;border-radius:22px;padding:36px 32px}
+.guide-card h3{font-size:19px;font-weight:800;color:var(--noir);margin-bottom:6px;letter-spacing:-.02em}
+.guide-card p.gc-sub{font-size:13px;color:var(--gris);margin-bottom:22px}
+
+/* SERVICES */
+.services{padding:110px 8vw;background:var(--blanc)}
+.svh{text-align:center;margin-bottom:64px}
+.svh .ssub{margin:0 auto}
+.svgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--bleu-bg);border-radius:20px;overflow:hidden}
+.svcard{background:var(--blanc);padding:38px 30px;transition:background .2s}
+.svcard:hover{background:#FAFCFE}
+.svicon{width:44px;height:44px;background:var(--bleu-bg);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:18px}
+.svcard h3{font-size:17px;font-weight:700;color:var(--noir);margin-bottom:8px;letter-spacing:-.01em}
+.svcard p{font-size:13.5px;color:var(--gris);line-height:1.65}
+
+/* SECTEURS */
+.secteurs{padding:100px 8vw;background:var(--gris-clair)}
+.sech{text-align:center;margin-bottom:56px}
+.sech .ssub{margin:0 auto}
+.secgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.seccard{background:#fff;border-radius:18px;padding:30px 26px;border-top:3px solid var(--bleu)}
+.seccard h3{font-size:16px;font-weight:700;color:var(--noir);margin-bottom:8px}
+.seccard p{font-size:13.5px;color:var(--gris);line-height:1.6}
+
+/* GUILLAUME */
+.guil{padding:110px 8vw;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.guil-img{position:relative}
+.guil-photo{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:top;border-radius:24px;display:block}
+.guil-tag{position:absolute;bottom:24px;right:-20px;background:#fff;border-radius:14px;padding:16px 22px;box-shadow:0 8px 32px rgba(0,0,0,.1)}
+.guil-tag strong{display:block;font-size:14px;font-weight:700;color:#C84133;margin-bottom:2px}
+.guil-tag span{font-size:12px;color:var(--gris)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
+.chip{background:var(--bleu-bg);color:var(--bleu-fonce);font-size:12px;font-weight:600;padding:7px 16px;border-radius:100px}
+.cinfo{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--gris);margin-bottom:10px}
+.cinfo a{color:var(--bleu);text-decoration:none;font-weight:600}
+
+/* AVIS */
+.avis{background:var(--gris-clair);padding:100px 8vw;text-align:center}
+.ascores{display:flex;justify-content:center;gap:32px;margin-bottom:56px;flex-wrap:wrap}
+.ascore{background:#fff;border-radius:20px;padding:32px 44px}
+.ascore strong{font-size:56px;font-weight:800;color:var(--noir);letter-spacing:-.04em;display:block;line-height:1}
+.ascore .stars{font-size:18px;margin:8px 0}
+.ascore span{font-size:13px;color:var(--gris)}
+
+/* ANNONCES */
+.annonces{padding:100px 8vw;background:#fff;text-align:center}
+.ann-card{max-width:720px;margin:0 auto;background:var(--gris-clair);border-radius:22px;padding:48px 40px}
+.ann-card h3{font-size:22px;font-weight:800;letter-spacing:-.02em;margin-bottom:12px}
+.ann-card p{font-size:15px;color:var(--gris);line-height:1.65;margin-bottom:26px}
+
+/* BLOG */
+.blog{background:var(--gris-clair);padding:100px 8vw}
+.bh{text-align:center;margin-bottom:56px}
+.bh .ssub{margin:0 auto}
+.bgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.bcard{background:#fff;border-radius:18px;overflow:hidden;text-decoration:none;display:block;transition:all .2s}
+.bcard:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,180,236,.12)}
+.btop{height:5px;background:var(--corail)}
+.bbody{padding:26px}
+.bcat{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#C84133;margin-bottom:8px}
+.bcard h3{font-size:15px;font-weight:700;color:var(--noir);line-height:1.3;margin-bottom:8px;letter-spacing:-.01em}
+.bcard p{font-size:13px;color:var(--gris);line-height:1.6;margin-bottom:14px}
+.blire{font-size:13px;font-weight:700;color:#0079A3}
+.blire::after{content:' →'}
+
+/* ESTIMATION */
+.estim{padding:100px 8vw;text-align:center;background:linear-gradient(135deg,var(--bleu-prof) 0%,var(--bleu-fonce) 100%)}
+.estim .stitle{color:#fff}
+.estim .ssub{color:rgba(255,255,255,.92);margin:0 auto 40px}
+.btn-estim{display:inline-flex;align-items:center;gap:12px;background:#fff;color:var(--bleu-prof);font-size:15px;font-weight:700;padding:17px 42px;border-radius:100px;text-decoration:none;transition:all .2s;box-shadow:0 8px 30px rgba(0,0,0,.15)}
+.btn-estim:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(0,0,0,.2)}
+
+/* CONTACT / FORMULAIRE */
+#contact{padding:110px 8vw;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.fl h2{font-size:clamp(28px,3.5vw,48px);font-weight:800;letter-spacing:-.03em;line-height:1.05;margin-bottom:18px}
+.fl h2 em{color:var(--corail);font-style:normal}
+.fl p{font-size:16px;color:var(--gris);line-height:1.65;margin-bottom:32px}
+.ftrust{display:flex;flex-direction:column;gap:10px;margin-bottom:36px}
+.fti{display:flex;align-items:center;gap:12px;font-size:14px;color:var(--gris);font-weight:500}
+.fti::before{content:'✓';width:22px;height:22px;background:var(--bleu-bg);color:var(--bleu);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;flex-shrink:0}
+.fcoords{display:flex;flex-direction:column;gap:12px;padding-top:28px;border-top:1px solid rgba(0,0,0,.08)}
+.fr{background:var(--gris-clair);border-radius:22px;padding:44px 36px}
+.fg{margin-bottom:18px}
+.fg label{display:block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--gris);margin-bottom:7px}
+.fg input,.fg select,.fg textarea{width:100%;padding:13px 16px;border:1.5px solid transparent;border-radius:10px;background:#fff;font-size:14px;font-family:inherit;color:var(--noir);outline:none;transition:border-color .2s}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--bleu)}
+.fg textarea{min-height:90px;resize:vertical}
+.fsub{width:100%;background:var(--bleu-prof);color:#fff;font-size:14px;font-weight:700;padding:16px;border:none;border-radius:10px;cursor:pointer;transition:background .2s;font-family:inherit}
+.fsub:hover{background:var(--bleu-fonce)}
+.fg2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fnote{font-size:11.5px;color:var(--gris);margin-top:14px;line-height:1.5}
+
+/* FOOTER */
+footer{background:var(--bleu-fonce);padding:56px 8vw 36px}
+.ft{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;padding-bottom:44px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:36px}
+.fb p{font-size:13px;color:rgba(255,255,255,.72);line-height:1.65;margin-top:14px;max-width:260px}
+.fc h3{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.75);margin-bottom:14px}
+.fc a{display:block;font-size:13px;color:rgba(255,255,255,.82);text-decoration:none;margin-bottom:9px;transition:color .2s}
+.fc a:hover{color:#fff;text-decoration:underline}
+.fbot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px}
+.fleg{font-size:11px;color:rgba(255,255,255,.85);line-height:1.5;max-width:680px}
+.fcopy{font-size:12px;color:rgba(255,255,255,.85)}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .hero{grid-template-columns:1fr;padding:60px 6vw}
+  .metrics{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .guide{grid-template-columns:1fr}
+  .svgrid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .secgrid{grid-template-columns:1fr}
+  .guil{grid-template-columns:1fr}
+  .bgrid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  #contact{grid-template-columns:1fr}
+  .ft{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+}
+@media(max-width:600px){
+  .qnav{display:none}
+  .navbar{top:0;padding:0 4vw}
+  .nb-brand{gap:8px}
+  .nb-logo{height:24px}
+  .nb-name{font-size:10.5px}
+  .nb-cta{padding:8px 16px;font-size:11.5px}
+  .fc a{padding:10px 0}
+  .fc h3{margin-top:8px}
+  .metrics{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .metric{padding:26px 12px}
+  .metric strong{font-size:28px}
+  .svgrid{grid-template-columns:1fr}
+  .bgrid{grid-template-columns:1fr}
+  .ascores{gap:14px}
+  .ft{grid-template-columns:1fr}
+  .fg2{grid-template-columns:1fr}
+  .fg input,.fg select,.fg textarea{font-size:16px}
+}
+/* Accessibilité — accents texte contrastés sur fond clair (WCAG AA 4.5:1) */
+.eyebrow,.blire,.bcat,.cinfo a,.metric strong{color:#0079A3}
+.bcat,.guil-tag strong{color:#C84133}
+#cookieBanner button:focus-visible{outline:3px solid #FFFFFF;outline-offset:3px}
+</style>
+<style data-refonte="">
+/* Charte iad 2025 — site commercial, septembre 2026 */
+@font-face{font-family:Montserrat;src:url('/fonts/montserrat-400-fr-20261005.woff2') format('woff2');font-weight:400;font-display:optional}
+@font-face{font-family:Montserrat;src:url('/fonts/montserrat-700-fr-20261005.woff2') format('woff2');font-weight:600 900;font-display:optional}
+:root{--bleu:#00b4ec;--bleu-prof:#007daf;--bleu-fonce:#006390;--gris:#515b66;--gris-clair:#f5f9fb;--bleu-bg:#e9fcff;--noir:#111;--corail:#ea584a}
+body{font-family:Montserrat,Helvetica,Arial,sans-serif;font-size:16px;line-height:1.7}
+html{scroll-padding-top:155px}a,button,input,select,textarea{touch-action:manipulation}a:focus-visible,button:focus-visible{outline:3px solid #007daf;outline-offset:5px}
+.qnav{position:sticky;top:0;background:#3c4a5f;min-height:46px;padding:5px 3vw;gap:0}.qnav a{font-size:14px;color:#fff;padding:6px 12px}.qnav .cta{background:#00b4ec;color:#111!important}.qnav .cta:hover{background:#95ebff!important}
+.navbar{height:88px;top:46px;padding:0 max(5vw,calc((100vw - 1280px)/2));background:#fff;backdrop-filter:none}.nb-logo{height:32px}.nb-brand{gap:22px}.nb-name{font-size:14px}.nb-name em{color:#111}.nb-sep{height:38px}.nb-cta{font-size:14px;background:#00b4ec;color:#111;padding:14px 24px}.nb-cta:hover{background:#95ebff}
+.hero{background:#fff;grid-template-columns:minmax(0,1.3fr) minmax(0,.8fr);gap:70px;min-height:650px;padding:70px max(6vw,calc((100vw - 1240px)/2)) 78px;overflow:visible}.hero::before,.hero::after,.hero-tag::before{display:none}.hero-tag{color:#006390;background:#e9fcff;border:0;font-size:14px;letter-spacing:0;padding:8px 16px;line-height:1.5;margin-bottom:25px}.hero h1{color:#111;font-size:clamp(38px,4.6vw,68px);line-height:1.12;letter-spacing:-.045em}.hero h1 em{color:#007daf}.hero-sub{color:#515b66;font-size:18px;max-width:590px;margin-bottom:28px}.hero-btns{margin-bottom:32px;gap:12px}.btn-w{background:#00b4ec;color:#111;padding:16px 24px;font-size:14px}.btn-w:hover{background:#95ebff}.btn-o{color:#111;border-color:#ccd4d9;padding:16px 24px;font-size:14px}.btn-o:hover{color:#006390;border-color:#007daf}.hero-stats{border-color:#dbe4e9;padding-top:26px}.hs{border-color:#dbe4e9;margin-right:18px;padding-right:18px}.hs strong{font-size:27px;color:#111}.hs span{font-size:12px;color:#515b66;letter-spacing:0;text-transform:none;line-height:1.5;margin-top:8px}.hero-photo{aspect-ratio:4/5;border-radius:160px 160px 20px 20px;object-position:top}.hero-right{padding:0 0 28px}.hero-card{position:absolute;left:-26px;right:20px;bottom:0;background:#fff;border:1px solid #e1e8ec;box-shadow:0 12px 35px #3c4a5f15;padding:20px 24px;border-radius:16px;backdrop-filter:none}.hero-card strong{font-size:18px}.hero-card span{font-size:14px}.hero-rating{display:none}
+.metrics{background:#f5f9fb;border-block:1px solid #e0e8ed}.metric{padding:30px 15px}.metric strong{font-size:34px;color:#007daf}.metric strong em{color:#007daf}.metric span{font-size:13px;letter-spacing:0;text-transform:none}
+.services,.secteurs,.guil,.avis,.annonces,.blog,#contact{padding:88px max(6vw,calc((100vw - 1240px)/2))}.eyebrow{font-size:14px;color:#006390;letter-spacing:.1em}.stitle{font-size:clamp(30px,3.5vw,46px);line-height:1.18;letter-spacing:-.035em}.stitle em,.fl h2 em{color:#007daf}.svh,.sech,.bh{text-align:left;margin-bottom:38px}.svh .ssub,.sech .ssub,.bh .ssub{margin:0}.svgrid{gap:22px;background:none;border-radius:0;counter-reset:service}.svcard{border-top:1px solid #ccdce5;padding:28px 0;background:none;counter-increment:service}.svicon{border-radius:100px;background:#e9fcff;font-size:0;width:52px;height:40px}.svicon::after{content:'0' counter(service);font-size:16px;font-weight:700;color:#006390}.svcard h3{font-size:18px}.svcard p,.seccard p,.bcard p,.ann-card p{font-size:16px}.secgrid{gap:24px}.seccard{border-top:3px solid #00b4ec;border-radius:0 0 16px 16px;padding:30px}.seccard h3{font-size:19px}.guil{grid-template-columns:.8fr 1.2fr}.guil-photo{max-height:540px;border-radius:20px;object-fit:cover}.guil-tag{right:18px}.guil-tag strong{color:#006390}.guil-tag span,.chip,.cinfo{font-size:14px}.guide{background:#3c4a5f;padding:74px max(6vw,calc((100vw - 1240px)/2));gap:60px}.guide h2 em{color:#fff}.guide p,.gli{font-size:16px}.guide-card{padding:32px}.guide-card p.gc-sub{font-size:14px}.guide-card h3{line-height:1.4}.guide .fg label{color:#515b66}.guide-card .fnote{color:#515b66;font-size:13px}
+.avis{text-align:left}.ascores{justify-content:flex-start;margin-bottom:34px}.ascore{border:1px solid #e1e8ec;padding:24px 35px}.ascore strong{font-size:40px}.ascore span{font-size:14px}.ann-card{max-width:900px;background:#e9fcff}.bgrid{gap:22px}.bcard{border:1px solid #dbe4e9;border-radius:14px;box-shadow:none}.btop{background:#00b4ec;height:4px}.bcat{color:#006390;font-size:12px}.bcard h3{font-size:18px;line-height:1.45}.blire{font-size:14px;color:#006390}.bbody{padding:28px}.estim{background:#3c4a5f;padding:74px 6vw}.estim .stitle em{color:#fff}.btn-estim{background:#00b4ec;color:#111;box-shadow:none}.btn-estim:hover{box-shadow:none;background:#95ebff}.fr{border:1px solid #dbe4e9;padding:32px;background:#f5f9fb}.fg label,.contact-preference legend{font-size:14px!important;letter-spacing:0!important;text-transform:none!important}.fg input,.fg select,.fg textarea{font-size:16px;border:1px solid #c6d4dd;min-height:48px}.fsub{border-radius:100px;background:#00b4ec;color:#111;font-size:16px}.fsub:hover{background:#95ebff}.fnote{font-size:13px}.fti{font-size:16px}.fl h2{line-height:1.2}.cinfo a{color:#006390;overflow-wrap:anywhere}.fcoords{min-width:0}footer{background:#3c4a5f}.fc h3,.fc a,.fb p{font-size:14px}.fleg,.fcopy{font-size:12px}.fb svg{opacity:1!important}#cookieBanner{background:#3c4a5f!important;font-family:Arial,Helvetica,sans-serif}#cookieBanner p,#cookieBanner button{font-family:inherit;font-size:14px!important}.skip-link{position:fixed;top:-100px;left:20px;z-index:3000;background:#fff;padding:12px}.skip-link:focus{top:12px}
+@media(max-width:1100px){.qnav a{font-size:12px;padding:6px 8px}.hero{gap:34px;grid-template-columns:1.2fr .8fr;padding:50px 5vw}.hero h1{font-size:46px}.hero-card{left:0;right:0}.hero-stats{flex-wrap:wrap;gap:12px}.hs{min-width:90px}.guil{gap:36px}.guide,#contact{gap:36px}.nb-logo{height:27px}}
+@media(max-width:760px){html{scroll-padding-top:140px}.navbar{top:0;height:78px;padding:0 5vw}.nb-brand{gap:10px}.nb-logo{height:22px;max-width:120px}.nb-name{font-size:12px}.nb-cta{padding:11px 14px;font-size:12px}.qnav{position:static;display:flex;overflow-x:auto;flex-wrap:nowrap;justify-content:flex-start;padding:6px 3vw;min-height:42px}.qnav a{font-size:13px}.qnav .sep,.qnav .cta{display:none}.hero{grid-template-columns:1fr;padding:38px 6vw 48px;gap:34px;min-height:0}.hero h1{font-size:clamp(36px,8vw,52px)}.hero-sub{font-size:16px}.hero-tag{font-size:12px}.hero-right{max-width:400px;width:100%;margin:auto}.hero-photo{aspect-ratio:1;border-radius:150px 150px 18px 18px;object-position:50% 22%}.hero-card span{font-size:12px}.hero-btns a{width:100%;text-align:center}.hs strong{font-size:23px}.hs span{font-size:12px}.metrics{grid-template-columns:1fr 1fr}.metric strong{font-size:28px}.services,.secteurs,.guil,.avis,.annonces,.blog,#contact,.guide{padding:55px 6vw}.svgrid,.secgrid,.guil,.guide,#contact,.bgrid{grid-template-columns:1fr}.guil-img{max-width:360px}.svcard{padding:24px 0}.guide-card,.fr{padding:24px 18px}.ann-card{padding:30px 20px}.ascore{padding:20px;flex:1;min-width:130px}.ascores{gap:12px}.ascore strong{font-size:34px}.ft{grid-template-columns:1fr}.fg2{grid-template-columns:1fr}.hero-stats{gap:0}.hs{min-width:0}.hero-card strong{font-size:16px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+
+/* Alignement final avec la charte graphique iad 2025 */
+:root{
+  --bleu:#00b4ec;
+  --bleu-dark:#008ec3;
+  --bleu-prof:#007daf;
+  --bleu-fonce:#006390;
+  --bleu-bg:#e9fcff;
+  --corail:#ea584a;
+  --corail-dark:#ea584a;
+  --noir:#000;
+  --gris-fonce:#3c4a5f;
+  --gris:#3c4a5f;
+  --gris-clair:#e9fcff;
+  --blanc:#fff;
+}
+body{color:#000;background:#fff}
+.estim .eyebrow{color:#fff!important}
+.navbar{border-bottom-color:rgba(60,74,95,.18)}
+.nb-logo{filter:none}
+.nb-brand{padding-block:10px}
+.hero h1 em,.stitle em,.fl h2 em{color:#007daf;font-style:italic}
+.hero-tag,.chip,.bien-tag{background:#e9fcff;color:#006390;border-radius:999px}
+.hero-right{isolation:isolate}
+.hero-right::before{content:"";display:block;position:absolute;inset:22px -18px 4px 22px;background:#e9fcff;border-radius:999px;transform:rotate(5deg);z-index:-1}
+.hero-right picture{position:relative;z-index:1;display:block}
+.hero-photo,.guil-photo{border-radius:999px}
+.hero-card,.guil-tag{border-color:rgba(60,74,95,.18);border-radius:999px;z-index:2}
+.nb-cta,.btn-w,.btn-estim,.fsub{
+  background:#007daf!important;
+  color:#fff!important;
+  border-color:#007daf!important;
+  border-radius:999px;
+  box-shadow:none!important;
+  font-family:Montserrat,Helvetica,Arial,sans-serif;
+  font-style:italic;
+  font-weight:700;
+}
+.nb-cta:hover,.btn-w:hover,.btn-estim:hover,.fsub:hover{
+  background:#006390!important;
+  border-color:#006390!important;
+}
+.btn-o{
+  background:#fff;
+  color:#000;
+  border-color:#00b4ec;
+  border-radius:999px;
+  font-style:italic;
+  font-weight:700;
+}
+.btn-o::after{content:'\203A';color:#ea584a;font-size:1.35em;font-style:normal;line-height:1}
+.btn-o:hover{background:#e9fcff;color:#000;border-color:#007daf}
+.qnav .cta{background:#00b4ec;color:#000!important;font-style:italic}
+.qnav .cta:hover{background:#95ebff!important;color:#000!important}
+.metrics,.fr,.biens-filtres{background:#e9fcff}
+.metrics{border-color:rgba(60,74,95,.18)}
+.metric,.hero-stats,.hs,.ascore,.bcard,.seccard,.fr,.hero-card{border-color:rgba(60,74,95,.18)}
+.svicon{width:72px;height:56px;border-radius:0;background:transparent;display:flex;align-items:center;justify-content:flex-start}
+.svicon::after{display:none}
+.iad-brand-icon{display:block;width:72px;height:54px;overflow:visible}
+.guide,.estim,footer,#cookieBanner{background:#3c4a5f!important}
+.guide-card{border-radius:28px}
+.btop{background:#00b4ec}
+.bcat,.blire,.cinfo a{color:#006390}
+.links a.primary{background:#007daf!important;border-color:#007daf!important;color:#fff!important;font-family:Montserrat,Helvetica,Arial,sans-serif;font-style:italic;font-weight:700}
+.links a.primary:hover{background:#006390!important;border-color:#006390!important}
+.merci-cta .p1{background:#ea584a!important;color:#000!important}
+@media(max-width:760px){
+  .hero-right::before{inset:18px -8px 8px 18px;transform:rotate(5deg)}
+  .hero-photo{aspect-ratio:4/5;border-radius:999px}
+  .hero-card{left:8px;right:8px;padding:16px 22px}
+}
+
+/* Navigation alignée sur le site Tribu Immo */
+html{scroll-padding-top:132px}
+.topbar{background:#3c4a5f;color:#fff;font-size:12.8px;line-height:1.6;padding:8px 0}
+.topbar-inner{max-width:1240px;margin:0 auto;padding:0 36px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.topbar span{letter-spacing:.02em}
+.topbar a{color:#fff;text-decoration:none;white-space:nowrap}
+.topbar a:hover{text-decoration:underline;color:#fff}
+.site-header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.98);border-bottom:1px solid #d0cdc6}
+.site-header .navbar{position:relative;top:auto;z-index:auto;width:100%;max-width:1240px;height:116px;margin:0 auto;padding:0 36px;background:transparent;border:0;display:flex;align-items:center;justify-content:space-between;gap:28px}
+.site-header .nb-brand{flex:none;gap:16px;padding:0;color:#000}
+.site-header .nb-brand:hover{color:#000}
+.site-header .nb-logo{height:32px;width:auto;max-width:176px;flex:none}
+.site-header .nb-sep{height:42px;background:#d0cdc6}
+.site-header .nb-name{font-size:14px;line-height:1.25;color:#000;white-space:nowrap}
+.site-header .nb-name em{color:#000}
+.nb-links{display:flex;align-items:center;justify-content:flex-end;gap:22px;min-width:0}
+.nb-links>a:not(.nb-cta){color:#000;text-decoration:none;font-size:13px;line-height:1.35;font-weight:600;text-align:center}
+.nb-links>a:not(.nb-cta):hover{color:#006390;text-decoration:underline;text-underline-offset:5px}
+.site-header .nb-cta{min-height:68px;min-width:176px;padding:12px 20px;background:#006390!important;border-color:#006390!important;display:inline-flex;align-items:center;justify-content:center;gap:14px;text-align:center;line-height:1.3}
+.site-header .nb-cta:hover{text-decoration:underline}
+.site-header .nb-cta span{font-size:18px;line-height:1}
+.nb-menu-toggle{display:none;background:#fff;color:#000;border:1px solid #007daf;border-radius:999px;padding:10px 16px;font-family:Montserrat,Helvetica,Arial,sans-serif;font-size:14px;font-weight:700;cursor:pointer}
+.nb-menu-toggle:hover{background:#e9fcff}
+@media(max-width:1180px){
+  .site-header .navbar{height:96px}
+  .site-header .nb-logo{height:28px;max-width:154px}
+  .site-header .nb-name{font-size:13px}
+  .nb-menu-toggle{display:block}
+  .nb-links{display:none;position:absolute;top:96px;left:25px;right:25px;background:#fff;border:1px solid #d0cdc6;border-top:3px solid #00b4ec;border-radius:0 0 18px 18px;padding:24px;box-shadow:0 14px 28px rgba(60,74,95,.16);flex-direction:column;align-items:stretch;gap:0}
+  .nb-links.open{display:flex}
+  .nb-links>a:not(.nb-cta){padding:13px 8px;text-align:left;border-bottom:1px solid rgba(60,74,95,.14);font-size:15px}
+  .site-header .nb-cta{min-height:52px;width:100%;margin-top:16px}
+}
+@media(max-width:760px){
+  html{scroll-padding-top:110px}
+  .topbar{font-size:11px;padding:7px 0}
+  .topbar-inner{padding:0 20px;justify-content:flex-end}
+  .topbar-inner>span{display:none}
+  .site-header .navbar{height:86px;padding:0 20px;gap:12px}
+  .site-header .nb-brand{gap:9px;min-width:0}
+  .site-header .nb-logo{height:24px;max-width:132px}
+  .site-header .nb-sep{height:34px}
+  .site-header .nb-name{font-size:11px;white-space:normal;line-height:1.25}
+  .nb-menu-toggle{padding:9px 14px;font-size:13px;flex:none}
+  .nb-links{top:86px;left:14px;right:14px;padding:20px}
+}
+@media(max-width:420px){
+  .topbar-inner{padding:0 14px}
+  .site-header .navbar{padding:0 14px}
+  .site-header .nb-logo{height:21px;max-width:116px}
+  .site-header .nb-sep{display:none}
+  .site-header .nb-name{font-size:10px}
+}
+</style>
+<script src="/navigation.js?v=20261011-parcours" defer=""></script>
+<style data-annonces="">
+.annonces{text-align:left}.biens-intro{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:30px}.biens-intro .ssub{max-width:660px}.biens-source{font-size:13px;color:#515b66;line-height:1.7;margin:16px 0 28px}.biens-source a{color:#006390}.biens-filtres{display:flex;align-items:end;flex-wrap:wrap;gap:16px;padding:24px;background:#f5f9fb;border-radius:18px;margin-bottom:18px}.biens-filtres>div{flex:1;min-width:150px}.biens-filtres label{display:block;font-size:14px;font-weight:700;margin-bottom:7px}.biens-filtres select{font-family:inherit;font-size:16px;width:100%;padding:13px 16px;border:1px solid #c6d4dd;border-radius:10px;background:#fff;color:#111;min-height:50px}.biens-filtres button{background:transparent;border:1px solid #007daf;color:#006390;padding:13px 20px;border-radius:99px;font:600 14px Montserrat,Arial,sans-serif;min-height:50px;cursor:pointer}#biens-resultat{font-size:14px;margin:20px 0;color:#515b66}.biens-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:25px}.bien-card{border:1px solid #dbe4e9;border-radius:20px;overflow:hidden;background:#fff;display:flex;flex-direction:column;min-width:0}.bien-card[hidden],.biens-filtres[hidden],#biens-plus[hidden]{display:none}.bien-card a{color:inherit;text-decoration:none;display:flex;flex-direction:column;height:100%}.bien-card a:hover .bien-lien{text-decoration:underline}.bien-image{aspect-ratio:4/3;width:100%;height:auto;display:block;object-fit:cover;background:#e9fcff}.bien-content{padding:24px;display:flex;flex-direction:column;flex:1}.bien-tags{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:14px}.bien-tag{padding:4px 10px;border-radius:99px;background:#e9fcff;color:#006390;font-size:12px;font-weight:600}.bien-prix{font-size:24px;font-weight:700;line-height:1.3;margin:0 0 4px}.bien-charge{font-size:12px;color:#515b66;margin-bottom:8px}.bien-card h3{font-size:17px;line-height:1.5;font-weight:600;margin:12px 0}.bien-details{font-size:14px;line-height:1.8;color:#515b66;margin-bottom:20px}.bien-lien{font-size:14px;color:#006390;font-weight:700;margin-top:auto;display:flex;gap:10px;align-items:center}.biens-actions{display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin-top:32px}.biens-actions button{border:0;cursor:pointer;font-family:inherit}.biens-actions>a{font-size:14px;color:#006390;font-weight:600}.material-symbol{width:1.25em;height:1.25em;display:inline-block;vertical-align:-.2em;flex-shrink:0;stroke:currentColor;stroke-width:1.8;fill:none;stroke-linecap:round;stroke-linejoin:round}.btn-w,.btn-o,.nb-cta,.btn-estim,.fsub{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;min-height:48px;font-weight:700;transition:background .18s,border-color .18s}.svicon .material-symbol{display:none}.cinfo>.material-symbol{color:#007daf}.qnav a .material-symbol{width:16px;height:16px}.hero-stats .material-symbol{color:#007daf}.biens-filtres select:focus-visible{outline:3px solid #007daf;outline-offset:3px}@media(max-width:1000px){.biens-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.biens-intro{display:block}}@media(max-width:600px){.biens-grid{grid-template-columns:1fr}.biens-filtres{padding:18px;gap:12px}.biens-filtres>div{min-width:100%}.bien-content{padding:22px}.biens-actions{flex-direction:column;align-items:stretch}.biens-actions>a{text-align:center}.bien-prix{font-size:23px}}
+
+/* Palette et pictogrammes conformes à la charte iad 2025 */
+.biens-source,#biens-resultat,.bien-charge,.bien-details{color:#3c4a5f}
+.biens-filtres{background:#e9fcff;border-radius:24px}
+.biens-filtres select{border-color:rgba(60,74,95,.32);color:#000}
+.biens-filtres button{border-color:#00b4ec;color:#006390;border-radius:999px;font-style:italic;font-weight:700}
+.biens-filtres button:hover{background:#fff;border-color:#007daf}
+.bien-card{border-color:rgba(60,74,95,.18);border-radius:24px}
+.bien-tag{background:#e9fcff;color:#006390;border-radius:999px}
+.bien-lien{color:#006390}
+.iad-brand-icon{display:block}
+
+/* Pictogrammes fonctionnels : style Material Symbols recommandé par la charte iad. */
+.material-symbol--arrow{width:1.1em;height:1.1em;vertical-align:-.15em}
+.cookie-close-icon{width:1.15rem;height:1.15rem;display:block}
+.google-mark{width:1.15em;height:1.15em;display:inline-block;vertical-align:-.2em;flex-shrink:0;fill:#007daf;stroke:none}
+
+.bien-sans-photo{display:flex;align-items:center;justify-content:center;font-size:14px;color:#006390;padding:24px;text-align:center}
+</style>
+<style data-avis-google="">
+/* Avis Google — présentation conforme à la charte iad */
+.avis-google-head{display:flex;align-items:flex-end;justify-content:space-between;gap:2rem;margin-bottom:2rem}
+.avis-google-head .stitle{margin-bottom:.75rem}
+.google-rating{display:flex;align-items:center;gap:1rem;background:#fff;border:1px solid #dbe4e9;border-radius:1.25rem;padding:1.25rem 1.5rem;min-width:15rem}
+.google-rating__score{font-size:2.75rem;font-weight:800;letter-spacing:-.05em;line-height:1;color:#111}
+.google-rating__stars,.review-stars,.stars,.rvstars{color:#007daf;display:inline-flex;align-items:center;gap:.12rem}
+.google-rating__stars{font-size:1rem;line-height:1.2}
+.rating-star{width:1em;height:1em;display:block;fill:currentColor;stroke:none}
+.google-rating__meta{font-size:.82rem;color:#515b66;margin-top:.3rem}
+.google-reviews{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.25rem;list-style:none;padding:0;margin:0}
+.google-review{display:flex;flex-direction:column;background:#fff;border:1px solid #dbe4e9;border-radius:1.15rem;padding:1.5rem;text-align:left;min-width:0}
+.rv-card.google-review{margin:0 6px;flex-shrink:0}
+.google-review__top{display:flex;align-items:center;gap:.8rem;margin-bottom:.9rem}
+.google-review__initial{width:2.6rem;height:2.6rem;border-radius:999px;background:#e9fcff;color:#006390;display:grid;place-items:center;font-weight:800;flex:0 0 auto}
+.google-review__name{font-size:.9rem;font-weight:700;color:#111;line-height:1.35}
+.google-review__date{font-size:.75rem;color:#68737d;margin-top:.15rem}
+.review-stars{font-size:.9rem;margin-bottom:.75rem}
+.google-review__text{font-size:.95rem;line-height:1.7;color:#3c4a5f;margin:0 0 1rem}
+.avis .google-review__text{display:-webkit-box;-webkit-line-clamp:6;-webkit-box-orient:vertical;overflow:hidden}
+.google-review__label{display:block;font-size:.72rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#007daf;margin-bottom:.35rem}
+.google-review__source{display:flex;align-items:center;gap:.45rem;margin-top:auto;font-size:.78rem;color:#68737d}
+.google-review__source .material-symbol{color:#007daf}
+.google-review__source .google-mark{color:#007daf}
+.google-source-note{font-size:.8rem;line-height:1.65;color:#515b66;margin:1.35rem 0 0}
+.google-actions{display:flex;gap:1rem;align-items:center;flex-wrap:wrap;margin-top:1.75rem}
+.google-actions .btn-google{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:3rem;padding:.8rem 1.35rem;border-radius:999px;background:#00b4ec;color:#111;font-size:.9rem;font-weight:700;text-decoration:none}
+.google-actions .btn-google:hover{background:#95ebff}
+.google-actions .link-secondary{color:#006390;font-size:.9rem;font-weight:700;text-decoration:none}
+.google-actions .link-secondary:hover{text-decoration:underline}
+.review-nav{width:3rem;height:3rem;border-radius:999px;border:1px solid #b9cbd5;background:#fff;color:#006390;display:grid;place-items:center;cursor:pointer;flex:0 0 auto;transition:background .18s,border-color .18s,color .18s}
+.review-nav:hover{background:#00b4ec;border-color:#00b4ec;color:#111}.review-nav .material-symbol{width:1.2rem;height:1.2rem}
+.google-panel{padding:2rem;background:#e9fcff;border-radius:1.4rem;margin-bottom:2rem}
+.google-panel .google-rating{border:0;box-shadow:none;padding:0;background:transparent;min-width:0}
+.google-panel__copy{font-size:.98rem;color:#3c4a5f;line-height:1.7;margin:.9rem 0 0;max-width:44rem}
+.google-reviews--full .google-review__text{display:block;overflow:visible}
+.google-reviews--full{grid-template-columns:repeat(2,minmax(0,1fr));margin-bottom:1.25rem}
+@media(max-width:900px){.avis-google-head{align-items:flex-start;flex-direction:column}.google-reviews{grid-template-columns:repeat(2,minmax(0,1fr))}.google-rating{min-width:0}}
+@media(max-width:600px){.google-reviews,.google-reviews--full{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:.85rem;margin-inline:-6vw;padding:0 6vw 1rem}.google-review{min-width:86vw;scroll-snap-align:start}.google-rating{width:100%}.google-panel{padding:1.4rem}.google-actions{align-items:stretch;flex-direction:column}.google-actions .link-secondary{text-align:center}}
+
+/* Palette et gélules conformes à la charte iad 2025 */
+.google-rating,.google-review{border-color:rgba(60,74,95,.18)}
+.google-rating__score,.google-review__name{color:#000}
+.google-rating__meta,.google-review__date,.google-review__text,.google-review__source,.google-source-note,.google-panel__copy{color:#3c4a5f}
+.google-review__initial,.google-panel{background:#e9fcff}
+.google-review__initial{color:#006390}
+.google-actions .btn-google{background:#007daf;color:#fff;border-radius:999px;font-family:Montserrat,Helvetica,Arial,sans-serif;font-style:italic;font-weight:700}
+.google-actions .btn-google:hover{background:#006390}
+.google-actions .link-secondary,.review-nav{color:#006390}
+.review-nav{border-color:rgba(60,74,95,.32)}
+.review-nav:hover{background:#00b4ec;border-color:#00b4ec;color:#000}
+</style>
+<style data-branding-20261004="">
+/* Logo Immobilier Narbonne — by Guillaume ROQUE, octobre 2026. */
+.nb-brand .nb-site-logo{display:block;width:160px;height:auto;max-width:none;flex:none;object-fit:contain}
+.site-header .navbar{height:152px}
+.site-header .nb-brand{gap:18px}
+.site-header .nb-links{gap:16px}
+.site-header .nb-logo{height:24px;width:auto;max-width:none}
+.nb-simple{min-height:152px;height:auto;padding-block:10px}
+html{scroll-padding-top:168px}
+.ft-site-brand{display:block;width:220px;max-width:100%;padding:8px;background:#fff;border-radius:12px;margin-bottom:24px}
+.ft-site-logo{display:block;width:100%;height:auto}
+@media(max-width:1180px){
+  .site-header .navbar{height:140px}
+  .nb-brand .nb-site-logo{width:140px}
+  .site-header .nb-links{top:140px;gap:0;max-height:calc(100dvh - 152px);overflow-y:auto}
+  html{scroll-padding-top:152px}
+}
+@media(max-width:760px){
+  .site-header .navbar{height:120px}
+  .site-header .nb-brand{gap:12px}
+  .nb-brand .nb-site-logo{width:120px}
+  .site-header .nb-logo{height:18px}
+  .site-header .nb-sep{display:block;height:38px;width:1px;flex:none}
+  .nb-simple{min-height:120px}
+  .site-header .nb-links{top:120px;max-height:calc(100dvh - 140px)}
+  html{scroll-padding-top:140px}
+}
+@media(max-width:420px){
+  .site-header .nb-brand{gap:9px}
+  .nb-brand .nb-site-logo{width:108px}
+  .site-header .nb-logo{height:16px}
+  .site-header .nb-menu-toggle{padding:9px 12px}
+}
+</style>
+<style data-newsletter-20261004="">
+/* Inscription directe Brevo — identité Immobilier Narbonne / iad. */
+.newsletter-section{padding:88px 8vw;background:#e9fcff;scroll-margin-top:130px}
+.newsletter-layout{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.newsletter-copy h2{font-size:clamp(30px,3.7vw,48px);font-weight:800;letter-spacing:-.035em;line-height:1.12;margin:0 0 20px;color:#000}
+.newsletter-copy h2 em{color:#007daf;font-style:italic}
+.newsletter-copy p{font-size:16px;line-height:1.8;color:#3c4a5f;max-width:530px}
+.newsletter-copy .newsletter-note{font-size:12px;line-height:1.7;margin-top:22px}
+.newsletter-form{min-width:0;background:#fff;border:1px solid rgba(60,74,95,.16);border-radius:24px;padding:32px}
+.newsletter-signup>label[for="newsletter-email"]{display:block;font-size:14px;font-weight:700;color:#3c4a5f;margin-bottom:10px}
+.newsletter-fields{display:flex;flex-wrap:wrap;gap:12px}
+.newsletter-fields input{flex:1 1 200px;min-width:0;width:100%;min-height:54px;border:1px solid #8a98a8;border-radius:10px;padding:14px 16px;color:#3c4a5f;background:#fff;font:inherit;font-size:16px}
+.newsletter-fields input::placeholder{color:#657486;opacity:1}
+.newsletter-fields button{flex:0 0 auto;min-height:54px;border:0;border-radius:999px;padding:14px 24px;background:#007daf;color:#fff;font:inherit;font-size:14px;font-weight:700;cursor:pointer}
+.newsletter-fields button:hover{background:#006390}
+.newsletter-consent{display:flex;align-items:flex-start;gap:10px;margin-top:20px;font-size:12px;line-height:1.65;color:#3c4a5f;cursor:pointer}
+.newsletter-consent input{flex:none;width:18px;height:18px;margin-top:2px;accent-color:#007daf}
+.newsletter-privacy{font-size:11.5px;line-height:1.75;color:#3c4a5f;margin-top:18px}
+.newsletter-privacy a{color:#006390;text-decoration:underline;text-underline-offset:3px}
+.newsletter-section input:focus-visible,.newsletter-section button:focus-visible,.newsletter-section a:focus-visible{outline:3px solid #007daf;outline-offset:3px}
+.newsletter-honeypot{position:absolute!important;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
+@media(max-width:980px){.newsletter-layout{grid-template-columns:1fr;gap:28px}.newsletter-copy p{max-width:680px}.newsletter-section{padding:64px 6vw;scroll-margin-top:110px}}
+@media(max-width:540px){.newsletter-section{padding:56px 20px;scroll-margin-top:100px}.newsletter-form{padding:24px 20px}.newsletter-fields{flex-direction:column}.newsletter-fields input{flex:auto}.newsletter-fields button{width:100%}.newsletter-copy h2{font-size:32px}}
+</style>
+<link rel="stylesheet" href="/parcours-20261011.css"><meta name="robots" content="noindex,follow"></head>
+<body>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <span>VOTRE PROJET IMMOBILIER À NARBONNE. UN CONSEILLER À VOS CÔTÉS.</span>
+    <a href="tel:+33662108396">Parlons de votre projet · 06 62 10 83 96</a>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<header class="site-header">
+<nav class="navbar" aria-label="Navigation principale">
+  <a href="#" class="nb-brand">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 176 32" role="img" aria-label="iad" class="nb-logo" fill="#00b4ec"><path d="M17.309,21.608c-0,-1.549 1.263,-2.805 2.821,-2.805l5.17,-0c1.558,-0 2.822,1.256 2.822,2.805c-0,1.55 -1.264,2.806 -2.822,2.806l-5.17,0c-1.558,0 -2.821,-1.256 -2.821,-2.806Zm-13.535,-21.608c2.084,0 3.773,1.68 3.773,3.752c0,2.072 -1.689,3.752 -3.773,3.752c-2.084,-0 -3.774,-1.68 -3.774,-3.752c-0,-2.072 1.69,-3.752 3.774,-3.752Zm46.201,0.01c8.949,0.056 16.185,7.286 16.185,16.197c0,6.782 -4.191,12.584 -10.128,14.998c-3.515,1.428 -8.049,1.199 -9.337,1.199l0,-0.188c0,-2.903 2.395,-5.021 5.274,-5.511c0.7,-0.119 1.379,-0.292 1.991,-0.54c3.95,-1.606 6.725,-5.463 6.725,-9.958c0,-5.916 -4.804,-10.716 -10.745,-10.753l-4.84,-0c-0.419,-0 -0.759,0.338 -0.759,0.755l-0,20.312c-0,3.221 -2.626,5.832 -5.866,5.832c-2.334,0 -4.446,-1.376 -5.378,-3.504l-9.93,-22.683c-0.165,-0.375 -0.699,-0.376 -0.865,-0.001l-10.053,22.711c-0.936,2.113 -3.038,3.477 -5.361,3.477c-3.238,0 -5.862,-2.612 -5.857,-5.831l0.024,-16.159c3.012,0 5.457,2.422 5.47,5.416l0.041,9.929c0.002,0.507 0.701,0.65 0.905,0.184l9.738,-22.268c0.941,-2.151 3.076,-3.542 5.435,-3.542c2.359,-0 4.463,1.37 5.415,3.497l9.959,22.255c0.207,0.463 0.903,0.316 0.903,-0.191l0,-19.814c0,-3.214 2.621,-5.819 5.853,-5.819l5.096,-0l0.105,-0Z"></path><path d="M118.474,23.252c0.515,0.488 0.918,1.058 1.208,1.709c0.29,0.651 0.436,1.381 0.436,2.156c-0,0.776 -0.146,1.495 -0.436,2.156c-0.291,0.662 -0.693,1.234 -1.208,1.716c-0.516,0.483 -1.121,0.858 -1.816,1.127c-0.696,0.268 -1.443,0.403 -2.274,0.403c-0.831,-0 -1.598,-0.134 -2.304,-0.403c-0.705,-0.269 -1.315,-0.647 -1.83,-1.134c-0.516,-0.488 -0.916,-1.06 -1.201,-1.717c-0.285,-0.656 -0.428,-1.372 -0.428,-2.148c-0,-0.776 0.143,-1.492 0.428,-2.149c0.285,-0.657 0.688,-1.229 1.208,-1.716c0.52,-0.488 1.131,-0.866 1.831,-1.134c0.701,-0.268 1.451,-0.403 2.281,-0.403c0.831,-0 1.593,0.134 2.289,0.403c0.695,0.268 1.301,0.646 1.816,1.134Zm-1.066,5.222c0.166,-0.408 0.248,-0.86 0.248,-1.358c-0,-0.497 -0.082,-0.95 -0.248,-1.358c-0.165,-0.408 -0.395,-0.761 -0.69,-1.059c-0.296,-0.299 -0.644,-0.528 -1.043,-0.687c-0.401,-0.159 -0.836,-0.238 -1.306,-0.238c-0.47,-0 -0.903,0.079 -1.298,0.238c-0.396,0.16 -0.743,0.388 -1.043,0.687c-0.3,0.298 -0.533,0.651 -0.698,1.059c-0.165,0.408 -0.247,0.871 -0.247,1.358c-0,0.487 0.082,0.938 0.247,1.35c0.165,0.413 0.396,0.769 0.69,1.067c0.296,0.299 0.644,0.528 1.043,0.687c0.401,0.159 0.836,0.238 1.306,0.238c0.471,0 0.903,-0.079 1.299,-0.238c0.395,-0.159 0.743,-0.389 1.043,-0.687c0.3,-0.298 0.533,-0.651 0.697,-1.059Zm-28.625,-6.579l1.996,-0l0.031,10.445l-2.282,-0l-0.013,-6.269l-3.093,5.165l-1.096,-0l-3.077,-5.031l0,6.135l-2.28,-0l-0,-10.446l2.011,0l3.935,6.486l3.868,-6.486Zm15.082,0l1.996,0l0.031,10.446l-2.282,-0l-0.014,-6.269l-3.092,5.165l-1.096,-0l-3.077,-5.031l0,6.135l-2.28,-0l-0,-10.446l2.01,0l3.935,6.486l3.869,-6.486Zm-28.289,0l-0,10.446l-2.432,-0l0,-10.446l2.432,0Zm61.711,0l-0,10.446l-2.432,-0l-0,-10.446l2.432,0Zm21.293,6.088l-0,2.418l5.718,-0l-0,1.94l-8.134,-0l-0,-10.446l7.939,0l-0,1.94l-5.523,0l-0,2.268l4.878,0l-0,1.88l-4.878,0Zm17.783,4.356l-2.626,-0l-2.017,-2.911l-0.114,0.001l-2.116,0l-0,2.91l-2.431,-0l-0,-10.445l4.547,-0c0.94,-0 1.75,0.151 2.431,0.455c0.68,0.303 1.206,0.738 1.576,1.305c0.37,0.568 0.555,1.254 0.555,2.03c-0,0.776 -0.185,1.445 -0.555,2.007c-0.371,0.562 -0.896,0.992 -1.576,1.291l-0.021,0.008l2.347,3.349Zm-3.212,-7.998c-0.37,-0.318 -0.93,-0.477 -1.68,-0.477l-1.982,0l-0,3.641l1.982,-0c0.75,-0 1.31,-0.162 1.68,-0.485c0.37,-0.324 0.555,-0.759 0.555,-1.336c-0,-0.577 -0.185,-1.024 -0.555,-1.343Zm-30.267,-2.446l-0,8.476l5.268,-0l-0,1.97l-7.699,-0l-0,-10.446l2.431,0Zm10.266,0l-0,10.446l-2.431,-0l-0,-10.446l2.431,0Zm-22.437,5.11c0.51,0.213 0.908,0.529 1.193,0.947c0.286,0.418 0.428,0.93 0.428,1.537c-0,0.895 -0.355,1.594 -1.066,2.096c-0.71,0.502 -1.756,0.754 -3.136,0.754l-5.433,-0l-0,-10.445l5.133,-0c1.32,-0 2.313,0.249 2.979,0.746c0.665,0.497 0.998,1.154 0.998,1.97c-0,0.547 -0.135,1.022 -0.405,1.425c-0.244,0.364 -0.57,0.652 -0.977,0.865c0.097,0.032 0.193,0.066 0.286,0.105Zm-1.328,3.208c0.325,-0.204 0.487,-0.54 0.487,-0.978c-0,-0.437 -0.162,-0.763 -0.487,-0.977c-0.325,-0.214 -0.803,-0.321 -1.433,-0.321l-2.837,-0l-0,2.582l2.837,-0c0.63,-0 1.108,-0.102 1.433,-0.306Zm-1.854,-6.499l-2.416,0l-0,2.462l2.416,0c0.591,0 1.043,-0.101 1.358,-0.305c0.316,-0.204 0.473,-0.525 0.473,-0.933c-0,-0.408 -0.157,-0.714 -0.473,-0.918c-0.315,-0.203 -0.768,-0.306 -1.358,-0.306Z"></path></svg>
+    <div class="nb-sep"></div>
+    <img src="/logo-narbonne-220-20261005.webp" srcset="/logo-narbonne-220-20261005.webp 220w, /logo-narbonne-440-20261005.webp 440w" sizes="(max-width:420px) 108px, (max-width:760px) 120px, (max-width:1180px) 140px, 160px" class="nb-site-logo" width="660" height="560" alt="Immobilier Narbonne — by Guillaume ROQUE" decoding="async">
+  </a>
+  <button class="nb-menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu-principal">Menu</button>
+  <div class="nb-links" id="menu-principal"><a href="/acheter">Acheter</a><a href="/vendre-bien-narbonne">Vendre</a><a href="/#guillaume">Votre conseiller</a><a href="/conseils/">Conseils</a><a href="/#contact">Contact</a><a href="/estimation-immobiliere-narbonne#estimation-form" class="nb-cta">Estimer mon bien ↗</a></div>
+</nav>
+</header>
+
+<main id="contenu"><section class="buyer-intro property-detail" id="property-detail"><a href="/acheter">← Retour aux annonces</a><h1>Détail du bien</h1><p role="status">Chargement de l’annonce…</p></section></main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft">
+    <div class="fb">
+      <a href="/" class="ft-site-brand" aria-label="Immobilier Narbonne — accueil"><img src="/logo-immobilier-narbonne-guillaume-roque-20261004.webp" class="ft-site-logo" width="660" height="560" alt="Immobilier Narbonne — by Guillaume ROQUE" loading="lazy" decoding="async"></a>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 176 32" role="img" aria-label="iad Immobilier" style="height:32px;width:auto;opacity:.7" fill="#fff"><path d="M17.309,21.608c-0,-1.549 1.263,-2.805 2.821,-2.805l5.17,-0c1.558,-0 2.822,1.256 2.822,2.805c-0,1.55 -1.264,2.806 -2.822,2.806l-5.17,0c-1.558,0 -2.821,-1.256 -2.821,-2.806Zm-13.535,-21.608c2.084,0 3.773,1.68 3.773,3.752c0,2.072 -1.689,3.752 -3.773,3.752c-2.084,-0 -3.774,-1.68 -3.774,-3.752c-0,-2.072 1.69,-3.752 3.774,-3.752Zm46.201,0.01c8.949,0.056 16.185,7.286 16.185,16.197c0,6.782 -4.191,12.584 -10.128,14.998c-3.515,1.428 -8.049,1.199 -9.337,1.199l0,-0.188c0,-2.903 2.395,-5.021 5.274,-5.511c0.7,-0.119 1.379,-0.292 1.991,-0.54c3.95,-1.606 6.725,-5.463 6.725,-9.958c0,-5.916 -4.804,-10.716 -10.745,-10.753l-4.84,-0c-0.419,-0 -0.759,0.338 -0.759,0.755l-0,20.312c-0,3.221 -2.626,5.832 -5.866,5.832c-2.334,0 -4.446,-1.376 -5.378,-3.504l-9.93,-22.683c-0.165,-0.375 -0.699,-0.376 -0.865,-0.001l-10.053,22.711c-0.936,2.113 -3.038,3.477 -5.361,3.477c-3.238,0 -5.862,-2.612 -5.857,-5.831l0.024,-16.159c3.012,0 5.457,2.422 5.47,5.416l0.041,9.929c0.002,0.507 0.701,0.65 0.905,0.184l9.738,-22.268c0.941,-2.151 3.076,-3.542 5.435,-3.542c2.359,-0 4.463,1.37 5.415,3.497l9.959,22.255c0.207,0.463 0.903,0.316 0.903,-0.191l0,-19.814c0,-3.214 2.621,-5.819 5.853,-5.819l5.096,-0l0.105,-0Z"></path><path d="M118.474,23.252c0.515,0.488 0.918,1.058 1.208,1.709c0.29,0.651 0.436,1.381 0.436,2.156c-0,0.776 -0.146,1.495 -0.436,2.156c-0.291,0.662 -0.693,1.234 -1.208,1.716c-0.516,0.483 -1.121,0.858 -1.816,1.127c-0.696,0.268 -1.443,0.403 -2.274,0.403c-0.831,-0 -1.598,-0.134 -2.304,-0.403c-0.705,-0.269 -1.315,-0.647 -1.83,-1.134c-0.516,-0.488 -0.916,-1.06 -1.201,-1.717c-0.285,-0.656 -0.428,-1.372 -0.428,-2.148c-0,-0.776 0.143,-1.492 0.428,-2.149c0.285,-0.657 0.688,-1.229 1.208,-1.716c0.52,-0.488 1.131,-0.866 1.831,-1.134c0.701,-0.268 1.451,-0.403 2.281,-0.403c0.831,-0 1.593,0.134 2.289,0.403c0.695,0.268 1.301,0.646 1.816,1.134Zm-1.066,5.222c0.166,-0.408 0.248,-0.86 0.248,-1.358c-0,-0.497 -0.082,-0.95 -0.248,-1.358c-0.165,-0.408 -0.395,-0.761 -0.69,-1.059c-0.296,-0.299 -0.644,-0.528 -1.043,-0.687c-0.401,-0.159 -0.836,-0.238 -1.306,-0.238c-0.47,-0 -0.903,0.079 -1.298,0.238c-0.396,0.16 -0.743,0.388 -1.043,0.687c-0.3,0.298 -0.533,0.651 -0.698,1.059c-0.165,0.408 -0.247,0.871 -0.247,1.358c-0,0.487 0.082,0.938 0.247,1.35c0.165,0.413 0.396,0.769 0.69,1.067c0.296,0.299 0.644,0.528 1.043,0.687c0.401,0.159 0.836,0.238 1.306,0.238c0.471,0 0.903,-0.079 1.299,-0.238c0.395,-0.159 0.743,-0.389 1.043,-0.687c0.3,-0.298 0.533,-0.651 0.697,-1.059Zm-28.625,-6.579l1.996,-0l0.031,10.445l-2.282,-0l-0.013,-6.269l-3.093,5.165l-1.096,-0l-3.077,-5.031l0,6.135l-2.28,-0l-0,-10.446l2.011,0l3.935,6.486l3.868,-6.486Zm15.082,0l1.996,0l0.031,10.446l-2.282,-0l-0.014,-6.269l-3.092,5.165l-1.096,-0l-3.077,-5.031l0,6.135l-2.28,-0l-0,-10.446l2.01,0l3.935,6.486l3.869,-6.486Zm-28.289,0l-0,10.446l-2.432,-0l0,-10.446l2.432,0Zm61.711,0l-0,10.446l-2.432,-0l-0,-10.446l2.432,0Zm21.293,6.088l-0,2.418l5.718,-0l-0,1.94l-8.134,-0l-0,-10.446l7.939,0l-0,1.94l-5.523,0l-0,2.268l4.878,0l-0,1.88l-4.878,0Zm17.783,4.356l-2.626,-0l-2.017,-2.911l-0.114,0.001l-2.116,0l-0,2.91l-2.431,-0l-0,-10.445l4.547,-0c0.94,-0 1.75,0.151 2.431,0.455c0.68,0.303 1.206,0.738 1.576,1.305c0.37,0.568 0.555,1.254 0.555,2.03c-0,0.776 -0.185,1.445 -0.555,2.007c-0.371,0.562 -0.896,0.992 -1.576,1.291l-0.021,0.008l2.347,3.349Zm-3.212,-7.998c-0.37,-0.318 -0.93,-0.477 -1.68,-0.477l-1.982,0l-0,3.641l1.982,-0c0.75,-0 1.31,-0.162 1.68,-0.485c0.37,-0.324 0.555,-0.759 0.555,-1.336c-0,-0.577 -0.185,-1.024 -0.555,-1.343Zm-30.267,-2.446l-0,8.476l5.268,-0l-0,1.97l-7.699,-0l-0,-10.446l2.431,0Zm10.266,0l-0,10.446l-2.431,-0l-0,-10.446l2.431,0Zm-22.437,5.11c0.51,0.213 0.908,0.529 1.193,0.947c0.286,0.418 0.428,0.93 0.428,1.537c-0,0.895 -0.355,1.594 -1.066,2.096c-0.71,0.502 -1.756,0.754 -3.136,0.754l-5.433,-0l-0,-10.445l5.133,-0c1.32,-0 2.313,0.249 2.979,0.746c0.665,0.497 0.998,1.154 0.998,1.97c-0,0.547 -0.135,1.022 -0.405,1.425c-0.244,0.364 -0.57,0.652 -0.977,0.865c0.097,0.032 0.193,0.066 0.286,0.105Zm-1.328,3.208c0.325,-0.204 0.487,-0.54 0.487,-0.978c-0,-0.437 -0.162,-0.763 -0.487,-0.977c-0.325,-0.214 -0.803,-0.321 -1.433,-0.321l-2.837,-0l-0,2.582l2.837,-0c0.63,-0 1.108,-0.102 1.433,-0.306Zm-1.854,-6.499l-2.416,0l-0,2.462l2.416,0c0.591,0 1.043,-0.101 1.358,-0.305c0.316,-0.204 0.473,-0.525 0.473,-0.933c-0,-0.408 -0.157,-0.714 -0.473,-0.918c-0.315,-0.203 -0.768,-0.306 -1.358,-0.306Z"></path></svg>
+      <p>Guillaume Roque · Conseiller immobilier iad France, intervenant à Narbonne · Estimation gratuite, accompagnement complet pour la vente de votre maison ou appartement.</p>
+    </div>
+    <div class="fc">
+      <h3>Mon accompagnement</h3>
+      <a href="#services">Estimation &amp; vente</a>
+      <a href="#secteurs">Zone d'intervention</a>
+      <a href="#guillaume">Qui suis-je</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="fc">
+      <h3>Ressources</h3>
+      <a href="/#newsletter">La newsletter</a>
+      <a href="/vendre-bien-narbonne">Vendre une maison ou un appartement à Narbonne</a>
+      <a href="/prix-immobilier-narbonne">Consulter les prix immobiliers à Narbonne</a>
+      <a href="/guillaume-roque">Découvrir la méthode de Guillaume Roque</a>
+      <a href="#articles">Guides Narbonne</a>
+      <a href="/avis-clients">Avis clients</a>
+    </div>
+    <div class="fc">
+      <h3>Suivez-moi</h3>
+      <a href="https://www.google.com/maps?cid=5116106871498769324" target="_blank" rel="noopener">Avis Google</a>
+      <a href="https://www.instagram.com/guillaumeroqueiad/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.facebook.com/guillaumeroque.immobilier/" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://www.linkedin.com/in/guillaume-roque-07a3bb8a/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+  <div class="fbot">
+    <p class="fleg">Guillaume Roque, conseiller immobilier indépendant iad France, mandataire indépendant en immobilier (sans détention de fonds), agent commercial EI inscrit au RSAC de Narbonne sous le numéro 512 124 215, de la SAS I@D France, titulaire de la carte de démarchage immobilier pour le compte de la société I@D France SAS, intervenant à Narbonne et dans le Grand Narbonne. Site indépendant, non officiel iad France. © 2026</p>
+    <span class="fcopy"><a href="/mentions-legales" style="color:inherit;text-decoration:underline">Mentions légales</a> · <a href="/politique-confidentialite" style="color:inherit;text-decoration:underline">Confidentialité</a> · <a href="/politique-confidentialite#cookies" onclick="if(typeof ouvrirGestionCookies==='function')return ouvrirGestionCookies();" style="color:inherit;text-decoration:underline">Gérer mes cookies</a> · <a href="https://www.iadfrance.fr/bareme_honoraires_iad.pdf" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">Barème d'honoraires</a> · immobiliernarbonne.com</span>
+  </div>
+</footer>
+
+<!-- MESURE D'AUDIENCE (RGPD) -->
+<!--
+  Identifiant GA4 configure (G-DXS5R3BPDY, fourni par Guillaume le 14/08/2026).
+  Le script Google (googletagmanager.com) n'est charge qu'apres consentement
+  explicite du visiteur (bouton "Accepter" du bandeau cookies) : sans ce choix,
+  ou en cas de refus, aucun script tiers n'est charge et aucun cookie de mesure
+  n'est depose (Consent Mode v2 : analytics_storage='denied' par defaut).
+-->
+<div id="cookieBanner" style="display:block;position:fixed;left:0;right:0;bottom:0;z-index:2000;background:#0B2436;color:#fff;padding:18px 5vw">
+  <div style="max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between">
+    <div style="max-width:640px">
+      <p style="font-size:12.5px;line-height:1.6;color:rgba(255,255,255,.9);margin:0 0 6px">Ce site utilise Google Analytics 4, un outil de mesure d'audience, uniquement si vous l'acceptez. Vos coordonnées personnelles ne sont jamais transmises à cet outil. <a href="/politique-confidentialite" style="color:#fff;text-decoration:underline" aria-label="En savoir plus sur la politique de confidentialité">En savoir plus</a></p>
+      <p id="consentStatutTexte" style="font-size:12px;color:rgba(255,255,255,.86);margin:0">Aucun choix enregistré pour le moment.</p>
+    </div>
+    <div style="display:flex;gap:10px;flex-shrink:0;flex-wrap:wrap;align-items:center">
+      <button id="consentBtnRetirer" onclick="retirerConsentement()" style="display:none;background:transparent;border:1px solid rgba(255,255,255,.4);color:#fff;font-size:12px;font-weight:600;padding:8px 16px;border-radius:100px;cursor:pointer">Retirer mon consentement</button>
+      <button onclick="setConsent(false)" style="background:transparent;border:1px solid rgba(255,255,255,.4);color:#fff;font-size:12px;font-weight:600;padding:8px 16px;border-radius:100px;cursor:pointer">Refuser</button>
+      <button onclick="setConsent(true)" style="background:#00709C;border:none;color:#fff;font-size:12px;font-weight:700;padding:8px 18px;border-radius:100px;cursor:pointer">Accepter</button>
+      <button onclick="document.getElementById('cookieBanner').style.display='none'" aria-label="Fermer ce panneau" style="background:transparent;border:none;color:rgba(255,255,255,.55);font-size:16px;padding:4px 10px;cursor:pointer;line-height:1"><svg class="material-symbol cookie-close-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/icons.svg?v=20260914#close"></use></svg></button>
+    </div>
+  </div>
+</div>
+<script>
+var GA4_MEASUREMENT_ID = 'G-DXS5R3BPDY'; // identifiant fourni par Guillaume le 14/08/2026 — charge uniquement apres consentement (voir loadGA4())
+var CONSENT_KEY = 'consent_mesure_audience';
+var CONSENT_DUREE_MS = 183 * 24 * 60 * 60 * 1000; // ~6 mois — passé ce délai, le choix expire et est redemandé
+
+window.dataLayer = window.dataLayer || [];
+function gtag() { window.dataLayer.push(arguments); }
+gtag('consent', 'default', { analytics_storage: 'denied' }); // mode Consent par défaut : refusé tant que non accepté explicitement
+
+function trackEvent(nom, params) {
+  // Appel officiel gtag('event', ...) : le site charge gtag.js directement
+  // (sans conteneur Google Tag Manager), donc un simple dataLayer.push()
+  // d'un objet ne produit aucun envoi reel. On repasse par window.gtag(),
+  // et on revalide le consentement a chaque appel (pas seulement au chargement).
+  var consentement = lireConsentement();
+  if (!consentement || consentement.choice !== 'accepted') return;
+  if (typeof window.gtag !== 'function') return;
+  window.gtag('event', nom, params || {});
+}
+
+function lireConsentement() {
+  try {
+    var brut = localStorage.getItem(CONSENT_KEY);
+    if (!brut) return null;
+    var data = JSON.parse(brut);
+    if (!data || !data.expiresAt || Date.now() > Date.parse(data.expiresAt)) return null; // choix expiré : on redemande
+    return data;
+  } catch (e) { return null; }
+}
+
+function ecrireConsentement(choice) {
+  var maintenant = new Date();
+  var expiration = new Date(maintenant.getTime() + CONSENT_DUREE_MS);
+  var data = { choice: choice, date: maintenant.toISOString(), expiresAt: expiration.toISOString() };
+  try { localStorage.setItem(CONSENT_KEY, JSON.stringify(data)); } catch (e) {}
+  return data;
+}
+
+function supprimerCookiesAnalytics() {
+  // Retire les cookies Google Analytics accessibles en JS (_ga, _ga_<container-id>, _gid)
+  document.cookie.split(';').map(function (c) { return c.split('=')[0].trim(); })
+    .filter(function (n) { return n === '_gid' || n.indexOf('_ga') === 0; })
+    .forEach(function (n) {
+      document.cookie = n + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+      document.cookie = n + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=.' + location.hostname + ';';
+    });
+}
+
+function loadGA4() {
+  if (!GA4_MEASUREMENT_ID) return;
+  // Toujours remettre le consentement a jour, meme si le script est deja charge :
+  // sinon le scenario accepter -> retirer -> re-accepter sur la meme page (sans
+  // recharger) restait bloque avant la mise a jour du consentement.
+  gtag('consent', 'update', { analytics_storage: 'granted' });
+  if (window.__ga4Loaded) return; // empeche un second chargement du script (ex. double clic, appel repete)
+  window.__ga4Loaded = true;
+  var s = document.createElement('script');
+  s.async = true;
+  s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA4_MEASUREMENT_ID;
+  document.head.appendChild(s);
+  gtag('js', new Date());
+  gtag('config', GA4_MEASUREMENT_ID, { anonymize_ip: true });
+}
+
+function majInterfaceConsentement() {
+  var data = lireConsentement();
+  var elStatut = document.getElementById('consentStatutTexte');
+  var btnRetirer = document.getElementById('consentBtnRetirer');
+  if (!elStatut) return;
+  if (!GA4_MEASUREMENT_ID) {
+    elStatut.textContent = "Google Analytics 4 n'est pas actif actuellement. La mesure technique Cloudflare fonctionne sans cookie.";
+    if (btnRetirer) btnRetirer.style.display = 'none';
+  } else if (data && data.choice === 'accepted') {
+    elStatut.textContent = 'Mesure d\'audience acceptée le ' + new Date(data.date).toLocaleDateString('fr-FR') + '.';
+    if (btnRetirer) btnRetirer.style.display = 'inline-block';
+  } else if (data && data.choice === 'denied') {
+    elStatut.textContent = 'Mesure d\'audience refusée le ' + new Date(data.date).toLocaleDateString('fr-FR') + '.';
+    if (btnRetirer) btnRetirer.style.display = 'none';
+  } else {
+    elStatut.textContent = 'Aucun choix enregistré pour le moment.';
+    if (btnRetirer) btnRetirer.style.display = 'none';
+  }
+}
+
+function setConsent(accepte) {
+  ecrireConsentement(accepte ? 'accepted' : 'denied');
+  var banniere = document.getElementById('cookieBanner');
+  if (banniere) banniere.style.display = 'none';
+  if (accepte) {
+    loadGA4();
+  } else {
+    gtag('consent', 'update', { analytics_storage: 'denied' });
+    supprimerCookiesAnalytics();
+  }
+  majInterfaceConsentement();
+}
+
+function retirerConsentement() {
+  ecrireConsentement('denied');
+  gtag('consent', 'update', { analytics_storage: 'denied' });
+  supprimerCookiesAnalytics();
+  majInterfaceConsentement();
+  var banniere = document.getElementById('cookieBanner');
+  if (banniere) banniere.style.display = 'none';
+}
+
+function ouvrirGestionCookies() {
+  majInterfaceConsentement();
+  var banniere = document.getElementById('cookieBanner');
+  if (banniere) banniere.style.display = 'block';
+  return false;
+}
+
+(function initConsentement() {
+  var data = lireConsentement();
+  var banniere = document.getElementById('cookieBanner');
+  if (data && data.choice === 'accepted') {
+    if (banniere) banniere.style.display = 'none';
+    loadGA4();
+  } else if (data && data.choice === 'denied') {
+    if (banniere) banniere.style.display = 'none';
+  } else if (!data && GA4_MEASUREMENT_ID) {
+    if (banniere) banniere.style.display = 'block';
+  } else if (banniere) {
+    banniere.style.display = 'none';
+  }
+  majInterfaceConsentement();
+  if (location.hash === '#cookies') { ouvrirGestionCookies(); }
+})();
+
+// Suivi du 1er focus dans un formulaire (remplace les attributs inline onfocusin)
+document.addEventListener('focusin', function (e) {
+  var f = e.target.closest('form');
+  if (!f) return;
+  if (f.id === 'fm-guide') suivreDebutFormulaire('guide');
+  else if (f.id === 'fm') suivreDebutFormulaire('contact');
+});
+</script>
+
+
+
+<script src="/parcours-20261011.js" defer=""></script><div class="mobile-project-bar"><a href="tel:+33662108396">Appeler</a><a href="/acheter">Voir les annonces</a></div><script src="/bien-20261011.js" defer=""></script></body></html>

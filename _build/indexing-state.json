@@ -116,8 +116,8 @@
     "lastmod": "2026-08-14"
   },
   "index.html": {
-    "sha256": "109d4a8ccebe1638c5212fc2ebfae401fb51d0d884b407331558497465a30034",
-    "lastmod": "2026-10-05"
+    "sha256": "3e5a0139a6ac5131109c962f659076e54bec2659536ab47f67ff33ffb408d69b",
+    "lastmod": "2026-10-11"
   },
   "prix-immobilier-narbonne.html": {
     "sha256": "48f81d7b727765a3431f0bfd37732bf3bd0804266a7b77d1733163bd19157bee",
@@ -126,5 +126,9 @@
   "vendre-bien-narbonne.html": {
     "sha256": "be441b8234d923743abf13c52bbb38bb047a141c2f269a5fd9c9efe2c442578a",
     "lastmod": "2026-10-05"
+  },
+  "acheter.html": {
+    "sha256": "c6813a2c8373e26012b7bf35ce87a82a56a9852bd3abc524c3f3db4c12b0fe75",
+    "lastmod": "2026-10-11"
   }
 }

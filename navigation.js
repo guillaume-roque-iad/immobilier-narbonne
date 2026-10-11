@@ -55,3 +55,5 @@
   if (document.readyState === 'complete') schedule();
   else window.addEventListener('load', schedule, { once: true });
 })();
+
+(()=>{const nav=document.querySelector('.nb-links');if(nav)nav.innerHTML='<a href="/acheter">Acheter</a><a href="/vendre-bien-narbonne">Vendre</a><a href="/#guillaume">Votre conseiller</a><a href="/conseils/">Conseils</a><a href="/#contact">Contact</a><a class="nb-cta" href="/estimation-immobiliere-narbonne#estimation-form">Estimer mon bien ↗</a>';})();

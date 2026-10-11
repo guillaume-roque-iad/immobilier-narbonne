@@ -39,7 +39,11 @@
 # dans wrangler.toml, le mecanisme correct et supporte pour ce type de projet.
 
 # BEGIN GENERATED INDEXING REDIRECTS
+/acheter.html /acheter 301
+/acheter/ /acheter 301
 /avis-clients.html /avis-clients 301
+/bien.html /bien 301
+/bien/ /bien 301
 /conseils /conseils/ 301
 /conseils/acheter-appartement-copropriete-narbonne.html /conseils/acheter-appartement-copropriete-narbonne 301
 /conseils/acheter-appartement-copropriete-narbonne/ /conseils/acheter-appartement-copropriete-narbonne 301

@@ -12,7 +12,11 @@
   const source = root.querySelector('.biens-source');
   let items = null;
   let loading = null;
-  let limit = 9;
+  const preview = root.hasAttribute('data-preview');
+  const pageSize = preview ? 6 : 9;
+  const budget = root.querySelector('#biens-budget'), bedrooms = root.querySelector('#biens-chambres'), neuf = root.querySelector('#biens-neuf');
+  if(neuf && new URLSearchParams(location.search).get('neuf')==='1')neuf.value='1';
+  let limit = pageSize;
 
   // Corrections vérifiées sur la page publique iad de Guillaume Roque.
   // Au 04/10/2026, le catalogue source a été resynchronisé avec les annonces iad publiques.
@@ -148,12 +152,12 @@
     article.dataset.offre = item.offre;
 
     const link = element('a');
-    link.href = item.url;
-    link.target = '_blank';
+    link.href = '/bien?ref='+encodeURIComponent(getReference(item));
+
     link.rel = 'noopener noreferrer';
     const displayPrice = item.offre === 'Location' ? `${item.price} / mois` : item.price;
     // Let the visible card text provide the accessible name.
-    link.setAttribute('aria-description', `Référence ${getReference(item)}. S’ouvre dans un nouvel onglet.`);
+    link.setAttribute('aria-description', `Référence ${getReference(item)}.`);
 
     if (item.image) {
       const image = element('img', 'bien-image');
@@ -177,7 +181,7 @@
     content.append(element('h3', '', item.title));
     content.append(element('p', 'bien-details', (item.details || []).join(' · ')));
 
-    const action = element('span', 'bien-lien', 'Voir le bien sur iad ');
+    const action = element('span', 'bien-lien', 'Découvrir le bien ');
     const icon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
     icon.setAttribute('class', 'material-symbol material-symbol--arrow');
     icon.setAttribute('viewBox', '0 0 24 24');
@@ -190,6 +194,7 @@
     content.append(action);
     link.append(content);
     article.append(link);
+    const visit=element('a','visit-link','Organiser une visite ↗');visit.href='/?projet=acheter&ref='+encodeURIComponent(getReference(item))+'#contact';article.append(visit);
     return article;
   }
 
@@ -198,7 +203,10 @@
     const matches = items.filter(item =>
       (!town.value || item.ville === town.value) &&
       (!type.value || item.type === type.value) &&
-      (!offer.value || item.offre === offer.value)
+      (!offer.value || item.offre === offer.value) &&
+      (!budget?.value || Number(item.price.replace(/[^0-9]/g,'')) <= Number(budget.value)) &&
+      (!bedrooms?.value || Number((item.details||[]).join(' ').match(/(\d+) chambre/)?.[1]||0) >= Number(bedrooms.value)) &&
+      (!neuf?.value || (item.tags||[]).includes('Neuf'))
     );
     const visible = matches.slice(0, limit);
     const fragment = document.createDocumentFragment();
@@ -207,7 +215,7 @@
     count.textContent = matches.length
       ? `${matches.length} bien${matches.length > 1 ? 's' : ''} · ${visible.length} affiché${visible.length > 1 ? 's' : ''}`
       : 'Aucun bien ne correspond à ces critères. Essayez une autre commune ou un autre type de bien.';
-    more.hidden = matches.length <= limit;
+    more.hidden = preview || matches.length <= limit;
     if (Number.isInteger(focusIndex)) {
       const next = grid.children[focusIndex];
       if (next) next.querySelector('a').focus({preventScroll:true});
@@ -252,8 +260,8 @@
     return loading;
   }
 
-  [town, type, offer].forEach(input => input.addEventListener('change', async () => {
-    limit = 9;
+  [town, type, offer, budget, bedrooms, neuf].filter(Boolean).forEach(input => input.addEventListener('change', async () => {
+    limit = pageSize;
     if (await ensureCatalogue()) render();
   }));
 
@@ -266,11 +274,12 @@
 
   reset.addEventListener('click', async () => {
     town.value = type.value = offer.value = '';
-    limit = 9;
+    [budget,bedrooms,neuf].filter(Boolean).forEach(x=>x.value='');
+    limit = pageSize;
     if (await ensureCatalogue()) render();
   });
 
-  root.querySelector('.biens-filtres').hidden = false;
+  root.querySelector('.biens-filtres').hidden = preview;
 
   // Refresh the catalogue on every visit, after the first screen is painted.
   // User interaction still calls ensureCatalogue immediately.
