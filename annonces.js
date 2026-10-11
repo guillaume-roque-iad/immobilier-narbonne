@@ -17,7 +17,7 @@
   // Corrections vérifiées sur la page publique iad de Guillaume Roque.
   // Au 04/10/2026, le catalogue source a été resynchronisé avec les annonces iad publiques.
   const catalogueCorrections = {
-    updated: '2026-10-04',
+    updated: '2026-10-11',
     additionalItems: [
       {
         title: 'Appartement à Narbonne (11100)',
