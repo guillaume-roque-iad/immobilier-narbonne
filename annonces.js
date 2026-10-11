@@ -284,6 +284,6 @@
   // Refresh the catalogue on every visit, after the first screen is painted.
   // User interaction still calls ensureCatalogue immediately.
   const refresh = () => requestAnimationFrame(() => setTimeout(ensureCatalogue, 0));
-  if (document.readyState === 'complete') refresh();
-  else window.addEventListener('load', refresh, { once: true });
+  if (document.readyState !== 'loading') refresh();
+  else document.addEventListener('DOMContentLoaded', refresh, { once: true });
 })();
