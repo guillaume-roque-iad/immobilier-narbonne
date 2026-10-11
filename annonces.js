@@ -71,6 +71,20 @@
     return (item.url || '').split('/').filter(Boolean).pop() || '';
   }
 
+  function sortByChronology(list) {
+    return [...list].sort((a, b) => {
+      const parseRef = (item) => {
+        const ref = getReference(item).replace(/^r/, '');
+        const [base, suffix = '0'] = ref.split('-');
+        return { base: Number(base) || 0, suffix: Number(suffix) || 0 };
+      };
+      const A = parseRef(a);
+      const B = parseRef(b);
+      if (B.base !== A.base) return B.base - A.base;
+      return B.suffix - A.suffix;
+    });
+  }
+
   function applyCatalogueCorrections(item) {
     const reference = getReference(item);
     const removedTags = catalogueCorrections.removedTagsByRef.get(reference);
@@ -220,11 +234,11 @@
           .map(applyCatalogueCorrections);
         const firstNonPrestige = baseItems.findIndex(item => !(item.tags || []).includes('Prestige'));
         const insertionIndex = firstNonPrestige === -1 ? baseItems.length : firstNonPrestige;
-        items = [
+        items = sortByChronology([
           ...baseItems.slice(0, insertionIndex),
           ...additionalItems,
           ...baseItems.slice(insertionIndex)
-        ];
+        ]);
         syncFilters();
         syncSource(catalogueCorrections.updated || data.updated);
         render();
