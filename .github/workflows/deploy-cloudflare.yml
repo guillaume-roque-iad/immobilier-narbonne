@@ -1,9 +1,8 @@
-name: Deploy to Cloudflare
+name: Cloudflare — déploiement manuel de secours
 
 on:
-  push:
-    branches:
-      - main
+  # Production is deployed automatically by the connected Cloudflare Workers Builds.
+  # Keep this workflow as an explicit fallback to avoid duplicate production pushes.
   workflow_dispatch:
 
 permissions:
