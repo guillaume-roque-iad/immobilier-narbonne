@@ -13,3 +13,4 @@ not_found_handling = "404-page"
 command = "node _build/update_indexing.mjs"
 # catalogue-refresh: 2026-10-11-quarante-207k
 # catalogue-refresh: 2026-11-04-annonces-avis
+# reviews-refresh: 2026-11-04-exact-google-reviews
