@@ -21,47 +21,10 @@
   // Corrections vérifiées sur la page publique iad de Guillaume Roque.
   // Au 04/10/2026, le catalogue source a été resynchronisé avec les annonces iad publiques.
   const catalogueCorrections = {
-    updated: '2026-10-11',
-    additionalItems: [
-      {
-        title: 'Appartement à Narbonne (11100)',
-        ville: 'Narbonne',
-        type: 'Appartement',
-        offre: 'Vente',
-        price: '118 000 €',
-        details: ['2 pièces', '53 m²'],
-        tags: ['Nouveau'],
-        url: 'https://www.iadfrance.fr/annonce/appartement-vente-2-pieces-narbonne-53m2/r2114821',
-        image: 'https://images.iadfrance.fr/property/broadcast/2026/09/23/01a0ced7c6473045e72374d1fa4423b6.jpg?format=auto&width=600',
-        charges: ''
-      },
-      {
-        title: 'Appartement à Narbonne (11100)',
-        ville: 'Narbonne',
-        type: 'Appartement',
-        offre: 'Vente',
-        price: '215 000 €',
-        details: ['2 chambres', '3 pièces', '71 m²'],
-        tags: ['Exclusivité', 'Nouveau'],
-        url: 'https://www.iadfrance.fr/annonce/appartement-vente-3-pieces-narbonne-71m2/r2118039',
-        image: 'https://images.iadfrance.fr/property/broadcast/2026/09/22/01a0c830ed4405f3e1c1d9a1e792fcc5.png?format=auto&width=600',
-        charges: ''
-      }
-    ],
-    excludedRefs: new Set([
-      'r1702385-4',
-      'r1702114-18',
-      'r1983373-23',
-      'r1983373-32'
-    ]),
-    removedTagsByRef: new Map([
-      ['r2062986', new Set(['Nouveau'])],
-      ['r2079926', new Set(['Nouveau'])],
-      ['r2101887', new Set(['Nouveau'])],
-      ['r2092836', new Set(['Nouveau'])],
-      ['r2093358', new Set(['Nouveau'])],
-      ['r2091672', new Set(['Nouveau'])]
-    ])
+    updated: '2026-11-04',
+    additionalItems: [],
+    excludedRefs: new Set([]),
+    removedTagsByRef: new Map([])
   };
 
   function element(tag, className, text) {
