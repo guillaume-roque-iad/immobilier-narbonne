@@ -48,3 +48,10 @@
 .google-actions .link-secondary,.review-nav{color:#006390}
 .review-nav{border-color:rgba(60,74,95,.32)}
 .review-nav:hover{background:#00b4ec;border-color:#00b4ec;color:#000}
+
+/* Textes originaux : retours à la ligne conservés, lecture intégrale. */
+.google-review__text,.google-review__attributes{white-space:pre-wrap;overflow-wrap:anywhere}
+.google-review__attributes{font-size:.8rem;line-height:1.6;color:#3c4a5f}
+.google-review__empty{font-style:italic}
+.google-reviews--full .google-review__text{-webkit-line-clamp:unset}
+@media(max-width:600px){.google-reviews--full{display:grid;grid-template-columns:minmax(0,1fr);overflow:visible;margin-inline:0;padding:0}.google-reviews--full .google-review{min-width:0}}
