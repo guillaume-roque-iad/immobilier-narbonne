@@ -21,7 +21,7 @@
   // Corrections vérifiées sur la page publique iad de Guillaume Roque.
   // Au 04/10/2026, le catalogue source a été resynchronisé avec les annonces iad publiques.
   const catalogueCorrections = {
-    updated: '2026-11-04',
+    updated: null,
     additionalItems: [],
     excludedRefs: new Set([]),
     removedTagsByRef: new Map([])
