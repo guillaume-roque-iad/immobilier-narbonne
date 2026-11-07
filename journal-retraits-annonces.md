@@ -45,3 +45,23 @@ Catalogue GitHub : **80 → 81 annonces** ; source datée du 6 novembre 2026. D�
 
 **Avis Google** : le fichier `avis-google.json` contient toujours 98 entrées, note affichée 4,9/5, dernier contrôle déclaré le 4 novembre 2026 ; le résultat d'annuaire de la fiche Google relève 97 avis, divergence pouvant venir de la fraîcheur de cache. Google Maps n'a pas été accessible pour contrôler directement, dans cette session, les nouveaux avis et réponses ; **aucune modification du nombre, de la note ou des témoignages** sans preuve d'une donnée Google plus récente et fiable. Aucune prétendue synchronisation API.
 
+## 7 novembre 2026
+
+**Contrôle des 81 références présentes avant traitement** dans `annonces-iad.json` (dernier export du 6 novembre), avec consultation des liens individuels iad France, du portefeuille public Guillaume ROQUE et recherche de confirmations indépendantes pour les liens redirigés. Le portefeuille officiel indique **79 biens disponibles**, contre 81 références locales avant le contrôle.
+
+### Retraits confirmés : 81 → 79 références
+
+- **r1827974 — Haras / maison de 217 m² à Montbrun-des-Corbières, 350 000 € : RETIRÉ du site.** La fiche iad individuelle `https://www.iadfrance.fr/annonce/maison-vente-4-pieces-montbrun-des-corbieres-217m2/r1827974` redirige désormais vers le catalogue général, et la référence a disparu des biens disponibles du conseiller. Vérification décisive : confirmation écrite du service de gestion iad le **6 novembre 2026** que le mandat a été annulé ; l'avis du siège précise qu'il est **retiré de la publicité et archivé le 06/11/2026**. Guillaume avait demandé l'annulation du mandat arrivant à échéance afin de **refaire un nouveau mandat** pour poursuivre la commercialisation. **Il ne s'agit pas d'une vente confirmée** : ne pas afficher « vendu », et ne réintégrer que la future **nouvelle référence iad active**, après vérification. Les copies tierces (Bien'ici, SeLoger) peuvent rester accessibles après la fermeture de l'ancien mandat. Courriels : https://mail.google.com/mail/u/?authuser=guillaume.roque%40iadfrance.fr#all/1a1b0bca7d084a3e et https://mail.google.com/mail/u/?authuser=guillaume.roque%40iadfrance.fr#all/1a1b0bc3140eee84 .
+- **r2118038 — Maison de village de 140 m² à Quarante, 100 000 € : RETIRÉ temporairement du site.** La fiche iad individuelle `https://www.iadfrance.fr/annonce/maison-vente-4-pieces-quarante-140m2/r2118038` redirige désormais vers le catalogue général et elle n'est plus dans les biens disponibles du conseiller. Vérification décisive : courriel officiel iad du **6 novembre 2026 à 03 h 13**, intitulé « Mandat dépublié - Action requise », confirmant la **dépublication du mandat 2118038** pour non-réception du mandat manuscrit et/ou de ses annexes par le siège. **Ce bien n'est pas déclaré vendu** : le retrait du site correspond à un blocage de diffusion documentaire. **Action pour republier :** fournir les pièces requises dans Playiad et attendre la remise en ligne de la fiche officielle, avant réintégration. Courriel : https://mail.google.com/mail/u/?authuser=guillaume.roque%40iadfrance.fr#all/1a1aea1879417024 .
+
+### Corrections du site
+
+- `annonces-iad.json` : 79 biens, date de contrôle `2026-11-07` ; aucun retrait sur seule erreur de lien.
+- `index.html` et `acheter.html` : le rendu statique (lisible sans JavaScript) indiquait encore « 80 biens — importées le 5 novembre » et affichait le mandat Quarante dépublié. Comptage corrigé à **79**, date au **7 novembre 2026**, et aperçu des 6 fiches remplacé par des références présentes dans le catalogue actif : r2132034, r2130994, r2127332, r2118039, r2114821, r2113044.
+- Les deux anciens mandats sont retirés du site **par statut administratif confirmé**, pas parce qu'une redirection web serait à elle seule une preuve. Aucun prix ou titre supplémentaire n'a été corrigé sans élément actuel suffisamment fiable.
+- Mise à jour enregistrée sur la branche GitHub `main` ; configuration Cloudflare Workers Builds automatique connue, mais publication effective en production non directement vérifiable à cette étape.
+
+### Avis Google
+
+- La fiche d'établissement publique « Guillaume ROQUE - iad France » indique **98 avis, note de 4,9/5** lors du relevé du 7 novembre 2026. Le site `avis-clients.html` et `avis-google.json` affichent déjà **98 avis et 4,9/5**, avec les témoignages exacts précédemment collectés (collecte datée du **4 novembre 2026**).
+- Le lien Google Maps public n'expose pas les détails des avis ni les réponses du professionnel sans JavaScript dans la session de contrôle. Pas de preuve suffisante de nouvel avis ou de réponse à cette date ; **aucun texte, aucune note, aucune date de collecte Google modifiés**, et aucune prétendue synchronisation API.
