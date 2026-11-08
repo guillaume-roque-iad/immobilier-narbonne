@@ -96,8 +96,8 @@
     "lastmod": "2026-10-05"
   },
   "conseils/index.html": {
-    "sha256": "679c2ea89c49c76997947bb1648a42b6d223d4bb5f85882fd031b8d0a81a72b6",
-    "lastmod": "2026-10-05"
+    "sha256": "cb84068b346f623a38c6f6f24e6c6d93afb3bed6a9005988a0d0a77b7c454a0e",
+    "lastmod": "2026-11-08"
   },
   "conseils/juste-prix-maison-narbonne.html": {
     "sha256": "c3ace306a4dc04214db95b4fa0edf87a38cd64afa3f6be7914cf83cd8db031d6",
@@ -130,5 +130,9 @@
   "acheter.html": {
     "sha256": "3e766a21a86f144466e972c7f34368cbf28d06f4bd8eb9129a900e97bd1c97dd",
     "lastmod": "2026-11-04"
+  },
+  "conseils/vendre-maison-narbonne-hiver-photos-visites.html": {
+    "sha256": "c33b82c355277fffabc7fa03e8a49d5e1b170461c2e5a5cd5a7571f67e92a961",
+    "lastmod": "2026-11-08"
   }
 }
