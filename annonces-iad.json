@@ -1,7 +1,25 @@
 {
   "source": "https://www.iadfrance.fr/conseiller-immobilier/guillaume.roque",
-  "updated": "2026-11-07",
+  "updated": "2026-11-09",
   "items": [
+    {
+      "title": "Maison de ville à Argeliers (11120)",
+      "ville": "Argeliers",
+      "type": "Maison",
+      "offre": "Vente",
+      "price": "269 000 €",
+      "details": [
+        "3 chambres",
+        "5 pièces",
+        "190 m²"
+      ],
+      "tags": [
+        "Nouveau"
+      ],
+      "url": "https://www.iadfrance.fr/annonce/maison-vente-5-pieces-argeliers-190m2/r2152313",
+      "image": "https://images.iadfrance.fr/property/broadcast/2026/11/06/01a1b2720520338ca4ea53d15ed5c7e0.png?format=auto&width=390",
+      "charges": ""
+    },
     {
       "title": "Maison de ville à Quarante (34310)",
       "ville": "Quarante",
