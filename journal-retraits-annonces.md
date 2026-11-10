@@ -76,3 +76,17 @@ Catalogue GitHub : **80 → 81 annonces** ; source datée du 6 novembre 2026. D�
 
 **Avis Google** : relevé public de la fiche « Guillaume ROQUE - iad France » indiquant **98 avis, 4,9/5** ; site et fichier `avis-google.json` affichent déjà **98 avis et 4,9/5**. L'accès à Google Maps directement via une page sans exécution JavaScript ne permet pas de comparer exhaustivement les nouveaux textes ni les réponses du propriétaire : pas de modification des avis, ni changement fictif de la date de dernière vérification des témoignages (4 novembre 2026). Aucun inventaire d'avis présenté comme synchronisé en direct.
 
+## 10 novembre 2026
+
+### Annonces : ajout confirmé, aucun retrait sans preuve
+
+- **Ajout — r2155949**, [Haras à Montbrun-des-Corbières (11700)](https://www.iadfrance.fr/annonce/maison-vente-4-pieces-montbrun-des-corbieres-217m2/r2155949) : **312 000 €**, 217 m², 4 pièces, 3 chambres, terrain 1 300 m², exclusivité et mention « Nouveau », DPE D / GES B. La fiche officielle iad est publiée et désigne expressément **Guillaume Roque** comme mandataire; l'annonce était absente des 80 références du site. Il s'agit d'un **nouveau mandat distinct**, à ne pas confondre avec la **référence r1827974**, retirée le 7 novembre après annulation de son mandat. Aucune réactivation de l'ancienne référence.
+- Source de contrôle : fiche officielle de la référence r2155949 et catalogue [Guillaume Roque — iad](https://www.iadfrance.fr/conseiller-immobilier/guillaume.roque). La fiche conseiller affichait **80 biens** pendant cette consultation ; l'annonce individuelle r2155949 est nouvelle, mais le décalage de comptage du portefeuille public peut tenir à un décalage de publication/indexation. **81 références désormais sur le site**, sans en retirer une autre pour faire artificiellement coïncider le compteur.
+- **Contrôle des 80 fiches préexistantes** : chacune des URL iad individuelles a été consultée le 10 novembre et renvoyait une fiche de bien. Ce constat seul ne démontre pas que chacune figure encore dans la liste des 80 biens du profil conseiller. En l'absence de confirmation indépendante de sortie du catalogue, **aucun retrait**. Ne jamais retirer sur la base d'un écart de compteur seul.
+- Fichiers modifiés : `annonces-iad.json`, `index.html`, `acheter.html` (81 annonces, dernière actualisation 10/11/2026 ; nouveau bien en première position). L'image d'illustration provient de l'ancienne fiche du **même bien** r1827974, conservée dans l'historique du site ; vérifier et remplacer par l'image de couverture actuelle du nouveau mandat lorsqu'elle pourra être récupérée.
+- Publication : changements enregistrés sur la branche GitHub `main` ; déploiement effectif Cloudflare à confirmer.
+
+### Avis Google
+
+- Fiche publique « Guillaume ROQUE - iad France » : **98 avis, 4,9/5** (données structurées disponibles le 10 novembre). Valeurs identiques à `avis-google.json` et aux pages du site. Aucune modification du compteur ou de la note.
+- Google Maps ne livre pas les nouveaux textes ni les réponses propriétaire dans cette session sans exécution JavaScript. Faute d'authentification aux contenus détaillés, **aucune prétendue comparaison exhaustive des avis ou des réponses** et aucune modification des témoignages vérifiés au 4 novembre.
