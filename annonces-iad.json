@@ -826,7 +826,9 @@
         "3 pièces",
         "56 m²"
       ],
-      "tags": [],
+      "tags": [
+        "Sous compromis"
+      ],
       "url": "https://www.iadfrance.fr/annonce/maison-vente-3-pieces-beziers-56m2/r1982891",
       "image": "https://images.iadfrance.fr/property/broadcast/2026/04/08/019d6c50a5a9464171cd799bd8c430e8.jpg?format=auto&width=600",
       "charges": ""
