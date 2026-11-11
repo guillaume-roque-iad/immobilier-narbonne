@@ -90,3 +90,12 @@ Catalogue GitHub : **80 → 81 annonces** ; source datée du 6 novembre 2026. D�
 
 - Fiche publique « Guillaume ROQUE - iad France » : **98 avis, 4,9/5** (données structurées disponibles le 10 novembre). Valeurs identiques à `avis-google.json` et aux pages du site. Aucune modification du compteur ou de la note.
 - Google Maps ne livre pas les nouveaux textes ni les réponses propriétaire dans cette session sans exécution JavaScript. Faute d'authentification aux contenus détaillés, **aucune prétendue comparaison exhaustive des avis ou des réponses** et aucune modification des témoignages vérifiés au 4 novembre.
+
+## 11 novembre 2026 — contrôle des annonces et avis
+
+- **Fiches iad individuelles** : 81 URL du catalogue contrôlées. Fiche r1829086 (Riols, maison 38 m², 36 000 €) redirigée vers le catalogue général iad alors que le profil public du conseiller présente 80 biens contre 81 sur immobiliernarbonne.com. **Aucun retrait** : l'annonce reste consultable sur Bien'ici et Logic-Immo au nom de Guillaume ROQUE, et une version officielle était encore indexée récemment. Disparition non confirmée de façon recoupée ; à revérifier.
+- **Statut corrigé** : r1982891 — maison de 56 m² à Béziers, prix inchangé 149 000 € : ajout de l'étiquette « Sous compromis » d'après la fiche officielle iad toujours active le 11/11/2026. Mise à jour dans `annonces-iad.json` (commit fa92f1f1f90d8fe864f5a5ddc3dda3ce727eb22f).
+- **Avis Google** : consultation des données de la fiche d'établissement via recherche publique : 98 avis, note 4,9/5 ; les chiffres du site sont identiques. Google Maps ne fournit pas les textes ou les réponses via l'accès web sans JavaScript : aucun nouvel avis et aucune réponse ne sont considérés comme vérifiés ; aucun témoignage modifié.
+- **Catalogue** : 81 références conservées. Profil iad : 80 biens disponibles. Écart non résolu, retrait différé pour respecter la règle de recoupement. Déploiement Cloudflare non confirmé.
+
+Sources : https://www.iadfrance.fr/conseiller-immobilier/guillaume.roque ; https://www.iadfrance.fr/annonce/maison-vente-3-pieces-beziers-56m2/r1982891 ; https://www.iadfrance.fr/annonce/maison-vente-2-pieces-riols-38m2/r1829086 ; https://www.bienici.com/annonce/vente/riols/maison/2pieces/iad-france-1829086 ; https://www.google.com/maps?cid=5116106871498769324 .
