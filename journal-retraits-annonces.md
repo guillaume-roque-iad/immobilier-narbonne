@@ -145,3 +145,12 @@ Sources : https://www.iadfrance.fr/conseiller-immobilier/guillaume.roque ; https
 - **Publication** : les mises à jour sont enregistrées dans le dépôt GitHub ; vérifier le déploiement public Cloudflare, qui peut être décalé ou mis en cache.
 
 Sources : https://www.iadfrance.fr/conseiller-immobilier/guillaume.roque ; https://www.iadfrance.fr/annonce/maison-vente-2-pieces-riols-38m2/r1829086 ; https://www.iadfrance.fr/conseiller-immobilier/picaud.mathieu ; https://www.seloger.com/annonce/achat/occitanie/herault-34/riols-34220/26RGSJ7LFD2V ; https://www.logic-immo.com/detail-annonce/vente/occitanie/herault-34/riols-34220/26RGSJ7LFD2V ; https://www.iadfrance.fr/annonce/terrain-vente-lezignan-corbieres-525m2/r2113044 ; https://www.google.com/maps?cid=5116106871498769324 .
+
+## 19 novembre 2026 — contrôle quotidien des annonces et avis Google
+
+- **Catalogue GitHub** : 79 références ; 79 fiches officielles individuelles iad ouvertes et contrôlées. Aucun retrait supplémentaire justifié, aucun ajout ou changement de prix/statut confirmé.
+- **Profil officiel Guillaume ROQUE** : 79 biens disponibles, cohérent avec le catalogue corrigé. L'annonce Riols r1829086 retirée le 18 novembre reste absente du catalogue local GitHub ; aucune nouvelle suppression.
+- **Site public au contrôle** : la page Acheter affiche encore « 80 biens » et « Annonces vérifiées le 15 novembre 2026 », tandis que GitHub contient 79 annonces. **Décalage de publication restant à résoudre** ; vérifier le dernier déploiement Cloudflare Workers Builds, sa configuration et les caches. La date de vérification du dépôt est actualisée au 19 novembre afin de déclencher une nouvelle publication GitHub, sans prétendre que Cloudflare est déjà à jour.
+- **Avis Google publics** : 98 avis et 4,9/5 sur la fiche Guillaume ROQUE - iad France, conformes au site. Nouveaux textes et réponses non vérifiables exhaustivement par l'accès public disponible ; aucun témoignage ajouté ni inventé, aucune API supposée.
+- **Incohérence source iad préexistante, non modifiée** : terrain Lézignan-Corbières r2113044, 55 000 € en prix officiel et sur le site, 58 000 € dans le texte iad. Confirmation du mandat nécessaire pour corriger le descriptif iad.
+- **Liens** : https://immobiliernarbonne.com/acheter ; https://www.iadfrance.fr/conseiller-immobilier/guillaume.roque ; https://www.iadfrance.fr/annonce/terrain-vente-lezignan-corbieres-525m2/r2113044 ; https://www.google.com/maps?cid=5116106871498769324 .
