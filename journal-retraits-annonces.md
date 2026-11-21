@@ -164,3 +164,14 @@ Sources : https://www.iadfrance.fr/conseiller-immobilier/guillaume.roque ; https
 - **Publication** : les commits du dépôt sont enregistrés sur `main`. L'activation effective d'une nouvelle publication Cloudflare et ses caches devront être vérifiés séparément ; ne pas présumer de leur propagation. Journal complété sans retrait.
 
 Sources : https://www.iadfrance.fr/conseiller-immobilier/guillaume.roque ; https://www.iadfrance.fr/annonce/maison-vente-5-pieces-argeliers-194m2/r2152313 ; https://www.iadfrance.fr/annonce/terrain-vente-lezignan-corbieres-525m2/r2113044 ; https://immobiliernarbonne.com/acheter ; https://www.google.com/maps?cid=5116106871498769324 .
+
+
+## 21 novembre 2026 — contrôle quotidien des annonces et des avis Google
+
+- **Catalogue iad** : ouverture individuelle des 79 URL officielles du fichier `annonces-iad.json` ; toutes répondent par une fiche iad correspondant à leur référence. Portefeuille public de Guillaume Roque : 79 biens. Aucun retrait, aucune suppression à partir d'une simple erreur d'accès.
+- **Données immobilières** : 79 références inchangées. Vérification de concordance des prix et caractéristiques visibles ; les incohérences internes aux descriptions iad restent à traiter chez iad : r2152313 (Argeliers, fiche structurée 194 m² et 3 chambres, description 190 m² et quatre chambres) ; r2113044 (Lézignan-Corbières, prix structuré 55 000 €, description 58 000 €). Les données structurées sont celles conservées sur le site.
+- **Avis Google** : fiche Google « Guillaume ROQUE - iad France », identifiant `ChIJyYJXAahRsBIRrIOe5BcQAEc`, consultée par recherche d'établissement publique : **99 avis**, **4,9/5**, contre **98 avis** sur le site et dans `avis-google.json`. Mise à jour du total public à 99 et de la date du contrôle agrégé au 21/11/2026, sans changer la date de collecte textuelle du 04/11/2026 ni inventer le 99e avis. Les 98 avis détaillés archivés sont conservés avec leur distribution d'étoiles ; le nouvel avis et les éventuelles réponses du professionnel ne sont pas vérifiables par cet accès. La page d'avis distingue explicitement les deux périmètres.
+- **Publication** : fichiers source GitHub corrigés ; la version consultable de `immobiliernarbonne.com/acheter` affichait encore « vérifiées le 19 novembre » et 190 m² pour Argeliers, bien que les fichiers de la branche principale indiquent 194 m² et 188 m² de terrain depuis le 20 novembre. Contrôler la propagation Cloudflare Workers Builds et purger son cache si nécessaire ; ne pas confondre une version publique retardée avec le catalogue GitHub.
+- **Retraits du jour** : aucun ; registre conservé.
+
+Sources : https://www.iadfrance.fr/conseiller-immobilier/guillaume.roque ; https://www.iadfrance.fr/annonce/maison-vente-5-pieces-argeliers-194m2/r2152313 ; https://www.iadfrance.fr/annonce/terrain-vente-lezignan-corbieres-525m2/r2113044 ; https://immobiliernarbonne.com/acheter ; https://www.google.com/maps?cid=5116106871498769324 .
