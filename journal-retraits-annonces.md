@@ -175,3 +175,16 @@ Sources : https://www.iadfrance.fr/conseiller-immobilier/guillaume.roque ; https
 - **Retraits du jour** : aucun ; registre conservé.
 
 Sources : https://www.iadfrance.fr/conseiller-immobilier/guillaume.roque ; https://www.iadfrance.fr/annonce/maison-vente-5-pieces-argeliers-194m2/r2152313 ; https://www.iadfrance.fr/annonce/terrain-vente-lezignan-corbieres-525m2/r2113044 ; https://immobiliernarbonne.com/acheter ; https://www.google.com/maps?cid=5116106871498769324 .
+
+
+## 22 novembre 2026 — contrôle quotidien des annonces et avis Google
+
+- **Références iad** : les 79 URL individuelles enregistrées sur immobiliernarbonne.com ont chacune été ouvertes sur iadfrance.fr (fiches individuelles accessibles). Profil public Guillaume ROQUE : 80 biens disponibles. Aucun retrait, aucun cas de disparition confirmée.
+- **Ajout confirmé, référence r2164987** : nouvelle maison de ville à Béziers (34500), 167 000 €, 74 m², 3 pièces, 2 chambres, statut « Nouveau ». Attribution confirmée par la fiche individuelle iad et par le portefeuille officiel du conseiller. URL officielle : https://www.iadfrance.fr/annonce/maison-vente-3-pieces-beziers-74m2/r2164987 . Ajoutée au début de `annonces-iad.json` et aux six aperçus statiques de l'accueil et de la page Acheter. Catalogue GitHub : **80 annonces**.
+- **Statut secondaire** : le badge « Nouveau » de la maison d'Argeliers r2152313 n'apparaît plus sur la fiche iad ni le portefeuille officiel. Retiré de la fiche du site sans changer son prix (269 000 €), sa surface (194 m²) ni ses 3 chambres.
+- **Avis Google publics** : recherche de la fiche « Guillaume ROQUE - iad France » : **99 avis et 4,9/5**, conformes aux chiffres du site. Contrôle agrégé daté du 22/11/2026. Les 98 textes précédemment vérifiés le 4/11 sont conservés ; aucun nouveau texte ni réponse reproduits faute d'accès authentifiant leur contenu. Dates de contrôle des chiffres corrigées dans les mentions publiques.
+- **Sources iad à harmoniser, non changées** : r2152313 Argeliers (194 m² et 3 chambres dans les champs structurés, 190 m² / « quatre chambres » dans le texte) ; r2113044 Lézignan-Corbières (55 000 € prix structuré, 58 000 € dans le descriptif). Corrections à effectuer sur iad après confirmation des mandats, sans modifier les données du site pour autant.
+- **Publication** : fichiers GitHub mis à jour sur la branche par défaut. Le site public consulté avant modification affichait encore 79 annonces ; vérifier que Cloudflare publie les changements, sans présumer de la propagation.
+- **Retraits du jour** : aucun ; historique de retrait conservé.
+
+Sources : https://immobiliernarbonne.com/acheter ; https://www.iadfrance.fr/conseiller-immobilier/guillaume.roque ; https://www.iadfrance.fr/annonce/maison-vente-3-pieces-beziers-74m2/r2164987 ; https://www.iadfrance.fr/annonce/maison-vente-5-pieces-argeliers-194m2/r2152313 ; https://www.iadfrance.fr/annonce/terrain-vente-lezignan-corbieres-525m2/r2113044 ; https://www.google.com/maps?cid=5116106871498769324 .
